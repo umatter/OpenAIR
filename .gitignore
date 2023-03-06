@@ -2,9 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-OpenAIR.Rproj
 docs
-tests/
-usethis::use_github_action("check-release")
-.Rbuildignore
-pkgdown/
+tests/_notes.R
