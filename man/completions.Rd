@@ -63,8 +63,9 @@ A character vector containing the generated text(s).
 This function generates natural language text given a prompt using the OpenAI API. It wraps the \code{completions} endpoint of the OpenAI API.
 }
 \examples{
+\dontrun{
 openai_api_key("your_api_key_here")
 completions("Once upon a time,", n = 3)
-
+}
 
 }

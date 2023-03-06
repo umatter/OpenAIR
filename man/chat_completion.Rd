@@ -55,6 +55,7 @@ A character vector containing the generated text(s).
 This function generates natural language text in a conversational style using the OpenAI API's chat endpoint.
 }
 \examples{
+\dontrun{
 openai_api_key("your_api_key_here")
 msgs_df <- data.frame(role=c("system", 
                              "user",
@@ -65,5 +66,5 @@ msgs_df <- data.frame(role=c("system",
                                 "The Los Angeles Dodgers won the World Series in 2020.",
                                 "Where was it played?"))
 chat_completion(messages = msgs_df)
-
+}
 }
