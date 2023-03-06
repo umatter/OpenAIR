@@ -7,4 +7,4 @@ docs
 tests/
 usethis::use_github_action("check-release")
 .Rbuildignore
-
+pkgdown/
