@@ -20,6 +20,7 @@
 #' @return A character vector containing the generated text(s).
 #'
 #' @examples
+#' \dontrun{
 #' openai_api_key("your_api_key_here")
 #' msgs_df <- data.frame(role=c("system", 
 #'                              "user",
@@ -30,7 +31,7 @@
 #'                                 "The Los Angeles Dodgers won the World Series in 2020.",
 #'                                 "Where was it played?"))
 #' chat_completion(messages = msgs_df)
-#'
+#' }
 #' @export
 chat_completion <- function(messages, model = "gpt-3.5-turbo", temperature = NULL, max_tokens = NULL, n = NULL, stop = NULL,
                           presence_penalty = NULL, frequency_penalty = NULL, best_of = NULL, logit_bias = NULL,

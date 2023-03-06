@@ -22,10 +22,11 @@
 #' @return A character vector containing the generated text(s).
 #'
 #' @examples
+#' \dontrun{
 #' openai_api_key("your_api_key_here")
 #' completions("Once upon a time,", n = 3)
+#' }
 #' 
-#'
 #' @export
 completions <- function(prompt, model = "text-davinci-003", temperature = 0.5, max_tokens = 2048, n = 1, stop = "\n", echo = FALSE,
                           suffix = NULL, top_p = NULL, stream = FALSE, logprobs = NULL, presence_penalty = NULL,
