@@ -15,6 +15,8 @@
 #' messages <- initialize_messages()
 #' messages_custom <- initialize_messages("Hello! How can I assist you today?")
 #'
+#' @export
+
 initialize_messages <- function(initial_system_content = "You are a helpful assistant.") {
   # Create a new data frame with the system message
   messages <- data.frame(role = "system",

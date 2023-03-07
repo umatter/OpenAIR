@@ -26,7 +26,8 @@ The type of entities to be searched for and extracted can be defined by the user
 }
 \examples{
  \dontrun{
-chat_process("Hello, how are you?", batched = FALSE)
-chat_process("path/to/text/file.txt", batched = TRUE, batch_size = 100)
+extract_entities("Hello, how are you?", batched = FALSE)
+extract_entities("path/to/text/file.txt", batched = TRUE, batch_size = 100)
 }
+
 }

@@ -9,7 +9,6 @@
 #' @references https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
 #'
 #' @import reticulate
-#' @export
 num_tokens <- function(text, encoding = "cl100k_base") {
   # Load necessary dependencies
   if (!requireNamespace("reticulate", quietly = TRUE)) {

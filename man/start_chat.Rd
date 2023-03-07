@@ -26,6 +26,6 @@ creating a new log environment to store the messages, and adding the messages ob
 chatlog_id <- start_chat()
 
 # Start a new chat session with a custom system message
-chatlog_id <- start_chat("Hello! How can I assist you today?")
+chatlog_id <- start_chat("How can I assist you today?")
 
 }

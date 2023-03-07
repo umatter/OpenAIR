@@ -9,13 +9,14 @@
 #' @return A response from the chat model as a character string.
 #'
 #' @examples
+#' \dontrun{
 #' # Start a new chat session
 #' chatlog_id <- start_chat()
 #'
 #' # Prompt the chat model with user input
 #' resp <- prompt(chatlog_id, "Hello!")
-#' print(resp)
-#'
+#' }
+#'@export
 prompt <- 
   function(x, text, show = FALSE) {
     
@@ -46,7 +47,7 @@ prompt <-
 
     if (show==TRUE){
       # Open current chatlog
-      View(chatlog(chatlog_id), 
+      utils::View(chatlog(chatlog_id), 
            title = paste0("Current chat (ID: ", chatlog_id, ")"))  
     }
     

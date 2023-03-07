@@ -14,8 +14,9 @@
 #' chatlog_id <- start_chat()
 #'
 #' # Start a new chat session with a custom system message
-#' chatlog_id <- start_chat("Hello! How can I assist you today?")
+#' chatlog_id <- start_chat("How can I assist you today?")
 #'
+#'@export
 start_chat <- function(initial_system_content = "You are a helpful assistant.", show=FALSE){
   
   # get the basic msgs object
@@ -27,15 +28,13 @@ start_chat <- function(initial_system_content = "You are a helpful assistant.", 
   
   # prepare chat environment
   if (!exists(".ChatEnv", envir = .GlobalEnv)) {
-    if (!is.environment(.Chatenv)){
       .ChatEnv <- new.env(parent = .GlobalEnv)
-    }
   }
   assign(chatlog_id, msgs, envir=.ChatEnv)
   
   if (show==TRUE){
     # Open current chatlog
-    View(get(chatlog_id, envir = .ChatEnv), 
+    utils::View(get(chatlog_id, envir = .ChatEnv), 
          title = paste0("Current chat (ID: ", chatlog_id, ")"))  
   }
 

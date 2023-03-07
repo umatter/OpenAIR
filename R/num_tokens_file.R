@@ -8,13 +8,12 @@
 #' @param batch_size integer indicating the number of lines to read in per batch (default is 1000)
 #' @param encoding character string indicating the encoding to use (default is "cl100k_base")
 #' @return a numeric value indicating the total number of tokens in the text file
-#' @examples
-#' data_path <- system.file("text", "lorem.txt", package = "OpenAIR")
-#' text_data <- num_tokens_file(data_path)
 #'
-#' @export
 num_tokens_file <- function(filename, batch_size = 1000, encoding = "cl100k_base") {
-
+  # Load necessary dependencies
+  if (!requireNamespace("reticulate", quietly = TRUE)) {
+    stop("reticulate package not installed.")
+  }
   # dependencies
   requireNamespace("readr", quietly = TRUE)
   

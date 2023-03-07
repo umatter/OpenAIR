@@ -21,8 +21,3 @@ The function batch-wise computes the total number of tokens in a text file.
 The function returns a numeric value indicating the total
 number of tokens in the file. The function can be used on very large text files.
 }
-\examples{
-data_path <- system.file("text", "lorem.txt", package = "OpenAIR")
-text_data <- num_tokens_file(data_path)
-
-}

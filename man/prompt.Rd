@@ -20,11 +20,11 @@ A response from the chat model as a character string.
 This function prompts the chat model with new user input.
 }
 \examples{
+\dontrun{
 # Start a new chat session
 chatlog_id <- start_chat()
 
 # Prompt the chat model with user input
 resp <- prompt(chatlog_id, "Hello!")
-print(resp)
-
+}
 }

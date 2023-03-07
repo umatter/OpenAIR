@@ -11,9 +11,11 @@
 #' 
 #' @examples
 #'  \dontrun{
-#' chat_process("Hello, how are you?", batched = FALSE)
-#' chat_process("path/to/text/file.txt", batched = TRUE, batch_size = 100)
+#' extract_entities("Hello, how are you?", batched = FALSE)
+#' extract_entities("path/to/text/file.txt", batched = TRUE, batch_size = 100)
 #' }
+#' 
+#' @export
 extract_entities <- function(text, entity_types=c("locations", "persons", "organizations"), batch_size = NULL) {
   
   requireNamespace("dplyr", quietly = TRUE)
@@ -48,10 +50,10 @@ extract_entities <- function(text, entity_types=c("locations", "persons", "organ
                                   user_input
                         ))
       # chat
-      resp <- chat_completion(messages = msgs_df)
+      resp <- chat_completion(msgs_df)
       total_tokens_used <- usage(resp)$total_tokens
       message("Total tokens used: ", total_tokens_used)
-      
+
       # process response
       msg_resp <- messages(resp)
       entities <- readr::read_csv(msg_resp$content)
