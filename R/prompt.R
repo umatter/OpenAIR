@@ -47,9 +47,9 @@ prompt <-
 
     if (show==TRUE){
       # Open current chatlog
-      utils::View(chatlog(chatlog_id), 
+      utils::View(get_chatlog(chatlog_id), 
            title = paste0("Current chat (ID: ", chatlog_id, ")"))  
     }
     
-    return(chatlog(chatlog_id))
+    return(get_chatlog(chatlog_id))
   }

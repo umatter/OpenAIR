@@ -1,3 +1,4 @@
+#'@import methods
 
 # function definition
 print.chatlog <- function(x) {
