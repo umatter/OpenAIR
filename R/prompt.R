@@ -20,8 +20,8 @@
 prompt <- 
   function(x, text, show = FALSE) {
     
-    if (is.list(x)) {
-      chatlog_id <- unique(x$chatlog_id)
+    if (is_chatlog(x)) {
+      chatlog_id <- x$chatlog_id
     } else {
       chatlog_id <- x
     }
@@ -37,7 +37,7 @@ prompt <-
     # Get response from chat model
     resp <- 
       chatlog_id %>% 
-      chatlog() %>%  
+      get_chatlog() %>%  
       chat_completion()
     
     # update chatlog, add to response

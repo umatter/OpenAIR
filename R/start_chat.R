@@ -19,26 +19,15 @@
 #'@export
 start_chat <- function(initial_system_content = "You are a helpful assistant.", show=FALSE){
   
-  # get the basic msgs object
-  msgs <- initialize_messages(initial_system_content=initial_system_content)
-  
-  # initiate session log
-  chatlog_id <- paste0("chat_log_", format(Sys.time(), "%Y%m%d%H%M%S"))
-  msgs$chatlog_id <- chatlog_id # pass the id on
-  
-  # prepare chat environment
-  if (!exists(".ChatEnv", envir = .GlobalEnv)) {
-      .ChatEnv <- new.env(parent = .GlobalEnv)
-  }
-  assign(chatlog_id, msgs, envir=.ChatEnv)
+ cl <- set_chatlog(initial_system_content=initial_system_content)
   
   if (show==TRUE){
     # Open current chatlog
-    utils::View(get(chatlog_id, envir = .ChatEnv), 
-         title = paste0("Current chat (ID: ", chatlog_id, ")"))  
+    utils::View(cl@messages,
+                title = paste0("Current chat (ID: ",
+                               cl@chatlog_id,
+                               ")"))  
   }
 
-  
-  return(msgs)
-  
+  return(cl)
 }

@@ -2,7 +2,7 @@
 #'
 #' This function generates natural language text in a conversational style using the OpenAI API's chat endpoint.
 #'
-#' @param msgs A data.frame containing the chat history to generate text from.
+#' @param msgs A data.frame containing the chat history to generate text from or a chatlog object.
 #' @param model A character string specifying the ID of the model to use. 
 #'        The default value is "gpt-3.5-turbo".
 #' @param temperature An optional numeric scalar specifying the sampling temperature to use. 
@@ -48,8 +48,8 @@ chat_completion <- function(msgs, model = "gpt-3.5-turbo", temperature = NULL, m
   }
   
   # Check if part of a chat session
-  if ("chatlog_id" %in% names(msgs)){
-    chatlog_id <- msgs$chatlog_id
+  if (is_chatlog(msgs)){
+    chatlog_id <- msgs@chatlog_id
   } else {
     chatlog_id <- "No chat session id"
   }
