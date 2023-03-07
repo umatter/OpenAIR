@@ -21,9 +21,7 @@ messages <- function(response) {
   }
   # flatten
   message <- choices$message
-  message$finish_reason <- choices$finish_reason
-  message$index <- choices$index
-  
+
   # Return the choices
   return(message)
 }
