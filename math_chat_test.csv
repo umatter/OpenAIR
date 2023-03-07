@@ -1,0 +1,6 @@
+"","role","content","chatlog_id"
+"1","system","You are a helpful assistant.","chat_log_20230307150626"
+"2","user","Compute the square root of 8","chat_log_20230307150626"
+"3","assistant","The square root of 8 is approximately equal to 2.8284271247461903.","chat_log_20230307150626"
+"4","user","compute the same but for 16","chat_log_20230307150626"
+"5","assistant","The square root of 16 is exactly equal to 4.","chat_log_20230307150626"

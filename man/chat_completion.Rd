@@ -5,7 +5,7 @@
 \title{Generate text using the OpenAI API's chat endpoint}
 \usage{
 chat_completion(
-  messages,
+  msgs,
   model = "gpt-3.5-turbo",
   temperature = NULL,
   max_tokens = NULL,
@@ -21,7 +21,7 @@ chat_completion(
 )
 }
 \arguments{
-\item{messages}{A data.frame containing the chat history to generate text from.}
+\item{msgs}{A data.frame containing the chat history to generate text from.}
 
 \item{model}{A character string specifying the ID of the model to use. 
 The default value is "gpt-3.5-turbo".}
@@ -65,6 +65,6 @@ msgs_df <- data.frame(role=c("system",
                                 "Who won the world series in 2020?",
                                 "The Los Angeles Dodgers won the World Series in 2020.",
                                 "Where was it played?"))
-chat_completion(messages = msgs_df)
+chat_completion(msgs_df)
 }
 }
