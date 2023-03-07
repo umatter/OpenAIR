@@ -7,9 +7,9 @@
 add_to_chatlog(msgs, chatlog_id)
 }
 \arguments{
-\item{msgs}{The messages entry (1x2 data.frame with columns role and content)}
+\item{msgs}{a chatlog object}
 
-\item{chatlog_id}{The idof the log.}
+\item{chatlog_id}{The id of the chatlog object}
 }
 \value{
 The resulting environment with the added data.

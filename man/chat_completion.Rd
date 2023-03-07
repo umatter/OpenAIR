@@ -21,7 +21,7 @@ chat_completion(
 )
 }
 \arguments{
-\item{msgs}{A data.frame containing the chat history to generate text from.}
+\item{msgs}{A data.frame containing the chat history to generate text from or a chatlog object.}
 
 \item{model}{A character string specifying the ID of the model to use. 
 The default value is "gpt-3.5-turbo".}
