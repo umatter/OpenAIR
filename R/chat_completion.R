@@ -2,7 +2,7 @@
 #'
 #' This function generates natural language text in a conversational style using the OpenAI API's chat endpoint.
 #'
-#' @param messages A data.frame containing the chat history to generate text from.
+#' @param msgs A data.frame containing the chat history to generate text from.
 #' @param model A character string specifying the ID of the model to use. 
 #'        The default value is "gpt-3.5-turbo".
 #' @param temperature An optional numeric scalar specifying the sampling temperature to use. 
@@ -30,10 +30,10 @@
 #'                                 "Who won the world series in 2020?",
 #'                                 "The Los Angeles Dodgers won the World Series in 2020.",
 #'                                 "Where was it played?"))
-#' chat_completion(messages = msgs_df)
+#' chat_completion(msgs_df)
 #' }
 #' @export
-chat_completion <- function(messages, model = "gpt-3.5-turbo", temperature = NULL, max_tokens = NULL, n = NULL, stop = NULL,
+chat_completion <- function(msgs, model = "gpt-3.5-turbo", temperature = NULL, max_tokens = NULL, n = NULL, stop = NULL,
                           presence_penalty = NULL, frequency_penalty = NULL, best_of = NULL, logit_bias = NULL,
                           stream = FALSE, top_p = NULL, user = NULL) {
   # the relevant API endpoint
@@ -47,10 +47,17 @@ chat_completion <- function(messages, model = "gpt-3.5-turbo", temperature = NUL
     stop("API key is missing. Provide it as the 'api_key' argument or set it as the environment variable 'OPENAI_API_KEY'.")
   }
   
+  # Check if part of a chat session
+  if ("chatlog_id" %in% names(msgs)){
+    chatlog_id <- msgs$chatlog_id
+  } else {
+    chatlog_id <- "No chat session id"
+  }
+  
   # Construct API request payload
   payload <- list(
     model = model,
-    messages = messages
+    messages = msgs[,1:2]
   )
   
   if (!is.null(max_tokens)) {
@@ -98,8 +105,15 @@ chat_completion <- function(messages, model = "gpt-3.5-turbo", temperature = NUL
   # Parse, and return content to user
   if (!is.null(response)) {
     if (httr::http_status(response)$category == "Success") {
-      result <- jsonlite::fromJSON(httr::content(response, "text"), simplifyVector = TRUE)
+      
+      # parse response
+      result <- jsonlite::fromJSON(httr::content(response,
+                                                 "text",
+                                                 encoding = "UTF-8"),
+                                   simplifyVector = TRUE)
+      
       return(result)
+      
     } else {
       message("HTTP error ", httr::http_status(response)$status_code, ": ", httr::http_status(response)$reason)
     }
