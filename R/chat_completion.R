@@ -50,6 +50,7 @@ chat_completion <- function(msgs, model = "gpt-3.5-turbo", temperature = NULL, m
   # Check if part of a chat session
   if (is_chatlog(msgs)){
     chatlog_id <- msgs@chatlog_id
+    msgs <- msgs@messages
   } else {
     chatlog_id <- "No chat session id"
   }
@@ -57,7 +58,7 @@ chat_completion <- function(msgs, model = "gpt-3.5-turbo", temperature = NULL, m
   # Construct API request payload
   payload <- list(
     model = model,
-    messages = msgs[,1:2]
+    messages = msgs
   )
   
   if (!is.null(max_tokens)) {

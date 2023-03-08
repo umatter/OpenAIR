@@ -16,11 +16,7 @@ get_chatlog <- function(x) {
   }
   
   # Extract the choices from the response
-  clog <- get(chatlog_id, envir = .ChatEnv)
-  # Check if the choices are a list
-  if (!is.list(clog)) {
-    stop("Invalid response format. Choices must be a list object.")
-  }
+  clog <- get(chatlog_id, envir = .GlobalEnv)
 
   # Return the choices
   return(clog)

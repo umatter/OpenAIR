@@ -5,8 +5,8 @@
 #' the system to the user with the initial content "You are a helpful assistant.", but you can customize the content
 #' by specifying a different value for the "initial_system_content" parameter.
 #'
-#' @param initial_system_content A character string indicating the initial content of the system message.
-#' The default value is "You are a helpful assistant.".
+#' @param initial_role A character string representing the role issueing the initial content (per default: "system")
+#' @param initial_content A character string representing the initial message from the system
 #'
 #' @return A data frame containing a single message from the system to the user, with columns for the
 #' message role and content.
@@ -17,10 +17,10 @@
 #'
 #' @export
 
-initialize_messages <- function(initial_system_content = "You are a helpful assistant.") {
-  # Create a new data frame with the system message
-  messages <- data.frame(role = "system",
-                         content = initial_system_content)
+initialize_messages <- function(initial_role="system", initial_content = "You are a helpful assistant.") {
+  # Create a new data frame with the message
+  messages <- data.frame(role = initial_role,
+                         content = initial_content)
   
   # Return the resulting data frame
   return(messages)
