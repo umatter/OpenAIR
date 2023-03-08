@@ -9,6 +9,7 @@
 Integrate OpenAI's GPT models into your R workflows.
 
 
+
 ## Installation
 
 You can install the development version of OpenAIR from [GitHub](https://github.com/) with:
@@ -18,12 +19,25 @@ You can install the development version of OpenAIR from [GitHub](https://github.
 devtools::install_github("umatter/OpenAIR")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+To use the package, you'll need to have an OpenAI API key. You can sign up for an API key [here](https://beta.openai.com/signup/). Once you have your API key, you can start using *OpenAIR*:
 
 ``` r
-library(OpenAIR)
-## basic example code
+# load the package
+library("OpenAIR")
+
+# register your api key
+openai_api_key("YOUR-API-KEY"")
+
 ```
 
+Then, you can start chatting with the model:
+
+``` r
+
+chat("Write a 100 words essay on why OpenAIR, 
+an R package to integrate GPT models into your R workflows is fantastic. 
+Write it as if the late Steve Jobs would have written it.")
+
+```
