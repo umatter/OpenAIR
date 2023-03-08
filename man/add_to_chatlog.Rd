@@ -4,15 +4,15 @@
 \alias{add_to_chatlog}
 \title{Add data to a chat log}
 \usage{
-add_to_chatlog(msgs, chatlog_id)
+add_to_chatlog(msgs, chatlog_id = NULL)
 }
 \arguments{
-\item{msgs}{a chatlog object}
+\item{msgs}{a chatlog object or a data.frame}
 
 \item{chatlog_id}{The id of the chatlog object}
 }
 \value{
-The resulting environment with the added data.
+The current chatlog
 }
 \description{
 This function adds data to the in-memory chat log, which is in the global environment. The data

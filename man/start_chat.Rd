@@ -5,14 +5,20 @@
 \title{Start a new chat session}
 \usage{
 start_chat(
-  initial_system_content = "You are a helpful assistant.",
-  show = FALSE
+  initial_role = "system",
+  initial_content = "You are a helpful assistant.",
+  show = FALSE,
+  chatlog_id = NULL
 )
 }
 \arguments{
-\item{initial_system_content}{A character string indicating the initial content of the system message. The default value is "You are a helpful assistant.".}
+\item{initial_role}{A character string representing the role issueing the initial content (per default: "system")}
+
+\item{initial_content}{A character string representing the initial message from the system}
 
 \item{show}{Logical, if TRUE, the current chat log is displayed via View(). Default is FALSE.}
+
+\item{chatlog_id}{A character string representing the ID of this conversation. Per default, this will be set automatically.}
 }
 \value{
 A character string indicating the name of the log environment created for the chat session.

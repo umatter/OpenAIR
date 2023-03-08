@@ -4,11 +4,15 @@
 \alias{initialize_messages}
 \title{Initialize a new messages object for OpenAI API chat completions}
 \usage{
-initialize_messages(initial_system_content = "You are a helpful assistant.")
+initialize_messages(
+  initial_role = "system",
+  initial_content = "You are a helpful assistant."
+)
 }
 \arguments{
-\item{initial_system_content}{A character string indicating the initial content of the system message.
-The default value is "You are a helpful assistant.".}
+\item{initial_role}{A character string representing the role issueing the initial content (per default: "system")}
+
+\item{initial_content}{A character string representing the initial message from the system}
 }
 \value{
 A data frame containing a single message from the system to the user, with columns for the
