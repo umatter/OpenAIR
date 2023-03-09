@@ -1,5 +1,5 @@
 
-# OpenAIR
+# OpenAIR <a href="https://umatter.github.io/OpenAIR/"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
   <!-- badges: start -->
   [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
