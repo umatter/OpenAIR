@@ -6,8 +6,17 @@
 #' A character string.
 #' @source This essay was written by a language model trained by OpenAI.
 #'
-#' @examples
-#' data("trump")
-#' cat(trump)
-#'
 "trump"
+
+
+
+#' Input: message content template for extract_entities()
+#'
+#' This message content serves as user input for the extract_entities function.
+#'
+#' @format ## `extract_entities_input`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"extract_entities_input"
+
