@@ -43,7 +43,7 @@ chat_completion <- function(msgs, model = "gpt-3.5-turbo", temperature = NULL, m
   api_key <- Sys.getenv("OPENAI_API_KEY")
   
   # Check that API key is provided
-  if (is.null(api_key)) {
+  if (is.null(api_key) | api_key == "") {
     stop("API key is missing. Provide it as the 'api_key' argument or set it as the environment variable 'OPENAI_API_KEY'.")
   }
   
