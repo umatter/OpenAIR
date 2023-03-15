@@ -17,13 +17,13 @@
 
 read_text <- function(text) {
 
-  # Define callback function to compute number of tokens per batch
+  # read text (either from file or string)
     if(!file.exists(text)) {
-      fn <- text
+      fn <- "character string"
       # read the data, split into lines
       lines <- readr::read_lines(I(text))
     } else {
-      fn <- "character string"
+      fn <- text
       # read the data, split into lines
       lines <- readr::read_lines(text)
     }

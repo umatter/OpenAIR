@@ -20,3 +20,13 @@
 #'
 "extract_entities_input"
 
+
+#' Input: message content template for references_to_bibtex()
+#'
+#' This message content serves as user input for the references_to_bibtex function.
+#'
+#' @format ## `references_to_bibtex_input`
+#' A data frame with 4 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"references_to_bibtex_input"
