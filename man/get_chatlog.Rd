@@ -4,10 +4,10 @@
 \alias{get_chatlog}
 \title{Get the current chatlog}
 \usage{
-get_chatlog(x)
+get_chatlog(x = ".__CURRENTCHAT__")
 }
 \arguments{
-\item{x}{either a chatlog object r, or a character string representing the id of a chatlog.}
+\item{x}{either a chatlog object r, or a character string representing the id of a chatlog (the default is ".__CURRENTCHAT__", the current log of the chat()-function)}
 }
 \value{
 a chatlog object

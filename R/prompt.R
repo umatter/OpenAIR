@@ -21,7 +21,7 @@ prompt <-
   function(x, text, show = FALSE) {
     
     if (is_chatlog(x)) {
-      chatlog_id <- x$chatlog_id
+      chatlog_id <- x@chatlog_id
     } else {
       chatlog_id <- x
     }

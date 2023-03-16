@@ -42,6 +42,7 @@ chat <- function(message, chatlog_id = ".__CURRENTCHAT__", output="message_to_co
   
   # update chatlog
   resp %>% 
+    messages() %>%
     add_to_chatlog(chatlog_id)
   
   if (output=="message_to_console") {

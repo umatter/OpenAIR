@@ -2,11 +2,11 @@
 #'
 #' This function extracts the current chatlog of a given chat from the chat environment.
 #'
-#' @param x either a chatlog object r, or a character string representing the id of a chatlog.
+#' @param x either a chatlog object r, or a character string representing the id of a chatlog (the default is ".__CURRENTCHAT__", the current log of the chat()-function)
 #' @return a chatlog object
 #'
 #' @export
-get_chatlog <- function(x) {
+get_chatlog <- function(x=".__CURRENTCHAT__") {
 
   # verify type of input to extract chatlog (needs to be improved)
   if (is_chatlog(x)) {

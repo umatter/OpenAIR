@@ -25,7 +25,7 @@ extract_entities <- function(text, entity_types=c("locations", "persons", "organ
     # import, process text
     text <- 
       read_text(text)$text %>% 
-      paste0(collapse = "n")
+      paste0(collapse = "\n")
   } else {
     text <- 
       read_text_batches(text, batch_size = batch_size)  %>% 
@@ -38,23 +38,6 @@ extract_entities <- function(text, entity_types=c("locations", "persons", "organ
       # initial user input
       entity_types <- paste0(entity_types, collapse = ", ")
       extract_entities_input$content[2] <- sprintf(fmt = extract_entities_input$content[2], entity_types, text)
-      
-      # extract_entities_input <- data.frame(role=c("system", "user"),
-      #                          content=c("You extract entities of different types from a text.",
-      #                          "Please extract the following entities from the text below: %s .\n
-      #                          %s
-      #                          \n For each entity identified, indicate to which entity type it belongs and add a short description of the entity.
-      #                          Return all of this information in a CSV-file format with the three columns name, entity_type, and description. \n
-      #                          Thereby please place each CSV cell value in double quotes in order to make sure that the CSV can be parsed properly. Thanks!"))
-      # 
-      # # # initial user input
-      # user_input <- 
-      #   paste0("Please extract the following entities from the text below: ",
-      #          paste0(entity_types, collapse = ", "), ".\n") %>% 
-      #   paste(text) %>% 
-      #   paste("\n For each entity identified, indicate to which entity type it belongs and add a short description of the entity. 
-      #       Return all of this information in a CSV-file format with the three columns name, entity_type, and description")  %>% 
-      #   paste0("\n Thereby please place each CSV cell value in double quotes in order to make sure that the CSV can be parsed properly. Thanks!")
       
       # chat
       resp <- chat_completion(extract_entities_input)
