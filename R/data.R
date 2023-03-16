@@ -30,3 +30,15 @@
 #' @source Contributed by umatter
 #'
 "references_to_bibtex_input"
+
+
+
+#' Input: message content template for feedback()
+#'
+#' This message content serves as user input for the feedback function.
+#'
+#' @format ## `feedback_input`
+#' A data frame with 2 rows and 2 columns representing the message object in API calls.
+#' @source Contributed by jldc
+#'
+"feedback_input"
