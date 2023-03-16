@@ -7,14 +7,17 @@
 references_to_bibtex(references)
 }
 \arguments{
-\item{references}{A character string or file path to a file containing the plain text references to convert.}
+\item{references}{A character string or a file path to a file containing the plain text references to convert.}
 }
 \value{
-A character string containing the references in BibTeX format.
+A character string containing the references in BibTeX format. If a file path is provided, the function also writes the BibTeX entries to a .bib file in the same directory and returns the file path of the newly created .bib file.
 }
 \description{
-This function takes a character string or file path to plain text references and 
-converts them to BibTeX format.
+This function takes a character string or a file path to plain text references and
+converts them into BibTeX format. The function reads the input text, processes it, and
+returns a character string containing the references in BibTeX format. If a file path is
+provided, the function also writes the BibTeX entries to a .bib file in the same
+directory.
 }
 \examples{
 \dontrun{
@@ -24,6 +27,9 @@ Journal of Scientific Computing, 12, 45-67."
 references_to_bibtex(references)
 }
 }
+\seealso{
+\url{https://ctan.org/pkg/bibtex} for more information on BibTeX format
+}
 \author{
-Ulrich Matter <umatter@protonmail.com>
+Ulrich Matter umatter@protonmail.com
 }
