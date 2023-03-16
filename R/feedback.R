@@ -12,18 +12,11 @@
 #' @export
 feedback <- function(task, code) {
 
-  requireNamespace("dplyr", quietly = TRUE)
-
-  # TODO: Do we really need to transform to TidyText format?
-  code <-
-    read_text(code)$text %>%
-    paste0(collapse = "\n")
-
   results_list <-
-    lapply(code, FUN = function(x) {
+    mapply(FUN = function(code, task) {
 
       # Initial user input
-      feedback_input$content[2] <- 
+      feedback_input$content[2] <-
         sprintf(fmt = feedback_input$content[2], task, code)
 
       # Chat
@@ -35,8 +28,10 @@ feedback <- function(task, code) {
       msg_resp <- messages(resp)
       feedback <- readr::read_csv(msg_resp$content)
 
+      names(feedback) <- c("lines", "feedback")
+
       return(feedback)
-    })
+    }, code, task)
 
   # Stack results
   feedback_df <- dplyr::bind_rows(results_list)
