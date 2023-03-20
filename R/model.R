@@ -5,7 +5,7 @@
 #'
 #' @param response a list object representing the HTTP response
 #' @return a character string representing the model from the response
-#'
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' 
 #' 

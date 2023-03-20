@@ -5,6 +5,7 @@
 #'
 #' @param object An R object to check
 #' @return TRUE if the object is of class "chatlog", FALSE otherwise
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' @examples
 #' is_chatlog("Hello, World!")

@@ -31,3 +31,6 @@ extract_entities("path/to/text/file.txt",  batch_size = 100)
 }
 
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

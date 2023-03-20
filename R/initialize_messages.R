@@ -10,7 +10,7 @@
 #'
 #' @return A data frame containing a single message from the system to the user, with columns for the
 #' message role and content.
-#'
+#' @author Ulrich Matter umatter@protonmail.com
 #' @examples
 #' messages <- initialize_messages()
 #' messages_custom <- initialize_messages("Hello! How can I assist you today?")

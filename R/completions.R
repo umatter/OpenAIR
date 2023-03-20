@@ -20,7 +20,8 @@
 #' @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. 
 #'
 #' @return A character vector containing the generated text(s).
-#'
+#' @author Ulrich Matter umatter@protonmail.com
+#' 
 #' @examples
 #' \dontrun{
 #' openai_api_key("your_api_key_here")

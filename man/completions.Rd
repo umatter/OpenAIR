@@ -69,3 +69,6 @@ completions("Once upon a time,", n = 3)
 }
 
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

@@ -8,7 +8,7 @@
 #' @param batch_size An integer indicating the size of each batch, if the text input is supposed to be processed in batches. Set this to NULL to process all at once.
 #' 
 #' @return A tibble
-#' 
+#' @author Ulrich Matter umatter@protonmail.com
 #' @examples
 #'  \dontrun{
 #' extract_entities("Hello, how are you?")

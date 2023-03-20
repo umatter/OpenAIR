@@ -2,20 +2,30 @@
 % Please edit documentation in R/openai_api_key.R
 \name{openai_api_key}
 \alias{openai_api_key}
-\title{Set OpenAI API key as an environment variable}
+\title{Set OpenAI API Key as an Environment Variable}
 \usage{
 openai_api_key(api_key)
 }
 \arguments{
-\item{api_key}{character string containing the OpenAI API key.}
+\item{api_key}{A character string containing the OpenAI API key.}
 }
 \value{
 Nothing is returned; the function is called for its side effects.
 }
 \description{
 This function sets the OpenAI API key as an environment variable in the current R session.
+It takes the API key as an input and stores it as an environment variable, allowing other
+functions to access the key when needed.
 }
 \examples{
+\dontrun{
+# Set the OpenAI API key for the current R session
 openai_api_key("your_api_key_here")
-
+}
+}
+\seealso{
+\url{https://beta.openai.com/docs/} for more information on the OpenAI API.
+}
+\author{
+Ulrich Matter umatter@protonmail.com
 }

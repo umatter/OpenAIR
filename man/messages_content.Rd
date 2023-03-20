@@ -16,3 +16,6 @@ a character string representing the choices/messages from the response
 This function extracts the messages content from the HTTP response of an API call to the
 OpenAI chat completions endpoint.
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

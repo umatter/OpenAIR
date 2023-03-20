@@ -5,6 +5,7 @@
 #' @param text A character string containing the code or text content with '```' markers.
 #'
 #' @return A character string containing the extracted code or text content.
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' @examples
 #' code_text <- "```

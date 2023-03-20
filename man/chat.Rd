@@ -24,3 +24,6 @@ Depending on the value of the 'output' argument, this function returns one of th
 This function starts or continues a chat conversation and adds the user's message to the conversation.
 If the conversation does not exist, a new one will be initiated.
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

@@ -10,6 +10,7 @@
 #' * "message": the response text as a character vector.
 #' * "response_object": the full response object from the ChatGPT API.
 #'
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' 
 #' @examples

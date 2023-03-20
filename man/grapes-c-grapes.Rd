@@ -35,3 +35,6 @@ response_obj <- "Hello, ChatGPT!" \%c\% "response_object"
 print(response_obj)
 }
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

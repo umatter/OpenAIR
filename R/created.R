@@ -5,7 +5,8 @@
 #'
 #' @param response a list object representing the HTTP response
 #' @return a Date object representing the date-time string of when the response was created
-#'
+#' 
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' 
 #' 

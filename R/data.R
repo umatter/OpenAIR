@@ -30,3 +30,14 @@
 #' @source Contributed by umatter
 #'
 "references_to_bibtex_input"
+
+
+#' Input: message content template for add_roxygen()
+#'
+#' This message content serves as user input for the add_roxygen function.
+#'
+#' @format ## `add_roxygen`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"add_roxygen_input"

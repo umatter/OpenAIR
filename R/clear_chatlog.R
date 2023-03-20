@@ -6,6 +6,7 @@
 #' @param chatlog_id character string indicating the name of the chat log to clear.
 #'                   Default is ".__CURRENTCHAT__".
 #' @return This function does not return anything.
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' @examples
 #' \dontrun{

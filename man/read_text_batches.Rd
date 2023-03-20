@@ -25,3 +25,6 @@ data_path <- system.file("text", "lorem.txt", package = "OpenAIR")
 text_data <- read_text_batches(data_path)
 
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

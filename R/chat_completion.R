@@ -1,13 +1,15 @@
-#' Generate text using the OpenAI API's chat endpoint
+#' Generate Text Using the OpenAI API's Chat Endpoint
 #'
 #' This function generates natural language text in a conversational style using the OpenAI API's chat endpoint.
+#' It takes a series of chat messages as input, either as a data.frame or a chatlog object, and generates a text
+#' completion based on the conversation history and the specified model parameters.
 #'
 #' @param msgs A data.frame containing the chat history to generate text from or a chatlog object.
-#' @param model A character string specifying the ID of the model to use. 
-#'        The default value is "gpt-3.5-turbo".
-#' @param temperature An optional numeric scalar specifying the sampling temperature to use. 
-#' @param max_tokens An optional integer scalar specifying the maximum number of tokens to generate in the text. 
-#' @param n An optional integer scalar specifying the number of text completions to generate. 
+#' @param model A character string specifying the ID of the model to use.
+#' The default value is "gpt-3.5-turbo".
+#' @param temperature An optional numeric scalar specifying the sampling temperature to use.
+#' @param max_tokens An optional integer scalar specifying the maximum number of tokens to generate in the text.
+#' @param n An optional integer scalar specifying the number of text completions to generate.
 #' @param stop An optional character string or character vector specifying one or more stop sequences to use when generating the text.
 #' @param presence_penalty An optional numeric scalar specifying the presence penalty to use when generating the text. The default value is NULL.
 #' @param frequency_penalty An optional numeric scalar specifying the frequency penalty to use when generating the text. The default value is NULL.
@@ -15,21 +17,22 @@
 #' @param logit_bias An optional named numeric vector specifying the logit bias to use for each token in the generated text.
 #' @param stream An optional logical scalar specifying whether to use the streaming API. The default value is \code{FALSE}.
 #' @param top_p An optional numeric scalar specifying the top p sampling ratio. The default value is NULL.
-#' @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. 
+#' @param user A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.
 #'
 #' @return A character vector containing the generated text(s).
-#'
+#' @author Ulrich Matter umatter@protonmail.com
+#' @seealso \url{https://beta.openai.com/docs/} for more information on the OpenAI API.
 #' @examples
 #' \dontrun{
 #' openai_api_key("your_api_key_here")
-#' msgs_df <- data.frame(role=c("system", 
-#'                              "user",
-#'                              "assistant",
-#'                              "user"),
-#'                       content=c("You are a helpful assistant", 
-#'                                 "Who won the world series in 2020?",
-#'                                 "The Los Angeles Dodgers won the World Series in 2020.",
-#'                                 "Where was it played?"))
+#' msgs_df <- data.frame(role=c("system",
+#' "user",
+#' "assistant",
+#' "user"),
+#' content=c("You are a helpful assistant",
+#' "Who won the world series in 2020?",
+#' "The Los Angeles Dodgers won the World Series in 2020.",
+#' "Where was it played?"))
 #' chat_completion(msgs_df)
 #' }
 #' @export

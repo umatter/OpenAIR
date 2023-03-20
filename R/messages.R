@@ -5,7 +5,7 @@
 #'
 #' @param response a list object representing the HTTP response
 #' @return a dataframe representing the choices/messages from the response
-#'
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 messages <- function(response) {
   # Check if the response is a list

@@ -16,3 +16,6 @@ a dataframe representing the choices/messages from the response
 This function extracts the choices/messages from the HTTP response of an API call to the
 OpenAI chat completions endpoint.
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

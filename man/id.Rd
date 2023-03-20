@@ -16,3 +16,6 @@ a character string representing the ID from the response
 This function extracts the ID from the parsed HTTP response of an API call to the
 OpenAI chat completions endpoint.
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

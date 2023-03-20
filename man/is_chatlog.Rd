@@ -23,3 +23,6 @@ chat <- new("chatlog")
 is_chatlog(chat)
 # [1] TRUE
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}
