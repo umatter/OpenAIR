@@ -4,3 +4,4 @@
 .Ruserdata
 docs
 tests/_notes.R
+inst/text/func.R
