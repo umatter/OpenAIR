@@ -13,14 +13,14 @@
 #' but with a .csv extension.
 #'
 #' @examples
-#' 
+#' \dontrun{
 #' json_string <- '{"employees":[
 #' { "firstName":"John", "lastName":"Doe" },
 #' { "firstName":"Anna", "lastName":"Smith" },
 #' { "firstName":"Peter", "lastName":"Jones" }
 #' ]}'
 #' json_to_csv(json_string)
-#' 
+#' }
 #' @export
 json_to_csv <- function(file) {
   

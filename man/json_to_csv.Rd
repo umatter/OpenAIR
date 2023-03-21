@@ -22,12 +22,12 @@ the output will be printed to the console. Otherwise, a CSV file will be
 generated with the same name as the input file but with a .csv extension.
 }
 \examples{
-
+\dontrun{
 json_string <- '{"employees":[
 { "firstName":"John", "lastName":"Doe" },
 { "firstName":"Anna", "lastName":"Smith" },
 { "firstName":"Peter", "lastName":"Jones" }
 ]}'
 json_to_csv(json_string)
-
+}
 }
