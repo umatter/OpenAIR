@@ -1,13 +1,13 @@
-#' Add Roxygen2 Documentation to R Function
+#' Add Roxygen2 documentation to an R function
+#'
+#' This function adds Roxygen2 documentation to an R function.
+#'
+#' @param file A character string indicating the path to the file containing the R function.
 #' 
-#' This function reads in an R file, adds Roxygen2 documentation using chat input, and outputs the processed R file with Roxygen2 documentation.
-#' 
-#' @param file character string with the name of the R file to process
-#' @return NULL
+#' @return If the path provided is a character string, this function returns the documented function in a 
+#' message to the console. If the Roxygen2 documentation was added successfully, this function returns a message indicating 
+#' that documentation was added to the file.
 #' @author Ulrich Matter umatter@protonmail.com
-#' @examples
-#' add_roxygen("myRfile.R")
-#' 
 #' 
 #' @export
 add_roxygen <- function(file) {
@@ -17,34 +17,36 @@ add_roxygen <- function(file) {
   text <- 
     r_function$text %>% 
     paste0(collapse = "\n")
-  
+
   # initial user input
   input <- add_roxygen_input
-  n_msgs <- nrow(add_roxygen_input)
+  n_msgs <- nrow(input)
   input$content[n_msgs] <- 
     sprintf(fmt = input$content[n_msgs], text)
-  
+
   # chat
   resp <- chat_completion(input)
   total_tokens_used <- usage(resp)$total_tokens
   message("Total tokens used: ", total_tokens_used)
-  
-  # extract output
+
+  # extract roxygen2 documentation
   output <- 
     resp %>% 
-    messages_content()
+    messages_content() %>% 
+    extract_roxygen2()
+  
 
-  # Return the processed r_function with Roxygen2 documentation
   filename <- unique(r_function$file)
   if (filename == "character string") {
     message(output)
     return(output)
     
   } else {
-    cat(output, file=filename)
+    rfunc <- readLines(filename)
+    rfunc_documented <- c(output, rfunc)
+    cat(output, file = filename)
     message("Added documentation to ", filename)
-    return(NULL)
-    
+
   }
-  
+
 }
