@@ -22,6 +22,7 @@ If the input is a CSV file, the function also writes the tidied data to a new CS
 with the same name and path as the input file but with a "-tidy.csv" suffix.
 }
 \examples{
+\dontrun{
 # Create a data.frame with air data
 air_data <- data.frame(
   Time = c("2021-01-01", "2021-01-02", "2021-01-03"),
@@ -33,6 +34,7 @@ air_data <- data.frame(
 # Process the data.frame using tidyair
 tidied_data <- tidyair(air_data)
 print(tidied_data)
+}
 }
 \author{
 Ulrich Matter umatter@protonmail.com
