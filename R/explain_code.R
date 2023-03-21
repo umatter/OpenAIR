@@ -1,10 +1,15 @@
-#' Explain a Piece of R Code
+#' Explain Code using OpenAI's chat_completion function
 #'
-#' TODO: FUNCTION_DESCRIPTION
+#' This function takes a code as input and uses OpenAI's chat_completion
+#' function to generate an explanation for the code.
 #'
-#' @param code A character string containing the R code to be processed.
+#' @param code A character string that represents the code that the user wants
+#' to explain.
 #'
-#' @return NULL 
+#' @return NULL
+#'
+#' @examples
+#' explain_code("for(i in 1:10) { print(i) }")
 #'
 #' @export
 explain_code <- function(code) {

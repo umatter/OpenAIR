@@ -2,13 +2,19 @@
 % Please edit documentation in R/explain_code.R
 \name{explain_code}
 \alias{explain_code}
-\title{Explain a Piece of R Code}
+\title{Explain Code using OpenAI's chat_completion function}
 \usage{
 explain_code(code)
 }
 \arguments{
-\item{code}{A character string containing the R code to be processed.}
+\item{code}{A character string that represents the code that the user wants
+to explain.}
 }
 \description{
-TODO: FUNCTION_DESCRIPTION
+This function takes a code as input and uses OpenAI's chat_completion
+function to generate an explanation for the code.
+}
+\examples{
+explain_code("for(i in 1:10) { print(i) }")
+
 }
