@@ -9,26 +9,26 @@ if (!nchar(Sys.getenv("OPENAI_API_KEY")) == 0) {
     test_that("add_roxygen returns NULL for valid input", {
       # Create a test file
       test_file <- tempfile(fileext = ".R")
-      write("test_function <- function(x) { x + 1 }", test_file)
+      write("test_function <- function(x) { x + 1 }\n", test_file)
       
       # Test function
       result <- add_roxygen(test_file)
       
       # Check result
-      expect_is(result, "NULL")
+      expect_type(result, "NULL")
     })
     
     # Test that function adds Roxygen2 documentation to a file
     test_that("add_roxygen adds Roxygen2 documentation to a file", {
       # Create a test file
       test_file <- tempfile(fileext = ".R")
-      write("test_function <- function(x) { x + 1 }", test_file)
+      write("test_function <- function(x) { x + 1 } \n", test_file)
       
       # Test function
       add_roxygen(test_file)
       
       # Check that file now contains Roxygen2 documentation
-      expect_true(readLines(test_file)[1] == "#' test_function\n#' \n#' @param x\n#' @return\n#' @export\ntest_function <- function(x) { x + 1 }")
+      expect_true(contains_roxygen2_doc(test_file))
     })
     
     # Test that function throws an error for invalid input

@@ -15,7 +15,7 @@ if (!nchar(Sys.getenv("OPENAI_API_KEY")) == 0) {
       result <- write_test(test_file)
       
       # Check result
-      expect_is(result, "NULL")
+      expect_type(result, "character")
     })
     
     # Test that function writes Roxygen2 documentation to a file
@@ -25,10 +25,10 @@ if (!nchar(Sys.getenv("OPENAI_API_KEY")) == 0) {
       write("test_function <- function(x) { x + 1 }", test_file)
       
       # Test function
-      write_test(test_file)
+      fpath <- write_test(test_file)
       
       # Check that test file now exists 
-      expect_true(file.exists(file_path_sans_ext(test_file) %s+% "-test.R"))
+      expect_true(file.exists(fpath))
     })
     
     # Test that function throws an error for invalid input
