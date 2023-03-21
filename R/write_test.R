@@ -1,17 +1,23 @@
-#' Write Test 
+#' Write test for an R function
 #'
-#' Writes a test file with Roxygen2 documentation 
-#'
-#' @param file A file to test documentation for
-#'
-#' @return The processed r_function with the Roxygen2 documentation 
-#'
-#' @author Ulrich Matter umatter@protonmail.com
+#' This function reads an R function from a file and generates a test file with documentation. 
+#' 
+#' @param file The file path of the R function.
+#' 
+#' @return If the input is a character string, the function returns the generated output without creating a test file. Otherwise, it creates a test file and returns the file name.
+#' 
+#' @examples 
+#' \dontrun{
+#' # Write test for an R function
+#' write_test("path/to/file.R")
+#' }
+#' 
+#' @importFrom readr read_text
+#' @importFrom dplyr nrow
+#' @importFrom utils stop
+#' @importFrom chatr chat_completion usage messages_content
+#' 
 #' @export
-#' @examples
-#' write_test("inst/text/func.R")
-#' 
-#' 
 
 write_test <- function(file) {
   
@@ -22,6 +28,11 @@ write_test <- function(file) {
   text <- 
     r_function$text %>% 
     paste0(collapse = "\n")
+  
+  # Make sure intput is an R function
+  if (!contains_r_func(text) | nchar(text)==0){
+    stop("The input does not contain a valid R function.")
+  }
 
   # Create user input 
   input <- write_test_input
@@ -52,7 +63,7 @@ write_test <- function(file) {
     filename <- paste0(replace_file_extension(filename, ""), "-test.R")
     cat(output, file=filename)
     message("Added documentation to ", filename)
-    return(NULL)
+    return(filename)
     
   }
   

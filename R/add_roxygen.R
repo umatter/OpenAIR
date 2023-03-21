@@ -17,6 +17,11 @@ add_roxygen <- function(file) {
   text <- 
     r_function$text %>% 
     paste0(collapse = "\n")
+  
+  # Make sure intput is an R function
+  if (!contains_r_func(text) | nchar(text)==0){
+    stop("The input does not contain a valid R function.")
+  }
 
   # initial user input
   input <- add_roxygen_input
@@ -35,7 +40,7 @@ add_roxygen <- function(file) {
     messages_content() %>% 
     extract_roxygen2()
   
-
+  # prepare output
   filename <- unique(r_function$file)
   if (filename == "character string") {
     message(output)
@@ -44,6 +49,7 @@ add_roxygen <- function(file) {
   } else {
     rfunc <- readLines(filename)
     rfunc_documented <- c(output, rfunc)
+    output <- paste0(rfunc_documented, collapse="\n")
     cat(output, file = filename)
     message("Added documentation to ", filename)
 
