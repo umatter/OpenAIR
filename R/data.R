@@ -36,8 +36,32 @@
 #'
 #' This message content serves as user input for the add_roxygen function.
 #'
-#' @format ## `add_roxygen`
+#' @format ## `add_roxygen_input`
 #' A data frame with 2 rows and 2 columns representing the messages object in API calls.
 #' @source Contributed by umatter
 #'
 "add_roxygen_input"
+
+
+#' Input: message content template for write_test()
+#'
+#' This message content serves as user input for the write_test function.
+#'
+#' @format ## `write_test_input`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"write_test_input"
+
+
+#' Input: message content template for json_to_csv()
+#'
+#' This message content serves as user input for the json_to_csv function.
+#'
+#' @format ## `json_to_csv_input`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"json_to_csv_input"
+
+
