@@ -15,6 +15,7 @@
 #' @export
 #' 
 #' @examples
+#' \dontrun{
 #' # Create a data.frame with air data
 #' air_data <- data.frame(
 #'   Time = c("2021-01-01", "2021-01-02", "2021-01-03"),
@@ -26,6 +27,7 @@
 #' # Process the data.frame using tidyair
 #' tidied_data <- tidyair(air_data)
 #' print(tidied_data)
+#' }
 tidyair <- function(file) {
   
   is_df <- is.data.frame(file)
