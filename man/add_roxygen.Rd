@@ -2,20 +2,20 @@
 % Please edit documentation in R/add_roxygen.R
 \name{add_roxygen}
 \alias{add_roxygen}
-\title{Add Roxygen2 Documentation to R Function}
+\title{Add Roxygen2 documentation to an R function}
 \usage{
 add_roxygen(file)
 }
 \arguments{
-\item{file}{character string with the name of the R file to process}
+\item{file}{A character string indicating the path to the file containing the R function.}
+}
+\value{
+If the path provided is a character string, this function returns the documented function in a 
+message to the console. If the Roxygen2 documentation was added successfully, this function returns a message indicating 
+that documentation was added to the file.
 }
 \description{
-This function reads in an R file, adds Roxygen2 documentation using chat input, and outputs the processed R file with Roxygen2 documentation.
-}
-\examples{
-add_roxygen("myRfile.R")
-
-
+This function adds Roxygen2 documentation to an R function.
 }
 \author{
 Ulrich Matter umatter@protonmail.com
