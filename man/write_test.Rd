@@ -2,24 +2,24 @@
 % Please edit documentation in R/write_test.R
 \name{write_test}
 \alias{write_test}
-\title{Write Test}
+\title{Write test for an R function}
 \usage{
 write_test(file)
 }
 \arguments{
-\item{file}{A file to test documentation for}
+\item{file}{The file path of the R function.}
 }
 \value{
-The processed r_function with the Roxygen2 documentation
+If the input is a character string, the function returns the generated output without creating a test file. Otherwise, it creates a test file and returns the file name.
 }
 \description{
-Writes a test file with Roxygen2 documentation
+This function reads an R function from a file and generates a test file with documentation.
 }
 \examples{
-write_test("inst/text/func.R")
-
-
+\dontrun{
+# Write test for an R function
+write_test("path/to/file.R")
 }
-\author{
-Ulrich Matter umatter@protonmail.com
+
+
 }
