@@ -80,3 +80,7 @@ resp
 ```
 [1] "XC-aujnapoqMP"
 ```
+
+## Code of Conduct
+
+For information about our code of conduct, please see the [Code of Conduct](CODE_OF_CONDUCT.md) page.

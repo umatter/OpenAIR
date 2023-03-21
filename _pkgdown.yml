@@ -1,4 +1,4 @@
-url: https://umatter.github.io/OpenAIR/
+url: https://openai-r.org 
 
 template:
   bootstrap: 5
@@ -11,5 +11,12 @@ template:
 authors:
   Ulrich Matter:
     href: "http://umatter.github.io"
+  Jonathan Chassot:
+    href: "http://www.jldc.ch"
 
+
+menu: 
+  - text: Code of Conduct
+    href: "CODE_OF_CONDUCT.md"
+  
 
