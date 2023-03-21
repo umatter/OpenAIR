@@ -9,17 +9,18 @@
 #'   string containing the text to be checked for an R function definition.
 #' @return A logical value (TRUE or FALSE) indicating whether the input
 #'   contains a valid R function definition.
+#' @export
 #' @examples
 #' # Create a temporary file with an R function definition
 #' temp_file <- tempfile(fileext = ".R")
 #' writeLines("example_function <- function(x) {\n  return(x * 2)\n}", temp_file)
 #'
 #' # Check if the temporary file contains an R function definition
-#' result <- contains_r_function(temp_file)
+#' result <- contains_r_func(temp_file)
 #' print(result) # Should print TRUE
 #'
 #' # Check if a character string contains an R function definition
-#' result <- contains_r_function("example_function <- function(x) { return(x * 2) }")
+#' result <- contains_r_func("example_function <- function(x) { return(x * 2) }")
 #' print(result) # Should print TRUE
 #'
 #' # Remove the temporary file

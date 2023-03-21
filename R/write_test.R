@@ -12,10 +12,6 @@
 #' write_test("path/to/file.R")
 #' }
 #' 
-#' @importFrom readr read_text
-#' @importFrom dplyr nrow
-#' @importFrom utils stop
-#' @importFrom chatr chat_completion usage messages_content
 #' 
 #' @export
 
