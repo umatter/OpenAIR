@@ -28,6 +28,7 @@
 #' tidied_data <- tidyair(air_data)
 #' print(tidied_data)
 #' }
+#' 
 tidyair <- function(file) {
   
   is_df <- is.data.frame(file)
