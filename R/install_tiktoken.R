@@ -9,7 +9,6 @@
 #'        or "auto" (default) to let reticulate automatically manage the environment.
 #'
 #' @importFrom reticulate py_install
-#' @export
 install_tiktoken <- function(method = "auto", conda = "auto") {
   reticulate::py_install("tiktoken", method = method, conda = conda)
 }

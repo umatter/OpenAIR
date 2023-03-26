@@ -16,7 +16,8 @@ Suggests:
     tidyr,
     dplyr,
     lubridate,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    utils
 Config/testthat/edition: 3
 Config/reticulate:
   list(
@@ -27,7 +28,6 @@ Config/reticulate:
 Imports:
     reticulate,
     magrittr,
-    readr,
     tibble,
     methods
 URL: https://umatter.github.io/OpenAIR/

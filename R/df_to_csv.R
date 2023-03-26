@@ -23,12 +23,14 @@
 #' cat(csv_string)
 df_to_csv <- function(df) {
   
+  requireNamespace("utils", quietly = TRUE)
+  
   if (!is.data.frame(df)){
     stop("df must be an object of class data.frame")
   }
   # Convert the data.frame to a CSV-formatted character string using write.csv
   output <- tempfile(fileext = ".csv")
-  write.csv(df, file = output, row.names = FALSE)
+  utils::write.csv(df, file = output, row.names = FALSE)
   
   # Read the CSV file content and store it in a character string
   csv_string <- paste(readLines(output), collapse = "\n")

@@ -28,7 +28,7 @@ if (!nchar(Sys.getenv("OPENAI_API_KEY")) == 0) {
       add_roxygen(test_file)
       
       # Check that file now contains Roxygen2 documentation
-      expect_true(contains_roxygen2_doc(test_file))
+      expect_true(contains_roxygen(test_file))
     })
     
     # Test that function throws an error for invalid input

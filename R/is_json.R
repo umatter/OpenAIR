@@ -17,13 +17,14 @@
 #' # FALSE
 #' @export
 is_json <- function(input_string) {
+  
   if (!is.character(input_string)) {
     warning("Input is not a character string.")
     return(FALSE)
   }
   
   if (nchar(input_string) == 0) {
-    warning("Empty string provided.")
+    message("Empty string provided.")
     return(FALSE)
   }
   

@@ -9,23 +9,7 @@
 #' @return A logical value (TRUE or FALSE) indicating whether the input
 #'   contains Roxygen2 documentation.
 #' @export
-#' @examples
-#' # Create a temporary file with Roxygen2 documentation
-#' temp_file <- tempfile(fileext = ".R")
-#' roxygen2_doc <- "#' This is an example function\n#' @param x A numeric value\nexample_function <- function(x) {\n  return(x * 2)\n}"
-#' writeLines(roxygen2_doc, temp_file)
-#'
-#' # Check if the temporary file contains Roxygen2 documentation
-#' result <- contains_roxygen2_doc(input = temp_file)
-#' print(result) # Should print TRUE
-#'
-#' # Check if a character string contains Roxygen2 documentation
-#' result <- contains_roxygen2_doc(input = roxygen2_doc)
-#' print(result) # Should print TRUE
-#'
-#' # Remove the temporary file
-#' file.remove(temp_file)
-contains_roxygen2_doc <- function(input) {
+contains_roxygen <- function(input) {
   # Check if the input is a file path or a character string
   is_file <- file.exists(input)
   
