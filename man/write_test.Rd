@@ -21,5 +21,4 @@ This function reads an R function from a file and generates a test file with doc
 write_test("path/to/file.R")
 }
 
-
 }
