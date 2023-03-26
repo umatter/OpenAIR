@@ -34,7 +34,7 @@ regenerate <- function(chatlog_id = ".__CURRENTCHAT__", output="message_to_conso
   }
   
   # check if chat is ongoing
-    if (!exists(chatlog_id, envir = .GlobalEnv)){
+    if (!exists(chatlog_id, envir = OpenAIR_env)){
       stop("No chatlog found. Please start a new chat with chat() first.")
     } else {
       # fetch current chat status
@@ -43,7 +43,7 @@ regenerate <- function(chatlog_id = ".__CURRENTCHAT__", output="message_to_conso
   
   # remove last chatlog entry
   cl@messages <- cl@messages[-nrow(cl@messages),]
-  assign(chatlog_id, cl, envir = .GlobalEnv)
+  assign(chatlog_id, cl, envir = OpenAIR_env)
   
   # regenerate
   resp <- chat_completion(cl)

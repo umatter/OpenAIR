@@ -18,7 +18,7 @@ get_chatlog <- function(x=".__CURRENTCHAT__") {
   }
   
   # Extract the choices from the response
-  clog <- get(chatlog_id, envir = .GlobalEnv)
+  clog <- get(chatlog_id, envir = OpenAIR_env)
 
   # Return the choices
   return(clog)

@@ -35,7 +35,7 @@ add_to_chatlog <- function(msgs, chatlog_id=NULL) {
     # update the chatlog
     current@messages <- dplyr::bind_rows(current@messages,
                                               msgs)
-    assign(chatlog_id, current, envir = .GlobalEnv)
+    assign(chatlog_id, current, envir = OpenAIR_env)
     
     return(current)
     
@@ -48,7 +48,7 @@ add_to_chatlog <- function(msgs, chatlog_id=NULL) {
     # update the chatlog
     current@messages <- dplyr::bind_rows(current@messages,
                                               msgs@messages)
-    assign(chatlog_id, current, envir = .GlobalEnv)
+    assign(chatlog_id, current, envir = OpenAIR_env)
     
     return(current)
     

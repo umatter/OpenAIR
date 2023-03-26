@@ -43,7 +43,6 @@ references_to_bibtex <- function(references) {
     resp %>% 
     messages_content() %>% 
     clean_output() 
-  
 
   # Return the processed references as BibTeX entries
   filename <- unique(references$file)

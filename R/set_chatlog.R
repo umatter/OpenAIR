@@ -28,7 +28,7 @@ set_chatlog <- function(initial_role="system", initial_content = "You are a help
                  chatlog_id = chatlog_id)
   
   # Prepare chat environment, store chatlog object there
-  assign(chatlog_id, chatlog, envir=.GlobalEnv)
+  assign(chatlog_id, chatlog, envir=OpenAIR_env)
   
   return(chatlog)
   

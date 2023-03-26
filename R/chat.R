@@ -24,7 +24,7 @@ chat <- function(message, chatlog_id = ".__CURRENTCHAT__", output="message_to_co
   
   # check if chat is ongoing
   # if not, initiate new chat
-    if (!exists(chatlog_id, envir = .GlobalEnv)){
+    if (!exists(chatlog_id, envir = OpenAIR_env)){
       # initialize chatlog
       cl <- start_chat(chatlog_id=chatlog_id)
     
