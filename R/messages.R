@@ -1,20 +1,38 @@
-#' Extract choices/messages from OpenAI API response
+#' Extract messages from a response object or a chatlog object
 #'
-#' This function extracts the choices/messages from the HTTP response of an API call to the
-#' OpenAI chat completions endpoint.
+#' This function takes a response object or a chatlog object as input and
+#' returns the messages. If the input is a response object, the function
+#' extracts and returns the messages from the choices. If the input is a
+#' chatlog object, the function returns the messages directly.
 #'
-#' @param response a list object representing the HTTP response
-#' @return a dataframe representing the choices/messages from the response
-#' @author Ulrich Matter umatter@protonmail.com
+#' @param x A list representing a response object or a chatlog object
+#' @return A data.frame containing the messages
 #' @export
-messages <- function(response) {
-  # Check if the response is a list
-  if (!is.list(response)) {
-    stop("Invalid response format. Expected list object.")
+#' @examples
+#' \dontrun{
+#' # Using a response object
+#' response <- list(choices = list(message = "This is a message."))
+#' messages_from_response <- messages(response)
+#' print(messages_from_response)
+#'
+#' # Using a chatlog object
+#' chatlog_id <- chat("Hello, how are you?")
+#' chatlog <- get_chatlog(chatlog_id)
+#' messages_from_chatlog <- messages(chatlog)
+#' print(messages_from_chatlog)
+#' }
+messages <- function(x) {
+  # Check input format
+  if (!is.list(x) & !is_chatlog(x)) {
+    stop("Invalid parameter value. Expecting list or chatlog object.")
   }
   
-  # Extract the choices from the response
-  choices <- response$choices
+  if (is_chatlog(x)) {
+    return(x@messages)
+  }
+  
+  # Extract the choices from the x
+  choices <- x$choices
   # Check if the choices are a list
   if (!is.list(choices)) {
     stop("Invalid response format. Choices must be a list object.")
