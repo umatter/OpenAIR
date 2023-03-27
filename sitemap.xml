@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://umatter.github.io/OpenAIR/404.html</loc>
+    <loc>https://openair-lib.org/404.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/LICENSE-text.html</loc>
+    <loc>https://openair-lib.org/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/LICENSE.html</loc>
+    <loc>https://openair-lib.org/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/authors.html</loc>
+    <loc>https://openair-lib.org/authors.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/index.html</loc>
+    <loc>https://openair-lib.org/index.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/add_roxygen.html</loc>
+    <loc>https://openair-lib.org/reference/add_roxygen.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/add_roxygen_input.html</loc>
+    <loc>https://openair-lib.org/reference/add_roxygen_input.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/add_to_chatlog.html</loc>
+    <loc>https://openair-lib.org/reference/add_to_chatlog.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/chat.html</loc>
+    <loc>https://openair-lib.org/reference/chat.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/chat_completion.html</loc>
+    <loc>https://openair-lib.org/reference/chat_completion.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/chatlog-class.html</loc>
+    <loc>https://openair-lib.org/reference/chatlog-class.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/clean_output.html</loc>
+    <loc>https://openair-lib.org/reference/clean_output.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/clear_chatlog.html</loc>
+    <loc>https://openair-lib.org/reference/clear_chatlog.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/contains_r_func.html</loc>
+    <loc>https://openair-lib.org/reference/contains_r_func.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/contains_roxygen.html</loc>
+    <loc>https://openair-lib.org/reference/contains_roxygen.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/created.html</loc>
+    <loc>https://openair-lib.org/reference/created.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/df_to_csv.html</loc>
+    <loc>https://openair-lib.org/reference/df_to_csv.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/extract_entities.html</loc>
+    <loc>https://openair-lib.org/reference/extract_entities.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/extract_entities_input.html</loc>
+    <loc>https://openair-lib.org/reference/extract_entities_input.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/extract_roxygen2.html</loc>
+    <loc>https://openair-lib.org/reference/extract_roxygen2.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/get_chatlog.html</loc>
+    <loc>https://openair-lib.org/reference/get_chatlog.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/grapes-c-grapes.html</loc>
+    <loc>https://openair-lib.org/reference/grapes-c-grapes.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/id.html</loc>
+    <loc>https://openair-lib.org/reference/id.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/index.html</loc>
+    <loc>https://openair-lib.org/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/initialize_messages.html</loc>
+    <loc>https://openair-lib.org/reference/initialize_messages.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/install_tiktoken.html</loc>
+    <loc>https://openair-lib.org/reference/install_tiktoken.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/is_chatlog.html</loc>
+    <loc>https://openair-lib.org/reference/is_chatlog.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/is_json.html</loc>
+    <loc>https://openair-lib.org/reference/is_json.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/messages.html</loc>
+    <loc>https://openair-lib.org/reference/messages.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/messages_content.html</loc>
+    <loc>https://openair-lib.org/reference/messages_content.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/model.html</loc>
+    <loc>https://openair-lib.org/reference/model.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/num_tokens.html</loc>
+    <loc>https://openair-lib.org/reference/num_tokens.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/num_tokens_file.html</loc>
+    <loc>https://openair-lib.org/reference/num_tokens_file.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/object.html</loc>
+    <loc>https://openair-lib.org/reference/object.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/openai_api_key.html</loc>
+    <loc>https://openair-lib.org/reference/openai_api_key.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/pipe.html</loc>
+    <loc>https://openair-lib.org/reference/pipe.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/read_text.html</loc>
+    <loc>https://openair-lib.org/reference/read_text.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/read_text_batches.html</loc>
+    <loc>https://openair-lib.org/reference/read_text_batches.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/references_to_bibtex.html</loc>
+    <loc>https://openair-lib.org/reference/references_to_bibtex.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/references_to_bibtex_input.html</loc>
+    <loc>https://openair-lib.org/reference/references_to_bibtex_input.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/regenerate.html</loc>
+    <loc>https://openair-lib.org/reference/regenerate.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/replace_file_extension.html</loc>
+    <loc>https://openair-lib.org/reference/replace_file_extension.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/set_chatlog.html</loc>
+    <loc>https://openair-lib.org/reference/set_chatlog.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/start_chat.html</loc>
+    <loc>https://openair-lib.org/reference/start_chat.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/trump.html</loc>
+    <loc>https://openair-lib.org/reference/trump.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/usage.html</loc>
+    <loc>https://openair-lib.org/reference/usage.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/write_test.html</loc>
+    <loc>https://openair-lib.org/reference/write_test.html</loc>
   </url>
   <url>
-    <loc>https://umatter.github.io/OpenAIR/reference/write_test_input.html</loc>
+    <loc>https://openair-lib.org/reference/write_test_input.html</loc>
   </url>
 </urlset>
