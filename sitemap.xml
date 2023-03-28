@@ -19,7 +19,7 @@
     <loc>https://openair-lib.org/reference/add_roxygen.html</loc>
   </url>
   <url>
-    <loc>https://openair-lib.org/reference/add_roxygen_input.html</loc>
+    <loc>https://openair-lib.org/reference/add_roxygen_prompt.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/add_to_chatlog.html</loc>
@@ -55,7 +55,7 @@
     <loc>https://openair-lib.org/reference/extract_entities.html</loc>
   </url>
   <url>
-    <loc>https://openair-lib.org/reference/extract_entities_input.html</loc>
+    <loc>https://openair-lib.org/reference/extract_entities_prompt.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/extract_roxygen2.html</loc>
@@ -118,7 +118,7 @@
     <loc>https://openair-lib.org/reference/references_to_bibtex.html</loc>
   </url>
   <url>
-    <loc>https://openair-lib.org/reference/references_to_bibtex_input.html</loc>
+    <loc>https://openair-lib.org/reference/references_to_bibtex_prompt.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/regenerate.html</loc>
@@ -142,6 +142,6 @@
     <loc>https://openair-lib.org/reference/write_test.html</loc>
   </url>
   <url>
-    <loc>https://openair-lib.org/reference/write_test_input.html</loc>
+    <loc>https://openair-lib.org/reference/write_test_prompt.html</loc>
   </url>
 </urlset>
