@@ -29,7 +29,8 @@ Imports:
     reticulate,
     magrittr,
     tibble,
-    methods
+    methods,
+    xml2
 URL: https://umatter.github.io/OpenAIR/
 InstData: yes
 Depends: 
