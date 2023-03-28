@@ -24,12 +24,12 @@ add_roxygen <- function(file) {
   }
 
   # initial user input
-  n_msgs <- nrow(add_roxygen_input)
-  add_roxygen_input$content[n_msgs] <- 
-    sprintf(fmt = add_roxygen_input$content[n_msgs], text)
+  n_msgs <- nrow(add_roxygen_prompt)
+  add_roxygen_prompt$content[n_msgs] <- 
+    sprintf(fmt = add_roxygen_prompt$content[n_msgs], text)
 
   # chat
-  resp <- chat_completion(add_roxygen_input)
+  resp <- chat_completion(add_roxygen_prompt)
   total_tokens_used <- usage(resp)$total_tokens
   message("Total tokens used: ", total_tokens_used)
 

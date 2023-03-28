@@ -29,12 +29,12 @@ write_test <- function(file) {
   }
 
   # Create user input 
-  n_msgs <- nrow(write_test_input)
-  write_test_input$content[n_msgs] <- 
-    sprintf(fmt = write_test_input$content[n_msgs], text)
+  n_msgs <- nrow(write_test_prompt)
+  write_test_prompt$content[n_msgs] <- 
+    sprintf(fmt = write_test_prompt$content[n_msgs], text)
 
   # Generate response output by chatting 
-  resp <- chat_completion(write_test_input)
+  resp <- chat_completion(write_test_prompt)
   total_tokens_used <- usage(resp)$total_tokens
   
   # Display the total use of tokens

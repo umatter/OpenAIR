@@ -14,44 +14,44 @@
 #'
 #' This message content serves as user input for the extract_entities function.
 #'
-#' @format ## `extract_entities_input`
+#' @format ## `extract_entities_prompt`
 #' A data frame with 2 rows and 2 columns representing the messages object in API calls.
 #' @source Contributed by umatter
 #'
-"extract_entities_input"
+"extract_entities_prompt"
 
 
 #' Input: message content template for references_to_bibtex()
 #'
 #' This message content serves as user input for the references_to_bibtex function.
 #'
-#' @format ## `references_to_bibtex_input`
+#' @format ## `references_to_bibtex_prompt`
 #' A data frame with 4 rows and 2 columns representing the messages object in API calls.
 #' @source Contributed by umatter
 #'
-"references_to_bibtex_input"
+"references_to_bibtex_prompt"
 
 
 #' Input: message content template for add_roxygen()
 #'
 #' This message content serves as user input for the add_roxygen function.
 #'
-#' @format ## `add_roxygen_input`
+#' @format ## `add_roxygen_prompt`
 #' A data frame with 2 rows and 2 columns representing the messages object in API calls.
 #' @source Contributed by umatter
 #'
-"add_roxygen_input"
+"add_roxygen_prompt"
 
 
 #' Input: message content template for write_test()
 #'
 #' This message content serves as user input for the write_test function.
 #'
-#' @format ## `write_test_input`
+#' @format ## `write_test_prompt`
 #' A data frame with 2 rows and 2 columns representing the messages object in API calls.
 #' @source Contributed by umatter
 #'
-"write_test_input"
+"write_test_prompt"
 
 
 
