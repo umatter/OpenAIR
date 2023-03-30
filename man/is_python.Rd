@@ -19,10 +19,11 @@ This function takes a character string as input and checks if it contains valid 
 This function presuposes that python is installed on the system.
 }
 \examples{
+\dontrun{
 # Check if the string contains valid Python code
 is_python("print('Hello, World!')")
 
 # Check if the string contains invalid Python code
 is_python("prit('Hello, World!')")
-
+}
 }

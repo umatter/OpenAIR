@@ -48,6 +48,7 @@ python_to_r <- function(py) {
     resp %>% 
     messages_content() %>% 
     clean_output() 
+  output <- gsub("^python", "", output)
   
   # validate output
   if (is_r(output)==FALSE){

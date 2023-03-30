@@ -7,13 +7,15 @@
 #' @return A logical value: TRUE if the input character string contains valid Python code, and FALSE otherwise.
 #' @details This function presuposes that python is installed on the system.
 #' @examples
+#' \dontrun{
 #' # Check if the string contains valid Python code
 #' is_python("print('Hello, World!')")
 #'
 #' # Check if the string contains invalid Python code
 #' is_python("prit('Hello, World!')")
-#'
+#'}
 #' @export
+#' 
 is_python <- function(code) {
   # Write the input code to a temporary file
   temp_file <- tempfile(fileext = ".py")
