@@ -27,7 +27,9 @@ clean_output <- function(text) {
     content <- regmatches(text, matches)[[1]]
     
     # Remove the '```' markers from the content
-    cleaned_content <- gsub("(```)", "", content)
+    cleaned_content <- gsub("^[a-zA-Z]*(```)", "", content)
+    cleaned_content <- gsub("(```)", "", cleaned_content)
+    
     
     return(cleaned_content)
   } else {

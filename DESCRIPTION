@@ -17,7 +17,9 @@ Suggests:
     dplyr,
     lubridate,
     testthat (>= 3.0.0),
-    utils
+    utils,
+    knitr,
+    rmarkdown
 Config/testthat/edition: 3
 Config/reticulate:
   list(
@@ -35,3 +37,4 @@ URL: https://umatter.github.io/OpenAIR/
 InstData: yes
 Depends: 
     R (>= 2.10)
+VignetteBuilder: knitr

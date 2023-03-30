@@ -6,3 +6,4 @@ docs
 tests/_notes.R
 inst/text/func.R
 code_of_conduct.md
+inst/doc

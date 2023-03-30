@@ -54,6 +54,26 @@
 "write_test_prompt"
 
 
+#' Input: message content template for r_to_python_prompt()
+#'
+#' This message content serves as user input for the r_to_python_prompt() function.
+#'
+#' @format ## `r_to_python_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"r_to_python_prompt"
+
+
+#' Input: message content template for python_to_r_prompt()
+#'
+#' This message content serves as user input for the python_to_r_prompt() function.
+#'
+#' @format ## `python_to_r_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"python_to_r_prompt"
 
 
 
