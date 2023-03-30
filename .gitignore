@@ -4,6 +4,7 @@
 .Ruserdata
 docs
 tests/_notes.R
+inst/slides/
 inst/text/func.R
 code_of_conduct.md
 inst/doc
