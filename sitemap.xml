@@ -19,6 +19,9 @@
     <loc>https://openair-lib.org/index.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/reference/OpenAIR-package.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/reference/add_roxygen.html</loc>
   </url>
   <url>
@@ -55,12 +58,6 @@
     <loc>https://openair-lib.org/reference/df_to_csv.html</loc>
   </url>
   <url>
-    <loc>https://openair-lib.org/reference/explain_code.html</loc>
-  </url>
-  <url>
-    <loc>https://openair-lib.org/reference/explain_code_input.html</loc>
-  </url>
-  <url>
     <loc>https://openair-lib.org/reference/extract_entities.html</loc>
   </url>
   <url>
@@ -68,12 +65,6 @@
   </url>
   <url>
     <loc>https://openair-lib.org/reference/extract_roxygen2.html</loc>
-  </url>
-  <url>
-    <loc>https://openair-lib.org/reference/feedback.html</loc>
-  </url>
-  <url>
-    <loc>https://openair-lib.org/reference/feedback_input.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/get_chatlog.html</loc>
@@ -136,7 +127,13 @@
     <loc>https://openair-lib.org/reference/python_to_r.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/reference/python_to_r_prompt.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/reference/r_to_python.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/r_to_python_prompt.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/read_text.html</loc>
