@@ -6,6 +6,7 @@
 #' @param chatlog_id character string indicating the name of the chat log to clear.
 #'                   Default is ".__CURRENTCHAT__".
 #' @return This function does not return anything.
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' @examples
 #' \dontrun{
@@ -17,5 +18,5 @@ clear_chatlog <- function(chatlog_id = ".__CURRENTCHAT__") {
   current <- get_chatlog(chatlog_id)
   # remove all but the initial (system) message
   current@messages <- current@messages[1,]
-  assign(chatlog_id, current, envir = .GlobalEnv)
+  assign(chatlog_id, current, envir = OpenAIR_env)
 }

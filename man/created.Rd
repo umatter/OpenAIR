@@ -16,3 +16,6 @@ a Date object representing the date-time string of when the response was created
 This function extracts the date-time string of when the response was created from the parsed HTTP response of an API call to the
 OpenAI chat completions endpoint.
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

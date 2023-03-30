@@ -29,3 +29,6 @@ messages <- initialize_messages()
 messages_custom <- initialize_messages("Hello! How can I assist you today?")
 
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

@@ -4,6 +4,8 @@
 #'
 #' @param x either a chatlog object r, or a character string representing the id of a chatlog (the default is ".__CURRENTCHAT__", the current log of the chat()-function)
 #' @return a chatlog object
+#' 
+#' @author Ulrich Matter umatter@protonmail.com
 #'
 #' @export
 get_chatlog <- function(x=".__CURRENTCHAT__") {
@@ -16,7 +18,7 @@ get_chatlog <- function(x=".__CURRENTCHAT__") {
   }
   
   # Extract the choices from the response
-  clog <- get(chatlog_id, envir = .GlobalEnv)
+  clog <- get(chatlog_id, envir = OpenAIR_env)
 
   # Return the choices
   return(clog)

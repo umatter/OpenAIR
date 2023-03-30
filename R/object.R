@@ -5,7 +5,7 @@
 #'
 #' @param response a list object representing the HTTP response
 #' @return a data frame with the usage statistics of the API call (how many tokens used)
-#'
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' 
 #' 

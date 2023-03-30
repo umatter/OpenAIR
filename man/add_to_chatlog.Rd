@@ -7,14 +7,35 @@
 add_to_chatlog(msgs, chatlog_id = NULL)
 }
 \arguments{
-\item{msgs}{a chatlog object or a data.frame}
+\item{msgs}{A chatlog object or a data.frame containing the messages to be added to the chat log.}
 
-\item{chatlog_id}{The id of the chatlog object}
+\item{chatlog_id}{The id of the chatlog object. Required when the provided msgs is a data.frame.}
 }
 \value{
-The current chatlog
+The updated chatlog object with the newly added messages.
 }
 \description{
 This function adds data to the in-memory chat log, which is in the global environment. The data
-can be any R object, such as a vector, list, or data frame.
+can be any R object, such as a vector, list, or data frame. The function supports adding data
+to the chat log by providing either a data.frame or a chatlog object.
+}
+\examples{
+\dontrun{
+# Add a data frame of messages to an existing chat log
+chatlog_df <- data.frame(
+user = c("user1", "user2"),
+message = c("Hello!", "Hi!")
+)
+updated_chatlog <- add_to_chatlog(chatlog_df, "existing_chatlog_id")
+
+# Add messages from one chat log to another
+chatlog1 <- create_chatlog("chatlog1")
+chatlog2 <- create_chatlog("chatlog2")
+chatlog1 <- add_message(chatlog1, "user1", "Hello!")
+chatlog2 <- add_message(chatlog2, "user2", "Hi!")
+merged_chatlog <- add_to_chatlog(chatlog1, chatlog2@chatlog_id)
+}
+}
+\author{
+Ulrich Matter umatter@protonmail.com
 }

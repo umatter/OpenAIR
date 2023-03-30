@@ -17,12 +17,11 @@
 #'
 #' This message content serves as user input for the extract_entities function.
 #'
-#' @format ## `extract_entities_input`
-#' A data frame with 2 rows and 2 columns representing the messages object in
-#' API calls.
+#' @format ## `extract_entities_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
 #' @source Contributed by umatter
 #'
-"extract_entities_input"
+"extract_entities_prompt"
 
 
 #' Input: message content template for references_to_bibtex()
@@ -30,34 +29,54 @@
 #' This message content serves as user input for the references_to_bibtex
 #' function.
 #'
-#' @format ## `references_to_bibtex_input`
-#' A data frame with 4 rows and 2 columns representing the messages object in
-#' API calls.
+#' @format ## `references_to_bibtex_prompt`
+#' A data frame with 4 rows and 2 columns representing the messages object in API calls.
 #' @source Contributed by umatter
 #'
-"references_to_bibtex_input"
+"references_to_bibtex_prompt"
 
 
-
-#' Input: message content template for feedback()
+#' Input: message content template for add_roxygen()
 #'
-#' This message content serves as user input for the feedback function.
+#' This message content serves as user input for the add_roxygen function.
 #'
-#' @format ## `feedback_input`
-#' A data frame with 2 rows and 2 columns representing the message object in API
-#' calls.
-#' @source Contributed by jldc
+#' @format ## `add_roxygen_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
 #'
-"feedback_input"
+"add_roxygen_prompt"
 
 
-#' Input: message content template for explain_code()
+#' Input: message content template for write_test()
 #'
-#' This message content serves as user input for the feedback function.
+#' This message content serves as user input for the write_test function.
 #'
-#' @format ## `feedback_input`
-#' A data frame with 2 rows and 2 columns representing the message object in API
-#' calls.
-#' @source Contributed by jldc
+#' @format ## `write_test_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
 #'
-"explain_code_input"
+"write_test_prompt"
+
+
+#' Input: message content template for r_to_python_prompt()
+#'
+#' This message content serves as user input for the r_to_python_prompt() function.
+#'
+#' @format ## `r_to_python_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"r_to_python_prompt"
+
+
+#' Input: message content template for python_to_r_prompt()
+#'
+#' This message content serves as user input for the python_to_r_prompt() function.
+#'
+#' @format ## `python_to_r_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"python_to_r_prompt"
+
+

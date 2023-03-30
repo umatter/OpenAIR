@@ -2,7 +2,7 @@
 % Please edit documentation in R/chat_completion.R
 \name{chat_completion}
 \alias{chat_completion}
-\title{Generate text using the OpenAI API's chat endpoint}
+\title{Generate Text Using the OpenAI API's Chat Endpoint}
 \usage{
 chat_completion(
   msgs,
@@ -23,7 +23,7 @@ chat_completion(
 \arguments{
 \item{msgs}{A data.frame containing the chat history to generate text from or a chatlog object.}
 
-\item{model}{A character string specifying the ID of the model to use. 
+\item{model}{A character string specifying the ID of the model to use.
 The default value is "gpt-3.5-turbo".}
 
 \item{temperature}{An optional numeric scalar specifying the sampling temperature to use.}
@@ -53,18 +53,26 @@ A character vector containing the generated text(s).
 }
 \description{
 This function generates natural language text in a conversational style using the OpenAI API's chat endpoint.
+It takes a series of chat messages as input, either as a data.frame or a chatlog object, and generates a text
+completion based on the conversation history and the specified model parameters.
 }
 \examples{
 \dontrun{
 openai_api_key("your_api_key_here")
-msgs_df <- data.frame(role=c("system", 
-                             "user",
-                             "assistant",
-                             "user"),
-                      content=c("You are a helpful assistant", 
-                                "Who won the world series in 2020?",
-                                "The Los Angeles Dodgers won the World Series in 2020.",
-                                "Where was it played?"))
+msgs_df <- data.frame(role=c("system",
+"user",
+"assistant",
+"user"),
+content=c("You are a helpful assistant",
+"Who won the world series in 2020?",
+"The Los Angeles Dodgers won the World Series in 2020.",
+"Where was it played?"))
 chat_completion(msgs_df)
 }
+}
+\seealso{
+\url{https://beta.openai.com/docs/} for more information on the OpenAI API.
+}
+\author{
+Ulrich Matter umatter@protonmail.com
 }

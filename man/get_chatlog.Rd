@@ -15,3 +15,6 @@ a chatlog object
 \description{
 This function extracts the current chatlog of a given chat from the chat environment.
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

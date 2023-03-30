@@ -22,3 +22,6 @@ This function clears a chat log, leaving only the initial (system) message.
 clear_chatlog()
 }
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

@@ -7,11 +7,11 @@
 #' @param batch_size integer indicating the number of lines to read in per batch (default is 1000)
 #' @param encoding character string indicating the encoding to use (default is "cl100k_base")
 #' @return a numeric value indicating the total number of tokens in the text file
+#' @author Ulrich Matter umatter@protonmail.com
 #' @examples
 #' data_path <- system.file("text", "lorem.txt", package = "OpenAIR")
 #' text_data <- read_text_batches(data_path)
 #'
-#' @import tibble
 #' @export
 read_text_batches <- function(text, batch_size = 3500, encoding = "cl100k_base") {
   
@@ -27,7 +27,7 @@ read_text_batches <- function(text, batch_size = 3500, encoding = "cl100k_base")
     }
     # convert to tidy-text format
     text <- 
-      tibble::tibble(text=lines,
+      data.frame(text=lines,
              file= fn,
              line=1:length(lines),
              batch_index=index)

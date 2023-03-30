@@ -5,6 +5,7 @@
 #' @param text A character string containing the code or text content with '```' markers.
 #'
 #' @return A character string containing the extracted code or text content.
+#' @author Ulrich Matter umatter@protonmail.com
 #' @export
 #' @examples
 #' code_text <- "```
@@ -26,7 +27,9 @@ clean_output <- function(text) {
     content <- regmatches(text, matches)[[1]]
     
     # Remove the '```' markers from the content
-    cleaned_content <- gsub("(```)", "", content)
+    cleaned_content <- gsub("^[a-zA-Z]*(```)", "", content)
+    cleaned_content <- gsub("(```)", "", cleaned_content)
+    
     
     return(cleaned_content)
   } else {

@@ -23,3 +23,6 @@ example_code <- function(x) {
 ```"
 clean_output(code_text)
 }
+\author{
+Ulrich Matter umatter@protonmail.com
+}

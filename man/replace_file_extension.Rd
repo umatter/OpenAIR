@@ -16,7 +16,16 @@ A character string representing the filename with the replaced file extension.
 }
 \description{
 This function replaces the file extension of a given filename with a specified new extension.
+It validates the input to ensure the filename and the new extension are single character strings.
+Then, it replaces the old extension with the new one and returns the modified filename.
 }
 \examples{
-replace_file_extension("example_document.txt", ".bib")
+\dontrun{
+# Replace the file extension of a text file with a BibTeX extension
+new_filename <- replace_file_extension("example_document.txt", ".bib")
+print(new_filename) # "example_document.bib"
+}
+}
+\author{
+Ulrich Matter umatter@protonmail.com
 }

@@ -2,7 +2,7 @@ Package: OpenAIR
 Type: Package
 Title: Integrate OpenAI's Large Language Models Into Your R Workflows
 Version: 0.1.0
-Author: Ulrich Matter
+Authors@R: c(person("Ulrich", "Matter", email = "umatter@protonmail.com", role = c("aut", "cre")), person("Jonathan", "Chassot", email = "jonathan.chassot@unisg.ch", role = "aut"))
 Maintainer: Ulrich Matter <umatter@protonmail.com>
 Description: OpenAIR builds on OpenAI's API as backend and provides R wrapper functions for the ChatGPT endpoint as well as various high-level functions to integrate ChatGPT's functionality in a variety of data handling and data analytics tasks, ranging from data cleaning to the automated generation of analytics scripts.
 License: MIT + file LICENSE
@@ -11,11 +11,15 @@ LazyData: true
 RoxygenNote: 7.2.3
 Suggests: 
     httr,
+    readr,
     jsonlite,
     tidyr,
     dplyr,
     lubridate,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    utils,
+    knitr,
+    rmarkdown
 Config/testthat/edition: 3
 Config/reticulate:
   list(
@@ -26,10 +30,11 @@ Config/reticulate:
 Imports:
     reticulate,
     magrittr,
-    readr,
     tibble,
-    methods
+    methods,
+    xml2
 URL: https://umatter.github.io/OpenAIR/
 InstData: yes
 Depends: 
     R (>= 2.10)
+VignetteBuilder: knitr

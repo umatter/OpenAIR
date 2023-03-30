@@ -2,17 +2,33 @@
 % Please edit documentation in R/messages.R
 \name{messages}
 \alias{messages}
-\title{Extract choices/messages from OpenAI API response}
+\title{Extract messages from a response object or a chatlog object}
 \usage{
-messages(response)
+messages(x)
 }
 \arguments{
-\item{response}{a list object representing the HTTP response}
+\item{x}{A list representing a response object or a chatlog object}
 }
 \value{
-a dataframe representing the choices/messages from the response
+A data.frame containing the messages
 }
 \description{
-This function extracts the choices/messages from the HTTP response of an API call to the
-OpenAI chat completions endpoint.
+This function takes a response object or a chatlog object as input and
+returns the messages. If the input is a response object, the function
+extracts and returns the messages from the choices. If the input is a
+chatlog object, the function returns the messages directly.
+}
+\examples{
+\dontrun{
+# Using a response object
+response <- list(choices = list(message = "This is a message."))
+messages_from_response <- messages(response)
+print(messages_from_response)
+
+# Using a chatlog object
+chatlog_id <- chat("Hello, how are you?")
+chatlog <- get_chatlog(chatlog_id)
+messages_from_chatlog <- messages(chatlog)
+print(messages_from_chatlog)
+}
 }

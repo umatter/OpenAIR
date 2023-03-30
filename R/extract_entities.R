@@ -8,7 +8,7 @@
 #' @param batch_size An integer indicating the size of each batch, if the text input is supposed to be processed in batches. Set this to NULL to process all at once.
 #' 
 #' @return A tibble
-#' 
+#' @author Ulrich Matter umatter@protonmail.com
 #' @examples
 #'  \dontrun{
 #' extract_entities("Hello, how are you?")
@@ -37,10 +37,10 @@ extract_entities <- function(text, entity_types=c("locations", "persons", "organ
       
       # initial user input
       entity_types <- paste0(entity_types, collapse = ", ")
-      extract_entities_input$content[2] <- sprintf(fmt = extract_entities_input$content[2], entity_types, text)
+      extract_entities_prompt$content[2] <- sprintf(fmt = extract_entities_prompt$content[2], entity_types, text)
       
       # chat
-      resp <- chat_completion(extract_entities_input)
+      resp <- chat_completion(extract_entities_prompt)
       total_tokens_used <- usage(resp)$total_tokens
       message("Total tokens used: ", total_tokens_used)
 

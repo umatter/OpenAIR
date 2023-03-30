@@ -7,7 +7,7 @@
 #' @param chatlog_id The ID of the chat conversation to start or continue. Default is "__CURRENTCHAT__".
 #' @param output The output format of the response. Default is "message_to_console".
 #' Valid options are "message_to_console", "message", or "response_object".
-#'
+#' @author Ulrich Matter umatter@protonmail.com
 #' @return Depending on the value of the 'output' argument, this function returns one of the following:
 #' * "message_to_console": a message containing the response text to be printed to the console.
 #' * "message": the response text as a character vector.
@@ -24,7 +24,7 @@ chat <- function(message, chatlog_id = ".__CURRENTCHAT__", output="message_to_co
   
   # check if chat is ongoing
   # if not, initiate new chat
-    if (!exists(chatlog_id, envir = .GlobalEnv)){
+    if (!exists(chatlog_id, envir = OpenAIR_env)){
       # initialize chatlog
       cl <- start_chat(chatlog_id=chatlog_id)
     

@@ -29,12 +29,12 @@ references_to_bibtex <- function(references) {
     paste0(collapse = "\n")
   
   # initial user input
-  n_msgs <- nrow(references_to_bibtex_input)
-  references_to_bibtex_input$content[n_msgs] <- 
-    sprintf(fmt = references_to_bibtex_input$content[n_msgs], text)
+  n_msgs <- nrow(references_to_bibtex_prompt)
+  references_to_bibtex_prompt$content[n_msgs] <- 
+    sprintf(fmt = references_to_bibtex_prompt$content[n_msgs], text)
   
   # chat
-  resp <- chat_completion(references_to_bibtex_input)
+  resp <- chat_completion(references_to_bibtex_prompt)
   total_tokens_used <- usage(resp)$total_tokens
   message("Total tokens used: ", total_tokens_used)
   
@@ -43,7 +43,6 @@ references_to_bibtex <- function(references) {
     resp %>% 
     messages_content() %>% 
     clean_output() 
-  
 
   # Return the processed references as BibTeX entries
   filename <- unique(references$file)
