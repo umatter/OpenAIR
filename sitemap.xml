@@ -13,6 +13,9 @@
     <loc>https://openair-lib.org/authors.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/code_of_conduct.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/index.html</loc>
   </url>
   <url>
@@ -52,6 +55,12 @@
     <loc>https://openair-lib.org/reference/df_to_csv.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/reference/explain_code.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/explain_code_input.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/reference/extract_entities.html</loc>
   </url>
   <url>
@@ -59,6 +68,12 @@
   </url>
   <url>
     <loc>https://openair-lib.org/reference/extract_roxygen2.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/feedback.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/feedback_input.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/get_chatlog.html</loc>
@@ -83,6 +98,12 @@
   </url>
   <url>
     <loc>https://openair-lib.org/reference/is_json.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/is_python.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/is_r.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/is_xml.html</loc>
@@ -110,6 +131,12 @@
   </url>
   <url>
     <loc>https://openair-lib.org/reference/pipe.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/python_to_r.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/r_to_python.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/read_text.html</loc>
