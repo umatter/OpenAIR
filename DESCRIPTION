@@ -32,6 +32,8 @@ Imports:
     magrittr,
     tibble,
     methods,
+    stringr,
+    R.utils,
     xml2
 URL: https://umatter.github.io/OpenAIR/
 InstData: yes
