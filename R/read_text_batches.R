@@ -4,8 +4,7 @@
 #' function from the readr package.
 #'
 #' @param text character string, either containing a path to a text file to read in or containing the text.
-#' @param batch_size integer indicating the number of lines to read in per batch (default is 1000)
-#' @param encoding character string indicating the encoding to use (default is "cl100k_base")
+#' @param batch_size integer indicating the number of lines to read in per batch (default is 3500)
 #' @return a numeric value indicating the total number of tokens in the text file
 #' @author Ulrich Matter umatter@protonmail.com
 #' @examples
@@ -13,7 +12,7 @@
 #' text_data <- read_text_batches(data_path)
 #'
 #' @export
-read_text_batches <- function(text, batch_size = 3500, encoding = "cl100k_base") {
+read_text_batches <- function(text, batch_size = 3500) {
   
   # dependencies
   requireNamespace("readr", quietly = TRUE)

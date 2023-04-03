@@ -4,14 +4,12 @@
 \alias{read_text_batches}
 \title{Load data from text files in batches}
 \usage{
-read_text_batches(text, batch_size = 3500, encoding = "cl100k_base")
+read_text_batches(text, batch_size = 3500)
 }
 \arguments{
 \item{text}{character string, either containing a path to a text file to read in or containing the text.}
 
-\item{batch_size}{integer indicating the number of lines to read in per batch (default is 1000)}
-
-\item{encoding}{character string indicating the encoding to use (default is "cl100k_base")}
+\item{batch_size}{integer indicating the number of lines to read in per batch (default is 3500)}
 }
 \value{
 a numeric value indicating the total number of tokens in the text file
