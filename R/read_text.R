@@ -13,12 +13,13 @@
 #' read_text("Hello, how are you?")
 #' read_text("path/to/text/file.txt")
 #'
+#' @importFrom R.utils isUrl
 #'@export
 
 read_text <- function(text) {
 
   # read text (either from file or string)
-    if(!file.exists(text)) {
+    if(!file.exists(text) & !R.utils::isUrl(text)) {
       fn <- "character string"
       # read the data, split into lines
       lines <- readr::read_lines(I(text))
