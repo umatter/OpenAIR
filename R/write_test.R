@@ -53,9 +53,9 @@ write_test <- function(file) {
     return(output)
     
   } else {
-    filename <- paste0(replace_file_extension(filename, ""), "-test.R")
+    filename <- paste0("test-", filename, ".R")
     cat(output, file=filename)
-    message("Added documentation to ", filename)
+    file.edit(filename)
     return(filename)
     
   }
