@@ -49,11 +49,11 @@ write_test <- function(file) {
   filename <- unique(r_function$file)
 
   if (filename == "character string") {
-    message(output)
+    #message(output)
     return(output)
     
   } else {
-    filename <- paste0("test-", filename, ".R")
+    filename <- paste0(replace_file_extension(filename, new_extension = ""), "-test.R")
     cat(output, file=filename)
     file.edit(filename)
     return(filename)
