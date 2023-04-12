@@ -3,7 +3,7 @@
 \docType{data}
 \name{r_to_python_prompt}
 \alias{r_to_python_prompt}
-\title{Input: message content template for r_to_python_prompt()}
+\title{Input: message content template for r_to_python()}
 \format{
 ## `r_to_python_prompt`
 A data frame with 2 rows and 2 columns representing the messages object in API calls.
@@ -15,6 +15,6 @@ Contributed by umatter
 r_to_python_prompt
 }
 \description{
-This message content serves as user input for the r_to_python_prompt() function.
+This message content serves as user input for the r_to_python() function.
 }
 \keyword{datasets}

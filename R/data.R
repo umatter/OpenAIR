@@ -58,9 +58,9 @@
 "write_test_prompt"
 
 
-#' Input: message content template for r_to_python_prompt()
+#' Input: message content template for r_to_python()
 #'
-#' This message content serves as user input for the r_to_python_prompt() function.
+#' This message content serves as user input for the r_to_python() function.
 #'
 #' @format ## `r_to_python_prompt`
 #' A data frame with 2 rows and 2 columns representing the messages object in API calls.
@@ -69,9 +69,9 @@
 "r_to_python_prompt"
 
 
-#' Input: message content template for python_to_r_prompt()
+#' Input: message content template for python_to_r()
 #'
-#' This message content serves as user input for the python_to_r_prompt() function.
+#' This message content serves as user input for the python_to_r() function.
 #'
 #' @format ## `python_to_r_prompt`
 #' A data frame with 2 rows and 2 columns representing the messages object in API calls.
@@ -80,3 +80,13 @@
 "python_to_r_prompt"
 
 
+
+#' Input: message content template for nested_to_pipe()
+#'
+#' This message content serves as user input for the nested_to_pipe() function.
+#'
+#' @format ## `nested_to_pipe_prompt`
+#' A data frame with 4 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"nested_to_pipe_prompt"
