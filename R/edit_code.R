@@ -1,3 +1,24 @@
+#' Edit code based on user's input
+#'
+#' The `edit_code` function prompts the user to provide a plain English description of how the code in a given file
+#' should be modified. The function then generates the modified code based on the user's input
+#' and writes it back to the specified file.
+#'
+#' @param filename A character string representing the name of the file containing the code to be edited.
+#' @param chatlog_id An optional character string representing the chatlog ID. Defaults to ".__CURRENTCODEFILE__".
+#'                   This ID is used to maintain the conversation history with the AI.
+#' 
+#' @return Returns the name of the file containing the modified code.
+#'
+#' @examples
+#' \dontrun{
+#' # Edit code in an existing file based on user input
+#' modified_code_file <- edit_code("example_code.R")
+#' 
+#' # Check the content of the modified code file
+#' cat(readLines(modified_code_file))
+#' }
+#' @export
 edit_code <- 
   function(filename, chatlog_id = ".__CURRENTCODEFILE__") {
     

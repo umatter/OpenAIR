@@ -1,3 +1,25 @@
+#' Write code based on user's input
+#'
+#' The `write_code` function prompts the user to provide a plain English description of a program or function
+#' and the programming language it should be written in. The function then generates the code based on the user's input
+#' and writes it to a specified file.
+#'
+#' @param filename A character string representing the name of the file where the generated code will be saved.
+#' @param chatlog_id An optional character string representing the chatlog ID. Defaults to ".__CURRENTCODEFILE__".
+#'                   This ID is used to maintain the conversation history with the AI.
+#' 
+#' @return Returns the name of the file containing the generated code.
+#'
+#' @examples
+#' \dontrun{
+#' # Generate code based on user input and save it to a file
+#' generated_code_file <- write_code("example_code.R")
+#' 
+#' # Check the content of the generated code file
+#' cat(readLines(generated_code_file))
+#' }
+#' @export
+
 write_code <- 
   function(filename, chatlog_id = ".__CURRENTCODEFILE__") {
     
