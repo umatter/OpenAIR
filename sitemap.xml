@@ -61,6 +61,9 @@
     <loc>https://openair-lib.org/reference/df_to_csv.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/reference/edit_code.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/reference/extract_entities.html</loc>
   </url>
   <url>
@@ -110,6 +113,12 @@
   </url>
   <url>
     <loc>https://openair-lib.org/reference/model.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/nested_to_pipe.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/nested_to_pipe_prompt.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/num_tokens.html</loc>
@@ -170,6 +179,9 @@
   </url>
   <url>
     <loc>https://openair-lib.org/reference/usage.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/write_code.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/write_test.html</loc>
