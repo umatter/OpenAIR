@@ -7,7 +7,7 @@
 #' @param api_key A character string containing the OpenAI API key.
 #' @return Nothing is returned; the function is called for its side effects.
 #' @author Ulrich Matter umatter@protonmail.com
-#' @seealso \url{https://beta.openai.com/docs/} for more information on the OpenAI API.
+#' @seealso \url{https://platform.openai.com/docs/} for more information on the OpenAI API.
 #' @examples
 #' \dontrun{
 #' # Set the OpenAI API key for the current R session

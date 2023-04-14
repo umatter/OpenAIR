@@ -2,7 +2,7 @@ Package: OpenAIR
 Type: Package
 Title: Integrate OpenAI's Large Language Models Into Your R Workflows
 Version: 0.1.0
-Authors@R: c(person("Ulrich", "Matter", email = "umatter@protonmail.com", role = c("aut", "cre")), person("Jonathan", "Chassot", email = "jonathan.chassot@unisg.ch", role = "aut"))
+Authors@R: c(person("Ulrich", "Matter", email = "umatter@protonmail.com", role = c("aut", "cre", "cph")), person("Jonathan", "Chassot", email = "jonathan.chassot@unisg.ch", role = "aut"))
 Maintainer: Ulrich Matter <umatter@protonmail.com>
 Description: OpenAIR builds on OpenAI's API as backend and provides R wrapper functions for the ChatGPT endpoint as well as various high-level functions to integrate ChatGPT's functionality in a variety of data handling and data analytics tasks, ranging from data cleaning to the automated generation of analytics scripts.
 License: MIT + file LICENSE
@@ -38,7 +38,7 @@ Imports:
     xml2,
     utils,
     cli
-URL: https://umatter.github.io/OpenAIR/
+URL: http://openair-lib.org/
 InstData: yes
 Depends: 
     R (>= 2.10)

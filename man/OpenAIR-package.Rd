@@ -13,12 +13,12 @@ OpenAIR builds on OpenAI's API as backend and provides R wrapper functions for t
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://umatter.github.io/OpenAIR/}
+  \item \url{http://openair-lib.org/}
 }
 
 }
 \author{
-\strong{Maintainer}: Ulrich Matter \email{umatter@protonmail.com}
+\strong{Maintainer}: Ulrich Matter \email{umatter@protonmail.com} [copyright holder]
 
 Authors:
 \itemize{

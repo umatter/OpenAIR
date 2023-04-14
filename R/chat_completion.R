@@ -21,7 +21,7 @@
 #'
 #' @return A character vector containing the generated text(s).
 #' @author Ulrich Matter umatter@protonmail.com
-#' @seealso \url{https://beta.openai.com/docs/} for more information on the OpenAI API.
+#' @seealso \url{https://platform.openai.com/docs/} for more information on the OpenAI API.
 #' @examples
 #' \dontrun{
 #' openai_api_key("your_api_key_here")

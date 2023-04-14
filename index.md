@@ -23,14 +23,14 @@ devtools::install_github("umatter/OpenAIR")
 
 ## Usage
 
-To use the package, you'll need to have an OpenAI API key. You can sign up for an API key [here](https://beta.openai.com/signup/). Once you have your API key, you can start using *OpenAIR*:
+To use the package, you'll need to have an OpenAI API key. You can sign up for an API key [here](https://platform.openai.com/signup/). Once you have your API key, you can start using *OpenAIR*:
 
 ``` r
 # load the package
 library("OpenAIR")
 
 # register your api key
-openai_api_key("YOUR-API-KEY"")
+openai_api_key("YOUR-API-KEY")
 
 ```
 

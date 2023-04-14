@@ -71,7 +71,7 @@ chat_completion(msgs_df)
 }
 }
 \seealso{
-\url{https://beta.openai.com/docs/} for more information on the OpenAI API.
+\url{https://platform.openai.com/docs/} for more information on the OpenAI API.
 }
 \author{
 Ulrich Matter umatter@protonmail.com
