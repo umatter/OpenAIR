@@ -82,8 +82,6 @@ parse_response <- function(input_string) {
     block <- gsub("^```|```$", "", block)
     # Extract the language
     res <- regexpr("\\n", block, perl = TRUE)[[1]][1]
-    cat(block)
-    print(paste0("----- ", res[1]))
     if (res[1] == -1) {
       lang <- ""
     } else {
