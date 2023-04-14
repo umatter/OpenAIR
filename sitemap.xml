@@ -13,13 +13,10 @@
     <loc>https://openair-lib.org/authors.html</loc>
   </url>
   <url>
-    <loc>https://openair-lib.org/code_of_conduct.html</loc>
-  </url>
-  <url>
     <loc>https://openair-lib.org/index.html</loc>
   </url>
   <url>
-    <loc>https://openair-lib.org/reference/OpenAIR-package.html</loc>
+    <loc>https://openair-lib.org/reference/TheOpenAIR-package.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/add_roxygen.html</loc>
