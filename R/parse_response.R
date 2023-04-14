@@ -50,24 +50,24 @@ parse_response <- function(input_string) {
   # If no matches, return the input string
   if (res[1] == -1) {
     return(list(type = "text", content = input_string))
+  }
+  
+  # start_text is the start for text blocks, start_code is the start for code
+  # end_text is the end for text blocks, end_code is the end for code
+  start_code <- as.numeric(res)
+  end_code <- start_code + attr(res, "match.length") - 1
+  start_text <- end_code + 1
+  end_text <- start_code - 1
+  # Correct for first and last blocks
+  if (start_code[1] != 1) {
+    start_text <- c(1, start_text)
   } else {
-    # start_text is the start for text blocks, start_code is the start for code
-    # end_text is the end for text blocks, end_code is the end for code
-    start_code <- as.numeric(res)
-    end_code <- start_code + attr(res, "match.length") - 1
-    start_text <- end_code + 1
-    end_text <- start_code - 1
-    # Correct for first and last blocks
-    if (start_code[1] != 1) {
-      start_text <- c(1, start_text)
-    } else {
-      end_text <- end_text[-1]
-    }
-    if (end_code[length(end_code)] != nchar(input_string)) {
-      end_text <- c(end_text, nchar(input_string))
-    } else {
-      start_text <- start_text[-length(start_text)]
-    }
+    end_text <- end_text[-1]
+  }
+  if (end_code[length(end_code)] != nchar(input_string)) {
+    end_text <- c(end_text, nchar(input_string))
+  } else {
+    start_text <- start_text[-length(start_text)]
   }
 
   text_blocks <- substring(input_string, start_text, end_text)
@@ -82,7 +82,7 @@ parse_response <- function(input_string) {
     block <- gsub("^```|```$", "", block)
     # Extract the language
     res <- regexpr("\\n", block, perl = TRUE)[[1]][1]
-    if (res[1] == -1) {
+    if (res == -1) {
       lang <- ""
     } else {
       lang <- tolower(trimws(substr(block, 1, res)))
