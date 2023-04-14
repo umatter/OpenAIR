@@ -7,3 +7,5 @@
 ^\.github$
 ^inst/slides
 ^cran-comments\.md$
+^code-of-conduct\.md$
+^index\.md$

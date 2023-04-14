@@ -1,5 +1,5 @@
 
-# OpenAIR
+# TheOpenAIR
 
   <!-- badges: start -->
   [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -23,11 +23,11 @@ devtools::install_github("umatter/OpenAIR")
 
 ## Usage
 
-To use the package, you'll need to have an OpenAI API key. You can sign up for an API key [here](https://platform.openai.com/signup/). Once you have your API key, you can start using *OpenAIR*:
+To use the package, you'll need to have an OpenAI API key. You can sign up for an API key [here](https://platform.openai.com/signup/). Once you have your API key, you can start using *TheOpenAIR*:
 
 ``` r
 # load the package
-library("OpenAIR")
+library("TheOpenAIR")
 
 # register your api key
 openai_api_key("YOUR-API-KEY")
@@ -38,13 +38,13 @@ Then, you can start chatting with the model. The simplest way of interacting wit
 
 ```r
 # use chat() to interact with ChatGPT through the R console
-chat("Write a 100 words essay on why OpenAIR, 
+chat("Write a 100 words essay on why TheOpenAIR, 
 an R package to integrate GPT models into your R workflows is fantastic. 
 Write it in the style of product launches moderated by Steve Jobs.")
 ```
 
 ```
-Ladies and gentlemen, let me introduce you to OpenAIR, the latest and greatest addition to the R community. Thanks to OpenAIR, you can now integrate the cutting-edge GPT models right into your R workflows, unlocking a world of possibilities for predictive modeling and natural language processing. Whether you're an experienced data scientist or a newcomer to the field, OpenAIR makes it easier than ever to create powerful models that generate high-quality text. From business applications to academic research, OpenAIR has the power to transform the way we work with language data. So what are you waiting for? Join the excitement and embrace the future of data science with OpenAIR!
+Ladies and gentlemen, let me introduce you to TheOpenAIR, the latest and greatest addition to the R community. Thanks to TheOpenAIR, you can now integrate the cutting-edge GPT models right into your R workflows, unlocking a world of possibilities for predictive modeling and natural language processing. Whether you're an experienced data scientist or a newcomer to the field, TheOpenAIR makes it easier than ever to create powerful models that generate high-quality text. From business applications to academic research, TheOpenAIR has the power to transform the way we work with language data. So what are you waiting for? Join the excitement and embrace the future of data science with TheOpenAIR!
 ```
 
 ```r
@@ -52,10 +52,10 @@ chat("Now shorten the essay to 30 words.")
 ```
 
 ```
-OpenAIR - unleash the full power of GPT models in R workflows.
+TheOpenAIR - unleash the full power of GPT models in R workflows.
 ```
  
-`chat()` is primarily useful for interactive mode. For writing short scripts and developing functions based on OpenAIR, the infix function `%c%` provides an alternative syntax to send messages to the model and indicate what output format is required.
+`chat()` is primarily useful for interactive mode. For writing short scripts and developing functions based on TheOpenAIR, the infix function `%c%` provides an alternative syntax to send messages to the model and indicate what output format is required.
 
 ```r
 # output to console
@@ -83,4 +83,4 @@ resp
 
 ## Code of Conduct
 
-For information about our code of conduct, please see the [Code of Conduct](CODE_OF_CONDUCT.md) page.
+For information about our code of conduct, please see the [Code of Conduct](inst/code_of_conduct.md) page.
