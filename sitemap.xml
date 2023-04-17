@@ -61,6 +61,9 @@
     <loc>https://openair-lib.org/reference/edit_code.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/reference/extract_blocks.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/reference/extract_entities.html</loc>
   </url>
   <url>
@@ -103,6 +106,9 @@
     <loc>https://openair-lib.org/reference/is_xml.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/reference/java_to_r.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/reference/messages.html</loc>
   </url>
   <url>
@@ -130,6 +136,9 @@
     <loc>https://openair-lib.org/reference/openai_api_key.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/reference/parse_response.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/reference/pipe.html</loc>
   </url>
   <url>
@@ -149,6 +158,12 @@
   </url>
   <url>
     <loc>https://openair-lib.org/reference/read_text_batches.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/refactor.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/refactor_prompt.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/references_to_bibtex.html</loc>
