@@ -10,7 +10,7 @@ references_to_bibtex(references)
 \item{references}{A character string or a file path to a file containing the plain text references to convert.}
 }
 \value{
-A character string containing the references in BibTeX format. If a file path is provided, the function also writes the BibTeX entries to a .bib file in the same directory and returns the file path of the newly created .bib file.
+A character string containing the references in BibTeX format or, if a file path is provided, the function writes the BibTeX entries to a .bib file in the same directory and returns the file path of the newly created .bib file.
 }
 \description{
 This function takes a character string or a file path to plain text references and

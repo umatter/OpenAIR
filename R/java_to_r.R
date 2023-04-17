@@ -44,9 +44,12 @@ java_to_r <- function(java) {
     sprintf(fmt = java_to_r_prompt$content[n_msgs], text)
   
   # chat
+  cli::cli_alert_info("Code writing in progress. Hold on tight!")
   resp <- chat_completion(java_to_r_prompt)
   total_tokens_used <- usage(resp)$total_tokens
-  message("Total tokens used: ", total_tokens_used)
+  info_token <- paste0("Total tokens used: ", total_tokens_used)
+  cli::cli_inform(info_token)
+  
   
   # extract output
   output <- 

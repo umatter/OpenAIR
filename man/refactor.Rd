@@ -7,17 +7,15 @@
 refactor(file, ...)
 }
 \arguments{
-\item{file}{file name containing R code to be refactored}
+\item{file}{character, file name of a file containing R code to be refactored or a character string containing R code to be refactored}
 
 \item{...}{optional arguments to be passed to the chat_completion function}
 }
 \value{
-The refactored code that can either be printed on the console or written to a file.
+The refactored code either to the console (if the input `file` was a character string) or written to a file (if the input was a file name).
 }
 \description{
-This function refactors R code with the assistance of an AI chatbot. 
-It takes as input the file name containing R code that requires refactoring. 
-After processing the content, it prompts the user to start a conversation with the chatbot. The conversation results in the refactored R code. The output can either be printed on the console or written to a file.
+This function refactors R code with the assistance of an AI chatbot.
 }
 \examples{
 \dontrun{

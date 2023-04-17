@@ -3,8 +3,7 @@
 #' This function adds Roxygen2 documentation to an R function.
 #'
 #' @param file A character string indicating the path to the file containing the R function.
-#' @return If the path provided is a character string, this function returns the documented function in a 
-#' message to the console. If the Roxygen2 documentation was added successfully, this function returns a message indicating 
+#' @return If the path provided is a character string, this function returns the documented function as a character string. If the input is a file path, this function returns a message indicating 
 #' that documentation was added to the file.
 #' @export
 #' @author Ulrich Matter umatter@protonmail.com
@@ -29,9 +28,11 @@ add_roxygen <- function(file) {
     sprintf(fmt = add_roxygen_prompt$content[n_msgs], text)
 
   # chat
+  cli::cli_alert_info("Code writing in progress. Hold on tight!")
   resp <- chat_completion(add_roxygen_prompt)
   total_tokens_used <- usage(resp)$total_tokens
-  message("Total tokens used: ", total_tokens_used)
+  info_token <- paste0("Total tokens used: ", total_tokens_used)
+  cli::cli_inform(info_token)
 
   # extract roxygen2 documentation
   output <- 
@@ -42,7 +43,6 @@ add_roxygen <- function(file) {
   # prepare output
   filename <- unique(r_function$file)
   if (filename == "character string") {
-    message(output)
     return(output)
     
   } else {
@@ -50,8 +50,6 @@ add_roxygen <- function(file) {
     rfunc_documented <- c(output, rfunc)
     output <- paste0(rfunc_documented, collapse="\n")
     cat(output, file = filename)
-    message("Added documentation to ", filename)
-
+    cli::cli_inform(paste0("Added documentation to ", filename))
   }
-
 }

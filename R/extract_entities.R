@@ -42,7 +42,8 @@ extract_entities <- function(text, entity_types=c("locations", "persons", "organ
       # chat
       resp <- chat_completion(extract_entities_prompt)
       total_tokens_used <- usage(resp)$total_tokens
-      message("Total tokens used: ", total_tokens_used)
+      info_token <- paste0("Total tokens used: ", total_tokens_used)
+      cli::cli_inform(info_token)
 
       # process response
       msg_resp <- messages(resp)

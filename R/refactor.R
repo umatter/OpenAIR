@@ -1,14 +1,11 @@
 #' Refactor R Code with AI Assistance
 #' 
 #' This function refactors R code with the assistance of an AI chatbot. 
-#' It takes as input the file name containing R code that requires refactoring. 
-#' After processing the content, it prompts the user to start a conversation with the chatbot. The conversation results in the refactored R code. The output can either be printed on the console or written to a file.
 #' 
-#' 
-#' @param file file name containing R code to be refactored
+#' @param file character, file name of a file containing R code to be refactored or a character string containing R code to be refactored
 #' @param ... optional arguments to be passed to the chat_completion function
 #' 
-#' @return The refactored code that can either be printed on the console or written to a file.
+#' @return The refactored code either to the console (if the input `file` was a character string) or written to a file (if the input was a file name).
 #' 
 #' @examples
 #' \dontrun{
@@ -67,7 +64,6 @@ refactor <- function(file, ...) {
   # prepare output
   filename <- unique(r_code$file)
   if (filename == "character string") {
-    #message(output)
     return(output)
     
   } else {
@@ -78,7 +74,6 @@ refactor <- function(file, ...) {
     cli::cli_inform(paste0("Wrote refactored version to ", filename))
     
     return(filename)
-    
   }
-  
+
 }

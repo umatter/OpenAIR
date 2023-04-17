@@ -7,7 +7,7 @@
 #' directory.
 #'
 #' @param references A character string or a file path to a file containing the plain text references to convert.
-#' @return A character string containing the references in BibTeX format. If a file path is provided, the function also writes the BibTeX entries to a .bib file in the same directory and returns the file path of the newly created .bib file.
+#' @return A character string containing the references in BibTeX format or, if a file path is provided, the function writes the BibTeX entries to a .bib file in the same directory and returns the file path of the newly created .bib file.
 #' @author Ulrich Matter umatter@protonmail.com
 #' @seealso \url{https://ctan.org/pkg/bibtex} for more information on BibTeX format
 #' @examples
@@ -34,9 +34,11 @@ references_to_bibtex <- function(references) {
     sprintf(fmt = references_to_bibtex_prompt$content[n_msgs], text)
   
   # chat
+  cli::cli_alert_info("Bibtex writing in progress. Hold on tight!")
   resp <- chat_completion(references_to_bibtex_prompt)
   total_tokens_used <- usage(resp)$total_tokens
-  message("Total tokens used: ", total_tokens_used)
+  info_token <- paste0("Total tokens used: ", total_tokens_used)
+  cli::cli_inform(info_token)
   
   # extract output
   output <- 
@@ -47,7 +49,6 @@ references_to_bibtex <- function(references) {
   # Return the processed references as BibTeX entries
   filename <- unique(references$file)
   if (filename == "character string") {
-    message(output)
     return(output)
     
   } else {

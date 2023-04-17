@@ -39,9 +39,11 @@ python_to_r <- function(py) {
     sprintf(fmt = r_to_python_prompt$content[n_msgs], text)
   
   # chat
+  cli::cli_alert_info("R-code writing in progress. Hold on tight!")
   resp <- chat_completion(r_to_python_prompt)
   total_tokens_used <- usage(resp)$total_tokens
-  message("Total tokens used: ", total_tokens_used)
+  info_token <- paste0("Total tokens used: ", total_tokens_used)
+  cli::cli_inform(info_token)
   
   # extract output
   output <- 
@@ -58,7 +60,6 @@ python_to_r <- function(py) {
   # Return the processed py as R
   filename <- unique(py$file)
   if (filename == "character string") {
-    message(output)
     return(output)
     
   } else {

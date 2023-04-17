@@ -33,12 +33,12 @@ write_test <- function(file) {
   write_test_prompt$content[n_msgs] <- 
     sprintf(fmt = write_test_prompt$content[n_msgs], text)
 
-  # Generate response output by chatting 
-  resp <- chat_completion(write_test_prompt)
+  # chat
+  cli::cli_alert_info("Test-writing in progress. Hold on tight!")
+  resp <- chat_completion(r_to_python_prompt)
   total_tokens_used <- usage(resp)$total_tokens
-  
-  # Display the total use of tokens
-  message("Total tokens used: ", total_tokens_used)
+  info_token <- paste0("Total tokens used: ", total_tokens_used)
+  cli::cli_inform(info_token)
 
   # extract output
   output <- 
@@ -49,12 +49,10 @@ write_test <- function(file) {
   filename <- unique(r_function$file)
 
   if (filename == "character string") {
-    #message(output)
     return(output)
     
   } else {
     filename <- paste0(replace_file_extension(filename, new_extension = ""), "-test.R")
-    cat(output, file=filename)
     file.edit(filename)
     return(filename)
     

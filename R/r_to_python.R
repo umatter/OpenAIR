@@ -29,9 +29,11 @@ r_to_python <- function(r) {
     sprintf(fmt = r_to_python_prompt$content[n_msgs], text)
   
   # chat
+  cli::cli_alert_info("Python-code writing in progress. Hold on tight!")
   resp <- chat_completion(r_to_python_prompt)
   total_tokens_used <- usage(resp)$total_tokens
-  message("Total tokens used: ", total_tokens_used)
+  info_token <- paste0("Total tokens used: ", total_tokens_used)
+  cli::cli_inform(info_token)
   
   # extract output
   output <- 
@@ -43,13 +45,12 @@ r_to_python <- function(r) {
   
   # validate output
   if (is_python(output)==FALSE){
-    warning("The conversion from R to Python has potentially resulted in invalid Python code. Please verify the output code carefully!")
+    cli::cli_alert_warning("The conversion from R to Python has potentially resulted in invalid Python code. Please verify the output code carefully!")
   }
 
   # Return the processed r as BibTeX entries
   filename <- unique(r$file)
   if (filename == "character string") {
-    message(output)
     return(output)
     
   } else {
