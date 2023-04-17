@@ -52,10 +52,10 @@ python_to_r <- function(py) {
   
   # validate output
   if (is_r(output)==FALSE){
-    warning("The conversion from Python to R has potentially resulted in invalid R code. Please verify the output code carefully!")
+    cli::cli_alert_warning("The conversion from Python to R has potentially resulted in invalid R code. Please verify the output code carefully!")
   }
 
-  # Return the processed py as BibTeX entries
+  # Return the processed py as R
   filename <- unique(py$file)
   if (filename == "character string") {
     message(output)
