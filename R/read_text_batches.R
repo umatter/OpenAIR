@@ -8,9 +8,10 @@
 #' @return a numeric value indicating the total number of tokens in the text file
 #' @author Ulrich Matter umatter@protonmail.com
 #' @examples
+#' \dontrun{
 #' data_path <- system.file("text", "lorem.txt", package = "OpenAIR")
 #' text_data <- read_text_batches(data_path)
-#'
+#' }
 #' @export
 read_text_batches <- function(text, batch_size = 3500) {
   

@@ -18,16 +18,35 @@ A list of blocks of the specified type
 Extract blocks of a specified type from a list of blocks
 }
 \examples{
-extract_blocks(list(
-     list(type = "text", content = "Hello world!"),
-     list(type = "code", content = "print('Hello world!')")), "code")
+\dontrun{
+# Example 1: Extract 'code' blocks
+blocks <- list(
+  list(type = "text", content = "Hello world!"),
+  list(type = "code", content = "print('Hello world!')")
+)
+extract_blocks(blocks, "code")
+# Output:
 # [[1]]
 # $type
 # [1] "code"
 #
 # $content
 # [1] "print('Hello world!')"
+
+# Example 2: Extract 'text' blocks
+blocks <- list(
+  list(type = "text", content = "Hello world!"),
+  list(type = "code", content = "print('Hello world!')")
+)
+extract_blocks(blocks, "text")
+# Output:
+# [[1]]
+# $type
+# [1] "text"
 #
+# $content
+# [1] "Hello world!"
+}
 }
 \author{
 Jonathan Chassot

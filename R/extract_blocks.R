@@ -7,17 +7,37 @@
 #'
 #' @author Jonathan Chassot
 #'
+#'
 #' @examples
-#' extract_blocks(list(
-#'      list(type = "text", content = "Hello world!"),
-#'      list(type = "code", content = "print('Hello world!')")), "code")
+#' \dontrun{
+#' # Example 1: Extract 'code' blocks
+#' blocks <- list(
+#'   list(type = "text", content = "Hello world!"),
+#'   list(type = "code", content = "print('Hello world!')")
+#' )
+#' extract_blocks(blocks, "code")
+#' # Output:
 #' # [[1]]
 #' # $type
 #' # [1] "code"
 #' #
 #' # $content
 #' # [1] "print('Hello world!')"
+#'
+#' # Example 2: Extract 'text' blocks
+#' blocks <- list(
+#'   list(type = "text", content = "Hello world!"),
+#'   list(type = "code", content = "print('Hello world!')")
+#' )
+#' extract_blocks(blocks, "text")
+#' # Output:
+#' # [[1]]
+#' # $type
+#' # [1] "text"
 #' #
+#' # $content
+#' # [1] "Hello world!"
+#' }
 #' @export
 extract_blocks <- function(block_list, block_type) {
     # Extract the blocks of the specified type

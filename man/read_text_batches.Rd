@@ -19,9 +19,10 @@ This function reads in data from text files in batches using the read_lines_chun
 function from the readr package.
 }
 \examples{
+\dontrun{
 data_path <- system.file("text", "lorem.txt", package = "OpenAIR")
 text_data <- read_text_batches(data_path)
-
+}
 }
 \author{
 Ulrich Matter umatter@protonmail.com
