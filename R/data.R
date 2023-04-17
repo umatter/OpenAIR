@@ -80,6 +80,15 @@
 "python_to_r_prompt"
 
 
+#' Input: message content template for java_to_r()
+#'
+#' This message content serves as user input for the java_to_r() function.
+#'
+#' @format ## `java_to_r_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"java_to_r_prompt"
 
 #' Input: message content template for nested_to_pipe()
 #'
@@ -90,3 +99,16 @@
 #' @source Contributed by umatter
 #'
 "nested_to_pipe_prompt"
+
+
+#' Input: message content template for refactor()
+#'
+#' This message content serves as user input for the refactor() function.
+#'
+#' @format ## `nested_to_pipe_prompt`
+#' A data frame with 2 rows and 2 columns representing the messages object in API calls.
+#' @source Contributed by umatter
+#'
+"refactor_prompt"
+
+
