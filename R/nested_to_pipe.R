@@ -55,9 +55,11 @@ nested_to_pipe <- function(r, n_tokens_limit=3000, ...) {
     sprintf(fmt = nested_to_pipe_prompt$content[n_msgs], text)
   
   # chat
+  cli::cli_alert_info("Code writing in progress. Hold on tight!")
   resp <- chat_completion(nested_to_pipe_prompt, ...)
   total_tokens_used <- usage(resp)$total_tokens
-  message("Total tokens used: ", total_tokens_used)
+  info_token <- paste0("Total tokens used: ", total_tokens_used)
+  cli::cli_inform(info_token)
   
   # extract output
   output <- 
@@ -67,13 +69,12 @@ nested_to_pipe <- function(r, n_tokens_limit=3000, ...) {
   
   # validate output
   if (is_r(output)==FALSE){
-    warning("The conversion has potentially resulted in invalid R code. Please verify the output code carefully!")
+    cli::cli_alert_warning("The conversion has potentially resulted in invalid R code. Please verify the output code carefully!")
   }
 
   # Return the processed r as BibTeX entries
   filename <- unique(r$file)
   if (filename == "character string") {
-    message(output)
     return(output)
     
   } else {

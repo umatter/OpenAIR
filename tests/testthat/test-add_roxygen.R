@@ -15,7 +15,7 @@ if (!nchar(Sys.getenv("OPENAI_API_KEY")) == 0) {
       result <- add_roxygen(test_file)
       
       # Check result
-      expect_type(result, "NULL")
+      expect_type(result, "character")
     })
     
     # Test that function adds Roxygen2 documentation to a file

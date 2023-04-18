@@ -71,7 +71,7 @@ refactor <- function(file, ...) {
         "\n\n # OLD VERSION ---\n\n",
         text_commented_out,
         file = filename)
-    cli::cli_inform(paste0("Wrote refactored version to ", filename))
+    cli::cli_alert_success(paste0("Wrote refactored version to ", filename))
     
     return(filename)
   }

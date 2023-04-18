@@ -40,6 +40,7 @@ extract_entities <- function(text, entity_types=c("locations", "persons", "organ
       extract_entities_prompt$content[2] <- sprintf(fmt = extract_entities_prompt$content[2], entity_types, text)
       
       # chat
+      cli::cli_alert_info("Entity extraction in progress. Hold on tight!")
       resp <- chat_completion(extract_entities_prompt)
       total_tokens_used <- usage(resp)$total_tokens
       info_token <- paste0("Total tokens used: ", total_tokens_used)
