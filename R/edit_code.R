@@ -26,6 +26,13 @@ edit_code <-
       stop("Did not find ", filename, " !", "Are you sure this is the right path?\n")
     }
     
+    # import, process text
+    imported_code_to_edit <- read_text(filename)
+    code_to_edit <- 
+      imported_code_to_edit$text %>% 
+      paste0(collapse = "\n")
+    
+    
     # check if code writing session was already initialized
     # if not, initialize new session
     if (!exists(chatlog_id, envir = OpenAIR_env)){
@@ -39,13 +46,14 @@ edit_code <-
     }
     
     # open the file to edit
-    file.edit(filename)
+    rstudioapi::navigateToFile(filename)
     
-    # Initialize an empty character vector to store input text
-    input_text <- character(0)
+    # Initialize the instructions text
+    input_text <- c("Here is the code I am currently working on:\n", 
+                    code_to_edit)
     
     # Prompt the user for input, and add each line to the input vector
-    cat("Explain in plain English how the code should be modified. Type 'GO!' to finish.\n")
+    cli::cli_h2("Explain in plain English how the code should be modified. Type 'GO!' to finish.\n")
     while (TRUE) {
       input_line <- readline("Instruction:")
       if (tolower(input_line) == "go!") {
@@ -55,7 +63,7 @@ edit_code <-
     }
     
     # make prompt more robust
-    instructions <- "Return everything in one code block! Do not add any explanations, simply return the code."
+    instructions <- "\n Make sure to return everything in one code block! Do not add any explanations, simply return the code in one code block."
     input_text <- c(input_text, instructions)
     message <- paste0(input_text, collapse = "\n")
     
@@ -64,8 +72,7 @@ edit_code <-
       initialize_messages(initial_role = "user", initial_content = message)  %>% 
       add_to_chatlog(chatlog_id)  %>%  
       chat_completion()
-    
-    
+
     # process response
     messages <-   
       resp %>% 
@@ -74,11 +81,42 @@ edit_code <-
     # update chatlog
     add_to_chatlog(messages)
     
-    # Write the output to the file
-    writeLines(clean_output(messages$content), filename)
-    file.edit(filename)
+    # process, format output
+    resp_parts <- parse_response(messages$content)
+    code <- 
+      extract_blocks(resp_parts, "code") %>% 
+      extract_blocks_content() %>% 
+      unlist() %>% 
+      paste0(collapse = "\n")
     
-    cli::cli_alert_success("Here you go!")
+    text <- 
+      extract_blocks(resp_parts, "text")  %>% 
+      extract_blocks_content() %>% 
+      unlist() %>% 
+      str_replace(pattern = "\\:$", replacement = ".") %>% 
+      paste0(collapse = "\n")
+    
+    if (nchar(code)==0){
+      code <- extract_r_code(text)
+    }
+    
+    # Write the output to the file
+    if (nchar(code)==0 & !is_r(text)){
+      cli::cli_alert_danger("No clearly defined code block has been returned!")
+    } else {
+      if (is_r(text)) {
+        writeLines(text, filename)
+      } else {
+        writeLines(code, filename)
+      }
+    }
+    rstudioapi::navigateToFile(filename)
+    
+    if (nchar(text)==0 | is_r(text) ){
+      cli::cli_alert_success("Here you go!")
+    } else {
+      cat(text)
+    }
     
     return(filename)
   }

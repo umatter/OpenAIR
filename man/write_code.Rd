@@ -10,7 +10,7 @@ write_code(filename, chatlog_id = ".__CURRENTCODEFILE__")
 \item{filename}{A character string representing the name of the file where the generated code will be saved.}
 
 \item{chatlog_id}{An optional character string representing the chatlog ID. Defaults to ".__CURRENTCODEFILE__".
-This ID is used to maintain the conversation history with the AI.}
+This ID is used to maintain the conversation history with the chatbot API.}
 }
 \value{
 Returns the name of the file containing the generated code.
@@ -27,5 +27,11 @@ generated_code_file <- write_code("example_code.R")
 
 # Check the content of the generated code file
 cat(readLines(generated_code_file))
+
+# Clean up
+unlink(generated_code_file)
 }
+}
+\author{
+Ulrich Matter
 }

@@ -4,25 +4,43 @@
 \alias{chat}
 \title{Start or continue a chat conversation}
 \usage{
-chat(message, chatlog_id = ".__CURRENTCHAT__", output = "message_to_console")
+chat(
+  message,
+  chatlog_id = ".__CURRENTCHAT__",
+  output = "message_to_console",
+  ...
+)
 }
 \arguments{
-\item{message}{The message to be added to the chat conversation}
+\item{message}{A character string representing the message to be added to the chat conversation.}
 
-\item{chatlog_id}{The ID of the chat conversation to start or continue. Default is "__CURRENTCHAT__".}
+\item{chatlog_id}{A character string representing the ID of the chat conversation to start or continue.
+Default is ".__CURRENTCHAT__".}
 
-\item{output}{The output format of the response. Default is "message_to_console".
+\item{output}{A character string indicating the output format of the response. Default is "message_to_console".
 Valid options are "message_to_console", "message", or "response_object".}
+
+\item{...}{Additional arguments to be passed to the `chat_completion` function.}
 }
 \value{
 Depending on the value of the 'output' argument, this function returns one of the following:
-* "message_to_console": a message containing the response text to be printed to the console.
+* "message_to_console": a message containing the response text is printed to the console (default).
 * "message": the response text as a character vector.
 * "response_object": the full response object from the ChatGPT API.
 }
 \description{
-This function starts or continues a chat conversation and adds the user's message to the conversation.
-If the conversation does not exist, a new one will be initiated.
+This function starts or continues a chat conversation by adding the user's message to the conversation.
+If the conversation does not exist, a new one will be initiated. The response can be displayed in the
+console, returned as a character vector, or returned as a full response object from the ChatGPT API.
+}
+\examples{
+\dontrun{
+# Start a new chat and print the response to the console
+chat("What's the weather like today?")
+
+# Continue the chat, but return the response as a character vector
+response_text <- chat("What about tomorrow's weather?", output = "message")
+}
 }
 \author{
 Ulrich Matter umatter@protonmail.com
