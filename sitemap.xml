@@ -64,10 +64,16 @@
     <loc>https://openair-lib.org/reference/extract_blocks.html</loc>
   </url>
   <url>
+    <loc>https://openair-lib.org/reference/extract_blocks_content.html</loc>
+  </url>
+  <url>
     <loc>https://openair-lib.org/reference/extract_entities.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/extract_entities_prompt.html</loc>
+  </url>
+  <url>
+    <loc>https://openair-lib.org/reference/extract_r_code.html</loc>
   </url>
   <url>
     <loc>https://openair-lib.org/reference/extract_roxygen2.html</loc>

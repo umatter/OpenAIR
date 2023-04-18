@@ -59,7 +59,7 @@ and writes it to a specified file.</p>
 
 <dt>chatlog_id</dt>
 <dd><p>An optional character string representing the chatlog ID. Defaults to ".__CURRENTCODEFILE__".
-This ID is used to maintain the conversation history with the AI.</p></dd>
+This ID is used to maintain the conversation history with the chatbot API.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -67,6 +67,10 @@ This ID is used to maintain the conversation history with the AI.</p></dd>
     
 
 <p>Returns the name of the file containing the generated code.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
+    <p>Ulrich Matter</p>
     </div>
 
     <div class="section level2">
@@ -77,6 +81,9 @@ This ID is used to maintain the conversation history with the AI.</p></dd>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Check the content of the generated code file</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="va">generated_code_file</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Clean up</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="va">generated_code_file</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
