@@ -10,8 +10,7 @@ add_roxygen(file)
 \item{file}{A character string indicating the path to the file containing the R function.}
 }
 \value{
-If the path provided is a character string, this function returns the documented function as a character string. If the input is a file path, this function returns a message indicating 
-that documentation was added to the file.
+If the path provided is a character string, this function returns the documented function as a character string. If the input is a file path, this function returns the path of the file to which documentation was added to the file.
 }
 \description{
 This function adds Roxygen2 documentation to an R function.

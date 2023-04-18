@@ -37,7 +37,8 @@ Imports:
     R.utils,
     xml2,
     utils,
-    cli
+    cli,
+    rstudioapi
 URL: http://openair-lib.org/
 Depends: 
     R (>= 2.10)
