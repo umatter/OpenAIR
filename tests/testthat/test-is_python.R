@@ -1,4 +1,4 @@
-if(all(nchar(Sys.which("python", "python3"))) == 0) {
+if (all(nchar(Sys.which(c("python", "python3")))) == 0) {
   skip("Python not installed, skipping test.")
 } else {
   # Test that the is_python function recognizes valid Python code
