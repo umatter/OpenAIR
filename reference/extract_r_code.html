@@ -71,9 +71,15 @@ The string may contain multiple lines separated by newline characters.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">example_string</span> <span class="op">&lt;-</span> <span class="st">"This is a text string with R code and comments.\n# A comment\nx &lt;- 5\ny = 10\nz &lt;- x + y\nAnother line of text."</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">example_string</span> <span class="op">&lt;-</span> </span></span>
+<span class="r-in"><span><span class="st">"This is a text string with R code and comments.\n</span></span></span>
+<span class="r-in"><span><span class="st"># A comment\n</span></span></span>
+<span class="r-in"><span><span class="st">x &lt;- 5\</span></span></span>
+<span class="r-in"><span><span class="st">ny = 10\n</span></span></span>
+<span class="r-in"><span><span class="st">z &lt;- x + y\n</span></span></span>
+<span class="r-in"><span><span class="st">Another line of text."</span></span></span>
 <span class="r-in"><span><span class="fu">extract_r_code</span><span class="op">(</span><span class="va">example_string</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "# A comment" "x &lt;- 5"      "y = 10"      "z &lt;- x + y" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "# A comment" "x &lt;- 5"      "ny = 10"     "z &lt;- x + y" </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
