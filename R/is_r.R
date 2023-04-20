@@ -19,15 +19,10 @@
 #'
 #' @export
 is_r <- function(code) {
-  # Attempt to parse the code
-  sink(file = "/dev/null")
-  parsed_code <- try(eval(parse(text = code)), silent = TRUE)
-  sink()
-  
-  # Check if parsing was successful
-  if (inherits(parsed_code, "try-error") | nchar(code)==0 | !is.character(code)) {
+  # Make sure input is character string
+  if (!is.character(code) || nchar(code) == 0) {
     return(FALSE)
   } else {
-    return(TRUE)
+    return(!inherits(try(eval(parse(text = code)), silent = TRUE), "try-error"))
   }
 }

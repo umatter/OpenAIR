@@ -10,15 +10,17 @@ write_test(file)
 \item{file}{The file path of the R function.}
 }
 \value{
-If the input is a character string, the function returns the generated output without creating a test file. Otherwise, it creates a test file and returns the file name.
+If the input is a character string, the function returns the
+generated output without creating a test file. Otherwise, it creates a test
+file and returns the file name.
 }
 \description{
-This function reads an R function from a file and generates a test file with documentation.
+This function reads an R function from a file and generates a test file with
+documentation.
 }
 \examples{
 \dontrun{
 # Write test for an R function
 write_test("path/to/file.R")
 }
-
 }

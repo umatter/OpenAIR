@@ -21,6 +21,12 @@ and each line is examined for R code and comment patterns. Only the lines that m
 patterns are returned.
 }
 \examples{
-example_string <- "This is a text string with R code and comments.\n# A comment\nx <- 5\ny = 10\nz <- x + y\nAnother line of text."
+example_string <- 
+"This is a text string with R code and comments.\n
+# A comment\n
+x <- 5\
+ny = 10\n
+z <- x + y\n
+Another line of text."
 extract_r_code(example_string)
 }
