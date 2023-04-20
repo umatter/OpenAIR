@@ -80,4 +80,4 @@ resp
 
 ## Code of Conduct
 
-For information about our code of conduct, please see the [Code of Conduct](CODE_OF_CONDUCT.md) page.
+For information about our code of conduct, please see the [Code of Conduct](inst/code_of_conduct.md) page.

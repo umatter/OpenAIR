@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-TheOpenAIR builds on OpenAI's API as backend and provides R wrapper functions for the ChatGPT endpoint as well as various high-level functions to integrate ChatGPT's functionality in a variety of data handling and data analytics tasks, ranging from data cleaning to the automated generation of analytics scripts.
+Utilizing OpenAI's API as the backend, TheOpenAIR offers R wrapper functions for the ChatGPT endpoint and several high-level functions that enable the integration of ChatGPT's capabilities in diverse data-related tasks, such as data cleansing and automated analytics script generation.
 }
 \seealso{
 Useful links:
