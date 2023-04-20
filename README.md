@@ -32,7 +32,7 @@ openai_api_key("YOUR-API-KEY")
 
 ```
 
-Then, you can start chatting with the model. The simplest way of interacting with ChatGPT is the `chat()`-function. Using it is essentially the same as interacting with with ChatGPT via the web GUI (https://chat.openai.com/chat).
+Then, you can start chatting with the model. The simplest way of interacting with ChatGPT is the `chat()`-function. Using it is essentially the same as interacting with ChatGPT via the web GUI (https://chat.openai.com/chat).
 
 ```r
 # use chat() to interact with ChatGPT through the R console
