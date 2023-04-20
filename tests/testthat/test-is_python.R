@@ -6,11 +6,11 @@ if (all(nchar(Sys.which(c("python", "python3")))) == 0) {
     expect_true(is_python("print('Hello, World!')"))
     expect_true(is_python("x = 5"))
     code <-
-  "
-  x = 5
-  if x > 0:
-      print('x is positive')
-  "
+"
+x = 5
+if x > 0:
+    print('x is positive')
+"
     expect_true(is_python(code))
   })
 
