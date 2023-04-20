@@ -4,7 +4,7 @@ Title: Integrate OpenAI's Large Language Models into Your R Workflows
 Version: 0.1.0
 Authors@R: c(person("Ulrich", "Matter", email = "umatter@protonmail.com", role = c("aut", "cre", "cph")), person("Jonathan", "Chassot", email = "jonathan.chassot@unisg.ch", role = "aut"))
 Maintainer: Ulrich Matter <umatter@protonmail.com>
-Description: TheOpenAIR builds on OpenAI's API as backend and provides R wrapper functions for the ChatGPT endpoint as well as various high-level functions to integrate ChatGPT's functionality in a variety of data handling and data analytics tasks, ranging from data cleaning to the automated generation of analytics scripts.
+Description: Utilizing OpenAI's API as the backend, TheOpenAIR offers R wrapper functions for the ChatGPT endpoint and several high-level functions that enable the integration of ChatGPT's capabilities in diverse data-related tasks, such as data cleansing and automated analytics script generation.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
