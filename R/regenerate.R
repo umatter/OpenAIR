@@ -10,6 +10,7 @@
 #' @return If output is 'message_to_console', the function returns NULL and prints the message to the console.
 #'         If output is 'message', the function returns a character string containing the message.
 #'         If output is 'response_object', the function returns the full response object.
+#' @export
 #' @examples
 #' \dontrun{
 #' # Start a new chat and save the chatlog ID
@@ -30,7 +31,7 @@ regenerate <- function(chatlog_id = ".__CURRENTCHAT__", output="message_to_conso
   
   # check input validity
   if (!output %in% c("message_to_console", "message", "response_object")){
-    stop("Argument output needs to be one of 'message_to_console', 'message', or 'response_object")
+    stop("Argument output needs to be one of 'message_to_console', 'message', or 'sponse_object")
   }
   
   # check if chat is ongoing
