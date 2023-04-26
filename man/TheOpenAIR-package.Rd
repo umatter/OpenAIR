@@ -4,11 +4,11 @@
 \name{TheOpenAIR-package}
 \alias{TheOpenAIR}
 \alias{TheOpenAIR-package}
-\title{TheOpenAIR: Integrate OpenAI's Large Language Models into Your R Workflows}
+\title{TheOpenAIR: Integrate 'OpenAI' Large Language Models into Your 'R' Workflows}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Utilizing OpenAI's API as the backend, TheOpenAIR offers R wrapper functions for the ChatGPT endpoint and several high-level functions that enable the integration of ChatGPT's capabilities in diverse data-related tasks, such as data cleansing and automated analytics script generation.
+Utilizing the 'OpenAI' API as the backend (\url{https://platform.openai.com/docs/api-reference}), 'TheOpenAIR' offers 'R' wrapper functions for the 'ChatGPT' endpoint and several high-level functions that enable the integration of 'ChatGPT' capabilities in diverse data-related tasks, such as data cleansing and automated analytics script generation.
 }
 \seealso{
 Useful links:
