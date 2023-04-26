@@ -73,50 +73,17 @@
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">chat</span> <span class="op">&lt;-</span> <span class="fu">set_chatlog</span><span class="op">(</span><span class="st">"Welcome to our chat!"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in set_chatlog("Welcome to our chat!"):</span> object 'OpenAIR_env' not found</span>
 <span class="r-in"><span><span class="fu"><a href="is_chatlog.html">is_chatlog</a></span><span class="op">(</span><span class="va">chat</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span><span class="va">chat</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> function (message, chatlog_id = ".__CURRENTCHAT__", output = "message_to_console", </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     ...) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (!output %in% c("message_to_console", "message", "response_object")) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         stop("Argument output needs to be one of 'message_to_console', 'message', or 'response_object")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (!exists(chatlog_id, envir = OpenAIR_env)) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         cl &lt;- start_chat(chatlog_id = chatlog_id)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     else {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         cl &lt;- get_chatlog(chatlog_id)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     resp &lt;- initialize_messages(initial_role = "user", initial_content = message) %&gt;% </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         add_to_chatlog(chatlog_id) %&gt;% chat_completion(...)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     resp %&gt;% messages() %&gt;% add_to_chatlog(chatlog_id)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (output == "message_to_console") {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         messages &lt;- resp %&gt;% messages()</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         resp_parts &lt;- parse_response(messages$content)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         for (i in 1:length(resp_parts)) {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             part &lt;- resp_parts[[i]]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             if (part$type == "text") {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 cli::cli_text(part$content)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 cli::cli_text()</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             else {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 cli::cli_code(part$content)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 cli::cli_text()</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (output == "message") {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         messages &lt;- resp %&gt;% messages()</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         return(messages$content)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     if (output == "response_object") {</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         return(resp)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> }</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;bytecode: 0x55cb72d63688&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: namespace:TheOpenAIR&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> An object of class "chatlog"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Slot "messages":</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   role                      content</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Welcome to our chat! You are a helpful assistant.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Slot "chatlog_id":</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ".chatlog_20230426080103"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
