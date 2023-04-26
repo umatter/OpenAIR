@@ -82,9 +82,11 @@ creating a new log environment to store the messages, and adding the messages ob
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Start a new chat session with the default system message</span></span></span>
 <span class="r-in"><span><span class="va">chatlog_id</span> <span class="op">&lt;-</span> <span class="fu">start_chat</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in set_chatlog(initial_role = initial_role, initial_content = initial_content,     chatlog_id):</span> object 'OpenAIR_env' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Start a new chat session with a custom system message</span></span></span>
 <span class="r-in"><span><span class="va">chatlog_id</span> <span class="op">&lt;-</span> <span class="fu">start_chat</span><span class="op">(</span><span class="st">"How can I assist you today?"</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in set_chatlog(initial_role = initial_role, initial_content = initial_content,     chatlog_id):</span> object 'OpenAIR_env' not found</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
