@@ -9,7 +9,10 @@ num_tokens(text, encoding = "cl100k_base")
 \arguments{
 \item{text}{a character string to count the number of tokens from}
 
-\item{encoding}{a character string that specifies how text is converted into tokens. The default is "cl100k_base" (for ChatGPT models; see https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb for details)}
+\item{encoding}{a character string that specifies how text is converted into
+tokens. The default is "cl100k_base" (for ChatGPT models; see
+https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
+for details)}
 }
 \value{
 an integer indicating the number of tokens in the input string

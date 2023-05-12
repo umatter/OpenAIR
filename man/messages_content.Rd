@@ -10,11 +10,12 @@ messages_content(response)
 \item{response}{a list object representing the HTTP response}
 }
 \value{
-a character string representing the choices/messages from the response
+a character string representing the choices/messages from the
+response
 }
 \description{
-This function extracts the messages content from the HTTP response of an API call to the
-OpenAI chat completions endpoint.
+This function extracts the messages content from the HTTP response of an API
+call to the OpenAI chat completions endpoint.
 }
 \author{
 Ulrich Matter umatter@protonmail.com

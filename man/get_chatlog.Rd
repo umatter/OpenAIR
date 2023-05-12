@@ -7,13 +7,16 @@
 get_chatlog(x = ".__CURRENTCHAT__")
 }
 \arguments{
-\item{x}{either a chatlog object r, or a character string representing the id of a chatlog (the default is ".__CURRENTCHAT__", the current log of the chat()-function)}
+\item{x}{either a chatlog object r, or a character string representing the id
+of a chatlog (the default is ".__CURRENTCHAT__", the current log of the
+chat()-function)}
 }
 \value{
 a chatlog object
 }
 \description{
-This function extracts the current chatlog of a given chat from the chat environment.
+This function extracts the current chatlog of a given chat from the chat
+environment.
 }
 \author{
 Ulrich Matter umatter@protonmail.com

@@ -13,9 +13,9 @@ openai_api_key(api_key)
 Nothing is returned; the function is called for its side effects.
 }
 \description{
-This function sets the OpenAI API key as an environment variable in the current R session.
-It takes the API key as an input and stores it as an environment variable, allowing other
-functions to access the key when needed.
+This function sets the OpenAI API key as an environment variable in the
+current R session. It takes the API key as an input and stores it as an
+environment variable, allowing other functions to access the key when needed.
 }
 \examples{
 \dontrun{
@@ -24,7 +24,8 @@ openai_api_key("your_api_key_here")
 }
 }
 \seealso{
-\url{https://platform.openai.com/docs/} for more information on the OpenAI API.
+\url{https://platform.openai.com/docs/} for more information
+on the OpenAI API.
 }
 \author{
 Ulrich Matter umatter@protonmail.com

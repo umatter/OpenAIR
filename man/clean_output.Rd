@@ -7,13 +7,16 @@
 clean_output(text)
 }
 \arguments{
-\item{text}{A character string containing the code or text content with '```' markers.}
+\item{text}{A character string containing the code or text content with
+'```' markers.}
 }
 \value{
 A character string containing the extracted code or text content.
 }
 \description{
-This function extracts the content from a given text string that is enclosed between the '```' markers. It can be used to extract any kind of code or text content.
+This function extracts the content from a given text string that is enclosed
+between the '```' markers. It can be used to extract any kind of code or text
+content.
 }
 \examples{
 code_text <- "```

@@ -4,22 +4,28 @@
 \alias{java_to_r}
 \title{Convert Java code to R code}
 \usage{
-java_to_r(java)
+java_to_r(java, ...)
 }
 \arguments{
-\item{java}{A character string containing the Java code to be converted to R, or a filename with the Java code.}
+\item{java}{A character string containing the Java code to be converted to R,
+or a filename with the Java code.}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
-If the input is a character string, the resulting R code will be printed and returned as a character string.
-        If the input is a filename, the resulting R code will be saved as a file with the same name as the input file, but with the extension `.R`, and the filename will be returned.
+If the input is a character string, the resulting R code will be
+printed and returned as a character string. If the input is a filename, the
+resulting R code will be saved as a file with the same name as the input
+file, but with the extension `.R`, and the filename will be returned.
 }
 \description{
 This function takes Java code as input and returns the corresponding R code.
 It uses GPT-4 powered chat to perform the code conversion.
 }
 \details{
-This function is not guaranteed to provide perfect conversions and might produce invalid R code in some cases.
-         Users are encouraged to verify the output code carefully.
+This function is not guaranteed to provide perfect conversions and
+might produce invalid R code in some cases. Users are encouraged to verify
+the output code carefully.
 }
 \examples{
 \dontrun{

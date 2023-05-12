@@ -9,15 +9,18 @@ replace_file_extension(filename, new_extension)
 \arguments{
 \item{filename}{The input filename as a character string.}
 
-\item{new_extension}{The new file extension to replace the old one (including the dot, e.g., ".bib").}
+\item{new_extension}{The new file extension to replace the old one
+(including the dot, e.g., ".bib").}
 }
 \value{
-A character string representing the filename with the replaced file extension.
+A character string representing the filename with the replaced file
+extension.
 }
 \description{
-This function replaces the file extension of a given filename with a specified new extension.
-It validates the input to ensure the filename and the new extension are single character strings.
-Then, it replaces the old extension with the new one and returns the modified filename.
+This function replaces the file extension of a given filename with a
+specified new extension. It validates the input to ensure the filename and
+the new extension are single character strings. Then, it replaces the old
+extension with the new one and returns the modified filename.
 }
 \examples{
 \dontrun{

@@ -4,20 +4,25 @@
 \alias{write_code}
 \title{Write code based on user's input}
 \usage{
-write_code(filename, chatlog_id = ".__CURRENTCODEFILE__")
+write_code(filename, chatlog_id = ".__CURRENTCODEFILE__", ...)
 }
 \arguments{
-\item{filename}{A character string representing the name of the file where the generated code will be saved.}
+\item{filename}{A character string representing the name of the file where
+the generated code will be saved.}
 
-\item{chatlog_id}{An optional character string representing the chatlog ID. Defaults to ".__CURRENTCODEFILE__".
-This ID is used to maintain the conversation history with the chatbot API.}
+\item{chatlog_id}{An optional character string representing the chatlog ID.
+Defaults to ".__CURRENTCODEFILE__". This ID is used to maintain the
+conversation history with the chatbot API.}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
 Returns the name of the file containing the generated code.
 }
 \description{
-The `write_code` function prompts the user to provide a plain English description of a program or function
-and the programming language it should be written in. The function then generates the code based on the user's input
+The `write_code` function prompts the user to provide a plain English
+description of a program or function and the programming language it should
+be written in. The function then generates the code based on the user's input
 and writes it to a specified file.
 }
 \examples{

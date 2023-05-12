@@ -14,7 +14,8 @@ A list of blocks with type, content, and language (for code blocks)
 }
 \description{
 This function takes an input string containing both text and code blocks,
-and returns a list of blocks with their respective type, content, and language (if applicable).
+and returns a list of blocks with their respective type, content, and
+language (if applicable).
 Each block is either of type 'text' or 'code'.
 }
 \examples{

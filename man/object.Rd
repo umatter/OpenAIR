@@ -10,11 +10,13 @@ object(response)
 \item{response}{a list object representing the HTTP response}
 }
 \value{
-a data frame with the usage statistics of the API call (how many tokens used)
+a data frame with the usage statistics of the API call (how many
+tokens used)
 }
 \description{
-This function extracts the object data from the parsed HTTP response of an API call to the
-OpenAI chat completions endpoint (provides information about the endpoint).
+This function extracts the object data from the parsed HTTP response of an
+API call to the OpenAI chat completions endpoint (provides information about
+the endpoint).
 }
 \author{
 Ulrich Matter umatter@protonmail.com

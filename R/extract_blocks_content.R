@@ -1,6 +1,7 @@
 #' Extract the content parts of blocks
 #'
-#' This function takes a list of blocks and returns a list of their content parts.
+#' This function takes a list of blocks and returns a list of their content
+#' parts.
 #'
 #' @param block_list A list of blocks to extract the content from
 #' @return A list of content parts

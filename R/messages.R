@@ -26,11 +26,11 @@ messages <- function(x) {
   if (!is.list(x) & !is_chatlog(x)) {
     stop("Invalid parameter value. Expecting list or chatlog object.")
   }
-  
+
   if (is_chatlog(x)) {
     return(x@messages)
   }
-  
+
   # Extract the choices from the x
   choices <- x$choices
   # Check if the choices are a list

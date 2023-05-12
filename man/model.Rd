@@ -13,8 +13,8 @@ model(response)
 a character string representing the model from the response
 }
 \description{
-This function extracts the model from the parsed HTTP response of an API call to the
-OpenAI chat completions endpoint.
+This function extracts the model from the parsed HTTP response of an API
+call to the OpenAI chat completions endpoint.
 }
 \author{
 Ulrich Matter umatter@protonmail.com

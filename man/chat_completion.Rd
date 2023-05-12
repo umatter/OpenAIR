@@ -21,57 +21,77 @@ chat_completion(
 )
 }
 \arguments{
-\item{msgs}{A data.frame containing the chat history to generate text from or a chatlog object.}
+\item{msgs}{A data.frame containing the chat history to generate text from or
+a chatlog object.}
 
 \item{model}{A character string specifying the ID of the model to use.
 The default value is "gpt-3.5-turbo".}
 
-\item{temperature}{An optional numeric scalar specifying the sampling temperature to use.}
+\item{temperature}{An optional numeric scalar specifying the sampling
+temperature to use.}
 
-\item{max_tokens}{An optional integer scalar specifying the maximum number of tokens to generate in the text.}
+\item{max_tokens}{An optional integer scalar specifying the maximum number of
+tokens to generate in the text.}
 
-\item{n}{An optional integer scalar specifying the number of text completions to generate.}
+\item{n}{An optional integer scalar specifying the number of text completions
+to generate.}
 
-\item{stop}{An optional character string or character vector specifying one or more stop sequences to use when generating the text.}
+\item{stop}{An optional character string or character vector specifying one
+or more stop sequences to use when generating the text.}
 
-\item{presence_penalty}{An optional numeric scalar specifying the presence penalty to use when generating the text. The default value is NULL.}
+\item{presence_penalty}{An optional numeric scalar specifying the presence
+penalty to use when generating the text. The default value is NULL.}
 
-\item{frequency_penalty}{An optional numeric scalar specifying the frequency penalty to use when generating the text. The default value is NULL.}
+\item{frequency_penalty}{An optional numeric scalar specifying the frequency
+penalty to use when generating the text. The default value is NULL.}
 
-\item{best_of}{An optional integer scalar specifying the number of completions to generate and return the best one. The default value is NULL.}
+\item{best_of}{An optional integer scalar specifying the number of
+completions to generate and return the best one. The default value is NULL.}
 
-\item{logit_bias}{An optional named numeric vector specifying the logit bias to use for each token in the generated text.}
+\item{logit_bias}{An optional named numeric vector specifying the logit bias
+to use for each token in the generated text.}
 
-\item{stream}{An optional logical scalar specifying whether to use the streaming API. The default value is \code{FALSE}.}
+\item{stream}{An optional logical scalar specifying whether to use the
+streaming API. The default value is \code{FALSE}.}
 
-\item{top_p}{An optional numeric scalar specifying the top p sampling ratio. The default value is NULL.}
+\item{top_p}{An optional numeric scalar specifying the top p sampling ratio.
+The default value is NULL.}
 
-\item{user}{A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.}
+\item{user}{A unique identifier representing your end-user, which can help
+OpenAI to monitor and detect abuse.}
 }
 \value{
 A character vector containing the generated text(s).
 }
 \description{
-This function generates natural language text in a conversational style using the OpenAI API's chat endpoint.
-It takes a series of chat messages as input, either as a data.frame or a chatlog object, and generates a text
-completion based on the conversation history and the specified model parameters.
+This function generates natural language text in a conversational style using
+the OpenAI API's chat endpoint. It takes a series of chat messages as input,
+either as a data.frame or a chatlog object, and generates a text completion
+based on the conversation history and the specified model parameters.
 }
 \examples{
 \dontrun{
 openai_api_key("your_api_key_here")
-msgs_df <- data.frame(role=c("system",
-"user",
-"assistant",
-"user"),
-content=c("You are a helpful assistant",
-"Who won the world series in 2020?",
-"The Los Angeles Dodgers won the World Series in 2020.",
-"Where was it played?"))
+msgs_df <- data.frame(
+  role = c(
+    "system",
+    "user",
+    "assistant",
+    "user"
+  ),
+  content = c(
+    "You are a helpful assistant",
+    "Who won the world series in 2020?",
+    "The Los Angeles Dodgers won the World Series in 2020.",
+    "Where was it played?"
+  )
+)
 chat_completion(msgs_df)
 }
 }
 \seealso{
-\url{https://platform.openai.com/docs/} for more information on the OpenAI API.
+\url{https://platform.openai.com/docs/} for more information on the
+OpenAI API.
 }
 \author{
 Ulrich Matter umatter@protonmail.com

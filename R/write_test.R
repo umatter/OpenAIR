@@ -4,6 +4,7 @@
 #' documentation.
 #'
 #' @param file The file path of the R function.
+#' @param ... Additional arguments to pass to the chat_completion() function.
 #'
 #' @return If the input is a character string, the function returns the
 #' generated output without creating a test file. Otherwise, it creates a test
@@ -15,8 +16,8 @@
 #' write_test("path/to/file.R")
 #' }
 #' @export
-write_test <- function(file) {
-  
+write_test <- function(file, ...) {
+
   # import, process text
   r_function <- read_text(file)
 
@@ -24,20 +25,20 @@ write_test <- function(file) {
   text <-
     r_function$text %>%
     paste0(collapse = "\n")
-  
+
   # Make sure intput is an R function
-  if (!contains_r_func(text) | nchar(text)==0){
+  if (!contains_r_func(text) || nchar(text) == 0) {
     stop("The input does not contain a valid R function.")
   }
 
-  # Create user input 
+  # Create user input
   n_msgs <- nrow(write_test_prompt)
-  write_test_prompt$content[n_msgs] <- 
+  write_test_prompt$content[n_msgs] <-
     sprintf(fmt = write_test_prompt$content[n_msgs], text)
 
   # chat
   cli::cli_alert_info("Test-writing in progress. Hold on tight!")
-  resp <- chat_completion(write_test_prompt)
+  resp <- chat_completion(write_test_prompt, ...)
   total_tokens_used <- usage(resp)$total_tokens
   info_token <- paste0("Total tokens used: ", total_tokens_used)
   cli::cli_inform(info_token)
@@ -54,7 +55,7 @@ write_test <- function(file) {
     return(output)
 
   } else {
-    filename <- paste0(replace_file_extension(filename, new_extension = ""), 
+    filename <- paste0(replace_file_extension(filename, new_extension = ""),
       "-test.R")
     file.edit(filename)
     return(filename)

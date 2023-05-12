@@ -4,23 +4,29 @@
 \alias{regenerate}
 \title{Regenerate the last response in an ongoing chat}
 \usage{
-regenerate(chatlog_id = ".__CURRENTCHAT__", output = "message_to_console")
+regenerate(chatlog_id = ".__CURRENTCHAT__", output = "message_to_console", ...)
 }
 \arguments{
-\item{chatlog_id}{A character string specifying the ID of the chatlog (default: '.__CURRENTCHAT__')}
+\item{chatlog_id}{A character string specifying the ID of the chatlog
+(default: '.__CURRENTCHAT__')}
 
-\item{output}{A character string specifying the output format. Options are 'message_to_console', 'message', or 'response_object' (default: 'message_to_console')}
+\item{output}{A character string specifying the output format. Options are
+'message_to_console', 'message', or 'response_object'
+(default: 'message_to_console')}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
-If output is 'message_to_console', the function returns NULL and prints the message to the console.
-        If output is 'message', the function returns a character string containing the message.
-        If output is 'response_object', the function returns the full response object.
+If output is 'message_to_console', the function returns NULL
+andprints the message to the console. If output is 'message', the function
+returns a character string containing the message. If output is
+'response_object', the function returns the full response object.
 }
 \description{
-This function removes the last response in a chatlog, generates a new response
-based on the updated chatlog, and updates the chatlog accordingly. The output
-can be displayed as a message in the console, returned as a message, or returned
-as a response object.
+This function removes the last response in a chatlog, generates a new
+response based on the updated chatlog, and updates the chatlog accordingly.
+The output can be displayed as a message in the console, returned as a
+message, or returned as a response object.
 }
 \examples{
 \dontrun{

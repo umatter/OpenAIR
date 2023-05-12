@@ -7,9 +7,6 @@ print.chatlog <- function(x) {
 }
 
 # Register the method
-setMethod(f = "print", 
-          signature = "chatlog", 
+setMethod(f = "print",
+          signature = "chatlog",
           definition = print.chatlog)
-
-
-

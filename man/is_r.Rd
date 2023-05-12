@@ -10,12 +10,14 @@ is_r(code)
 \item{code}{A character string containing the R code to be checked.}
 }
 \value{
-A logical value indicating whether the input code string contains valid R code or not.
+A logical value indicating whether the input code string contains
+valid R code or not.
 }
 \description{
-This function takes a character string as input and attempts to parse it as R code using the
-`parse` function. If the parsing is successful, the function returns TRUE, indicating that
-the input string contains valid R code. If parsing fails, the function returns FALSE.
+This function takes a character string as input and attempts to parse it as
+R code using the `parse` function. If the parsing is successful, the function
+returns TRUE, indicating that the input string contains valid R code. If
+parsing fails, the function returns FALSE.
 }
 \examples{
 # Valid R code

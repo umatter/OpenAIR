@@ -10,7 +10,7 @@
 #' @examples
 #' is_chatlog("Hello, World!")
 #' # [1] FALSE
-#' 
+#'
 #' chat <- new("chatlog")
 #' is_chatlog(chat)
 #' # [1] TRUE

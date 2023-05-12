@@ -4,20 +4,26 @@
 \alias{references_to_bibtex}
 \title{Convert references in plain text to BibTeX format}
 \usage{
-references_to_bibtex(references)
+references_to_bibtex(references, ...)
 }
 \arguments{
-\item{references}{A character string or a file path to a file containing the plain text references to convert.}
+\item{references}{A character string or a file path to a file containing the
+plain text references to convert.}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
-A character string containing the references in BibTeX format or, if a file path is provided, the function writes the BibTeX entries to a .bib file in the same directory and returns the file path of the newly created .bib file.
+A character string containing the references in BibTeX format or, if
+a file path is provided, the function writes the BibTeX entries to a .bib
+file in the same directory and returns the file path of the newly created
+.bib file.
 }
 \description{
-This function takes a character string or a file path to plain text references and
-converts them into BibTeX format. The function reads the input text, processes it, and
-returns a character string containing the references in BibTeX format. If a file path is
-provided, the function also writes the BibTeX entries to a .bib file in the same
-directory.
+This function takes a character string or a file path to plain text
+references and converts them into BibTeX format. The function reads the input
+text, processes it, and returns a character string containing the references
+in BibTeX format. If a file path is provided, the function also writes the
+BibTeX entries to a .bib file in the same directory.
 }
 \examples{
 \dontrun{
@@ -28,7 +34,8 @@ references_to_bibtex(references)
 }
 }
 \seealso{
-\url{https://ctan.org/pkg/bibtex} for more information on BibTeX format
+\url{https://ctan.org/pkg/bibtex} for more information on BibTeX
+format
 }
 \author{
 Ulrich Matter umatter@protonmail.com

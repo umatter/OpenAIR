@@ -4,10 +4,12 @@
 \alias{write_test}
 \title{Write test for an R function}
 \usage{
-write_test(file)
+write_test(file, ...)
 }
 \arguments{
 \item{file}{The file path of the R function.}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
 If the input is a character string, the function returns the

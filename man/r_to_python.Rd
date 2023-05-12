@@ -4,16 +4,25 @@
 \alias{r_to_python}
 \title{Convert R Code to Python Code}
 \usage{
-r_to_python(r)
+r_to_python(r, ...)
 }
 \arguments{
-\item{r}{The R code file to be converted to Python code. This should be a file path in the form of a character string.}
+\item{r}{The R code file to be converted to Python code. This should be a
+file path in the form of a character string.}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
-If the input filename is a "character string", the converted Python code will be returned as a character string. Otherwise, a new Python file will be created with the same name as the input file but with a ".py" extension, and the function will return the file path of the newly created Python file.
+If the input filename is a "character string", the converted Python
+code will be returned as a character string. Otherwise, a new Python file
+will be created with the same name as the input file but with a ".py"
+extension, and the function will return the file path of the newly created
+Python file.
 }
 \description{
-This function takes an R code file as input and uses a language model to convert the R code to Python code. The converted Python code is then either returned as a character string or written to a file, depending on the input.
+This function takes an R code file as input and uses a language model to
+convert the R code to Python code. The converted Python code is then either
+returned as a character string or written to a file, depending on the input.
 }
 \examples{
 \dontrun{

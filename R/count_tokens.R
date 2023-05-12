@@ -33,35 +33,35 @@
 #'
 #' @export
 count_tokens <- function(text) {
-  
+
   # Check if input is a file path
   if (is.character(text) && file.exists(text)) {
     text_string <- readLines(text, warn = FALSE)
-    
+
     # Check if input is a URL
   } else if (isUrl(text)) {
     response <- GET(text)
     text_string <- content(response, "text")
-    
+
     # Check if input is a character string
   } else if (is.character(text)) {
     text_string <- text
-    
+
     # If input is not valid, return an error message
   } else {
     stop("Input must be a file path, a valid URL, or a character string.")
   }
-  
+
   # Tokenize the text
   tokens <- stri_split_regex(text_string, "\\s+|(?=\\W)|(?<=\\W)")
   tokens <- unlist(tokens)
-  
+
   # Remove empty and whitespace-only tokens
   tokens <- tokens[tokens != "" & !grepl("^\\s+$", tokens)]
-  
+
   # Count the number of non-empty tokens using data.table package
   tokens_dt <- data.table(tokens)
   num_tokens <- tokens_dt[, .N, by = NULL][[1]]
-  
+
   return(num_tokens)
 }

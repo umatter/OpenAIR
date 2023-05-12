@@ -7,18 +7,24 @@
 message \%c\% output
 }
 \arguments{
-\item{message}{A character string containing the message to be sent to the ChatGPT API.}
+\item{message}{A character string containing the message to be sent to the
+ChatGPT API.}
 
-\item{output}{A character string specifying the output format. Valid options are "message_to_console", "message", or "response_object". Default is "message_to_console".}
+\item{output}{A character string specifying the output format. Valid options
+are "message_to_console", "message", or "response_object". Default is
+"message_to_console".}
 }
 \value{
-Depending on the value of the 'output' argument, this function returns one of the following:
-* "message_to_console": a message containing the response text to be printed to the console.
+Depending on the value of the 'output' argument, this function
+returns one of the following:
+* "message_to_console": a message containing the response text to be
+printed to the console.
 * "message": the response text as a character vector.
 * "response_object": the full response object from the ChatGPT API.
 }
 \description{
-This function sends a message to the ChatGPT API using the 'chat()' function and returns the response in the specified output format.
+This function sends a message to the ChatGPT API using the 'chat()' function
+and returns the response in the specified output format.
 }
 \examples{
 \dontrun{

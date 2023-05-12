@@ -12,26 +12,33 @@ chat(
 )
 }
 \arguments{
-\item{message}{A character string representing the message to be added to the chat conversation.}
+\item{message}{A character string representing the message to be added to the
+chat conversation.}
 
-\item{chatlog_id}{A character string representing the ID of the chat conversation to start or continue.
-Default is ".__CURRENTCHAT__".}
+\item{chatlog_id}{A character string representing the ID of the chat
+conversation to start or continue. Default is ".__CURRENTCHAT__".}
 
-\item{output}{A character string indicating the output format of the response. Default is "message_to_console".
-Valid options are "message_to_console", "message", or "response_object".}
+\item{output}{A character string indicating the output format of the
+response. Default is "message_to_console". Valid options are 
+"message_to_console", "message", or "response_object".}
 
-\item{...}{Additional arguments to be passed to the `chat_completion` function.}
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
-Depending on the value of the 'output' argument, this function returns one of the following:
-* "message_to_console": a message containing the response text is printed to the console (default).
+Depending on the value of the 'output' argument, this function
+returns one of the following:
+* "message_to_console": a message containing the response text is printed to
+the console (default).
 * "message": the response text as a character vector.
 * "response_object": the full response object from the ChatGPT API.
 }
 \description{
-This function starts or continues a chat conversation by adding the user's message to the conversation.
-If the conversation does not exist, a new one will be initiated. The response can be displayed in the
-console, returned as a character vector, or returned as a full response object from the ChatGPT API.
+This function starts or continues a chat conversation by adding the user's
+message to the conversation.
+If the conversation does not exist, a new one will be initiated. The response
+can be displayed in the
+console, returned as a character vector, or returned as a full response
+object from the ChatGPT API.
 }
 \examples{
 \dontrun{

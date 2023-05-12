@@ -19,7 +19,7 @@ This function splits a text string into a vector of strings with a
  specified number of tokens each.
 }
 \examples{
-large_text <- "This is an example of a large text string 
+large_text <- "This is an example of a large text string
 that will be split into chunks of N tokens each by our custom R function."
 num_tokens_per_chunk <- 5
 split_text(large_text, num_tokens_per_chunk)
