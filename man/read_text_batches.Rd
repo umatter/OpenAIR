@@ -7,16 +7,19 @@
 read_text_batches(text, batch_size = 3500)
 }
 \arguments{
-\item{text}{character string, either containing a path to a text file to read in or containing the text.}
+\item{text}{character string, either containing a path to a text file to read
+in or containing the text.}
 
-\item{batch_size}{integer indicating the number of lines to read in per batch (default is 3500)}
+\item{batch_size}{integer indicating the number of lines to read in per batch
+(default is 3500)}
 }
 \value{
-a numeric value indicating the total number of tokens in the text file
+a numeric value indicating the total number of tokens in the text
+file
 }
 \description{
-This function reads in data from text files in batches using the read_lines_chunked
-function from the readr package.
+This function reads in data from text files in batches using
+the read_lines_chunked function from the readr package.
 }
 \examples{
 \dontrun{

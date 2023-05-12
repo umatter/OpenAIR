@@ -7,13 +7,17 @@
 is_python(code)
 }
 \arguments{
-\item{code}{A character string containing code to be checked for Python code validity.}
+\item{code}{A character string containing code to be checked for Python code
+validity.}
 }
 \value{
-A logical value: TRUE if the input character string contains valid Python code, and FALSE otherwise.
+A logical value: TRUE if the input character string contains valid
+Python code, and FALSE otherwise.
 }
 \description{
-This function takes a character string as input and checks if it contains valid Python code. It returns TRUE if the string contains valid Python code, and FALSE otherwise.
+This function takes a character string as input and checks if it contains
+valid Python code. It returns TRUE if the string contains valid Python code,
+and FALSE otherwise.
 }
 \details{
 This function presuposes that python is installed on the system.

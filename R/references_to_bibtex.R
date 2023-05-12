@@ -1,15 +1,22 @@
 #' Convert references in plain text to BibTeX format
 #'
-#' This function takes a character string or a file path to plain text references and
-#' converts them into BibTeX format. The function reads the input text, processes it, and
-#' returns a character string containing the references in BibTeX format. If a file path is
-#' provided, the function also writes the BibTeX entries to a .bib file in the same
-#' directory.
+#' This function takes a character string or a file path to plain text
+#' references and converts them into BibTeX format. The function reads the input
+#' text, processes it, and returns a character string containing the references
+#' in BibTeX format. If a file path is provided, the function also writes the
+#' BibTeX entries to a .bib file in the same directory.
 #'
-#' @param references A character string or a file path to a file containing the plain text references to convert.
-#' @return A character string containing the references in BibTeX format or, if a file path is provided, the function writes the BibTeX entries to a .bib file in the same directory and returns the file path of the newly created .bib file.
+#' @param references A character string or a file path to a file containing the
+#' plain text references to convert.
+#' @param ... Additional arguments to pass to the chat_completion() function.
+#'
+#' @return A character string containing the references in BibTeX format or, if
+#' a file path is provided, the function writes the BibTeX entries to a .bib
+#' file in the same directory and returns the file path of the newly created
+#' .bib file.
 #' @author Ulrich Matter umatter@protonmail.com
-#' @seealso \url{https://ctan.org/pkg/bibtex} for more information on BibTeX format
+#' @seealso \url{https://ctan.org/pkg/bibtex} for more information on BibTeX
+#' format
 #' @examples
 #' \dontrun{
 #' # Convert plain text references to BibTeX format
@@ -20,45 +27,41 @@
 #' @export
 
 
-references_to_bibtex <- function(references) {
-  
+references_to_bibtex <- function(references, ...) {
+
   # import, process text
   references <- read_text(references)
-  text <- 
-    references$text %>% 
+  text <-
+    references$text %>%
     paste0(collapse = "\n")
-  
+
   # initial user input
   n_msgs <- nrow(references_to_bibtex_prompt)
-  references_to_bibtex_prompt$content[n_msgs] <- 
+  references_to_bibtex_prompt$content[n_msgs] <-
     sprintf(fmt = references_to_bibtex_prompt$content[n_msgs], text)
-  
+
   # chat
   cli::cli_alert_info("Bibtex writing in progress. Hold on tight!")
-  resp <- chat_completion(references_to_bibtex_prompt)
+  resp <- chat_completion(references_to_bibtex_prompt, ...)
   total_tokens_used <- usage(resp)$total_tokens
   info_token <- paste0("Total tokens used: ", total_tokens_used)
   cli::cli_inform(info_token)
-  
+
   # extract output
-  output <- 
-    resp %>% 
-    messages_content() %>% 
-    clean_output() 
+  output <-
+    resp %>%
+    messages_content() %>%
+    clean_output()
 
   # Return the processed references as BibTeX entries
   filename <- unique(references$file)
   if (filename == "character string") {
     return(output)
-    
+
   } else {
     output_file <- replace_file_extension(filename, new_extension = ".bib")
     writeLines(output, output_file)
     return(output_file)
-    
+
   }
-  
 }
-
-
-

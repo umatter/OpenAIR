@@ -7,15 +7,17 @@
 contains_r_func(input)
 }
 \arguments{
-\item{input}{A character string specifying the path to the text file, or a character
-string containing the text to be checked for an R function definition.}
+\item{input}{A character string specifying the path to the text file, or a
+character
+  string containing the text to be checked for an R function definition.}
 }
 \value{
 A logical value (TRUE or FALSE) indicating whether the input
   contains a valid R function definition.
 }
 \description{
-This function parses a text file or a character string and returns TRUE if it contains
+This function parses a text file or a character string and returns TRUE if it
+contains
 a valid R function definition. It uses a regex pattern to identify
 possible R function definitions and then attempts to parse the matched
 lines as R code.
@@ -23,14 +25,16 @@ lines as R code.
 \examples{
 # Create a temporary file with an R function definition
 temp_file <- tempfile(fileext = ".R")
-writeLines("example_function <- function(x) {\n  return(x * 2)\n}", temp_file)
+writeLines("example_function <- function(x) {\n  return(x * 2)\n}",
+temp_file)
 
 # Check if the temporary file contains an R function definition
 result <- contains_r_func(temp_file)
 print(result) # Should print TRUE
 
 # Check if a character string contains an R function definition
-result <- contains_r_func("example_function <- function(x) { return(x * 2) }")
+result <- contains_r_func(
+ "example_function <- function(x) { return(x * 2) }")
 print(result) # Should print TRUE
 
 # Remove the temporary file

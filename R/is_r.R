@@ -1,12 +1,14 @@
 #' Check if a character string contains valid R code
 #'
-#' This function takes a character string as input and attempts to parse it as R code using the
-#' `parse` function. If the parsing is successful, the function returns TRUE, indicating that
-#' the input string contains valid R code. If parsing fails, the function returns FALSE.
+#' This function takes a character string as input and attempts to parse it as
+#' R code using the `parse` function. If the parsing is successful, the function
+#' returns TRUE, indicating that the input string contains valid R code. If
+#' parsing fails, the function returns FALSE.
 #'
 #' @param code A character string containing the R code to be checked.
 #'
-#' @return A logical value indicating whether the input code string contains valid R code or not.
+#' @return A logical value indicating whether the input code string contains
+#' valid R code or not.
 #'
 #' @examples
 #' # Valid R code

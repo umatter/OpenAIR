@@ -7,7 +7,8 @@
 extract_roxygen2(func_def)
 }
 \arguments{
-\item{func_def}{A character vector containing the lines of a function definition}
+\item{func_def}{A character vector containing the lines of a function
+definition}
 }
 \value{
 A character string containing the roxygen2 documentation lines

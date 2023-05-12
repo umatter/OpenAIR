@@ -7,17 +7,20 @@
 add_to_chatlog(msgs, chatlog_id = NULL)
 }
 \arguments{
-\item{msgs}{A chatlog object or a data.frame containing the messages to be added to the chat log.}
+\item{msgs}{A chatlog object or a data.frame containing the messages to be
+added to the chat log.}
 
-\item{chatlog_id}{The id of the chatlog object. Required when the provided msgs is a data.frame.}
+\item{chatlog_id}{The id of the chatlog object. Required when the provided
+msgs is a data.frame.}
 }
 \value{
 The updated chatlog object with the newly added messages.
 }
 \description{
-This function adds data to the in-memory chat log, which is in the global environment. The data
-can be any R object, such as a vector, list, or data frame. The function supports adding data
-to the chat log by providing either a data.frame or a chatlog object.
+This function adds data to the in-memory chat log, which is in the global
+environment. The data can be any R object, such as a vector, list, or data
+frame. The function supports adding data to the chat log by providing either
+a data.frame or a chatlog object.
 }
 \examples{
 \dontrun{

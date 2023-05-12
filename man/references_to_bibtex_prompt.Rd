@@ -6,7 +6,8 @@
 \title{Input: message content template for references_to_bibtex()}
 \format{
 ## `references_to_bibtex_prompt`
-A data frame with 4 rows and 2 columns representing the messages object in API calls.
+A data frame with 4 rows and 2 columns representing the messages object in
+API calls.
 }
 \source{
 Contributed by umatter

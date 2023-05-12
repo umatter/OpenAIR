@@ -10,13 +10,16 @@ df_to_csv(df)
 \item{df}{A data.frame to be converted to a CSV-formatted character string.}
 }
 \value{
-A character string representing the data values in the input data.frame
+A character string representing the data values in the input
+data.frame
   formatted as a CSV file.
 }
 \description{
 The `df_to_csv` function takes a data.frame as input and returns a character
-string representing the content of the original data.frame formatted as a CSV file.
-The resulting CSV-formatted string can be written to a file or further processed
+string representing the content of the original data.frame formatted as a CSV
+file.
+The resulting CSV-formatted string can be written to a file or further
+processed
 as needed.
 }
 \examples{

@@ -7,22 +7,30 @@
 extract_entities(
   text,
   entity_types = c("locations", "persons", "organizations"),
-  batch_size = NULL
+  batch_size = NULL,
+  ...
 )
 }
 \arguments{
-\item{text}{A character string containing the text to be processed, or a path to a text file}
+\item{text}{A character string containing the text to be processed, or a path
+to a text file}
 
-\item{entity_types}{A character vector containing names of entity types to be extracted. Defaults to c("locations", "persons", "organizations").}
+\item{entity_types}{A character vector containing names of entity types to
+be extracted. Defaults to c("locations", "persons", "organizations").}
 
-\item{batch_size}{An integer indicating the size of each batch, if the text input is supposed to be processed in batches. Set this to NULL to process all at once.}
+\item{batch_size}{An integer indicating the size of each batch, if the text
+input is supposed to be processed in batches. Set this to NULL to process all
+at once.}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
 A tibble
 }
 \description{
-This function takes a character string or a path to a text file and returns a tibble describing the entities found in the text.
-The type of entities to be searched for and extracted can be defined by the user.
+This function takes a character string or a path to a text file and returns
+a tibble describing the entities found in the text. The type of entities to
+be searched for and extracted can be defined by the user.
 }
 \examples{
  \dontrun{

@@ -7,17 +7,21 @@
 num_tokens_file(filename, batch_size = 1000, encoding = "cl100k_base")
 }
 \arguments{
-\item{filename}{character string indicating the name of the text file to read in}
+\item{filename}{character string indicating the name of the text file to
+read in}
 
-\item{batch_size}{integer indicating the number of lines to read in per batch (default is 1000)}
+\item{batch_size}{integer indicating the number of lines to read in per batch
+(default is 1000)}
 
-\item{encoding}{character string indicating the encoding to use (default is "cl100k_base")}
+\item{encoding}{character string indicating the encoding to use
+(default is "cl100k_base")}
 }
 \value{
-a numeric value indicating the total number of tokens in the text file
+a numeric value indicating the total number of tokens in the text
+file
 }
 \description{
-The function batch-wise computes the total number of tokens in a text file. 
-The function returns a numeric value indicating the total
-number of tokens in the file. The function can be used on very large text files.
+The function batch-wise computes the total number of tokens in a text file.
+The function returns a numeric value indicating the total number of tokens
+in the file. The function can be used on very large text files.
 }

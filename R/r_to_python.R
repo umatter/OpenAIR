@@ -1,10 +1,18 @@
 #' Convert R Code to Python Code
 #'
-#' This function takes an R code file as input and uses a language model to convert the R code to Python code. The converted Python code is then either returned as a character string or written to a file, depending on the input.
+#' This function takes an R code file as input and uses a language model to
+#' convert the R code to Python code. The converted Python code is then either
+#' returned as a character string or written to a file, depending on the input.
 #'
-#' @param r The R code file to be converted to Python code. This should be a file path in the form of a character string.
+#' @param r The R code file to be converted to Python code. This should be a
+#' file path in the form of a character string.
+#' @param ... Additional arguments to pass to the chat_completion() function.
 #'
-#' @return If the input filename is a "character string", the converted Python code will be returned as a character string. Otherwise, a new Python file will be created with the same name as the input file but with a ".py" extension, and the function will return the file path of the newly created Python file.
+#' @return If the input filename is a "character string", the converted Python
+#' code will be returned as a character string. Otherwise, a new Python file
+#' will be created with the same name as the input file but with a ".py"
+#' extension, and the function will return the file path of the newly created
+#' Python file.
 #'
 #' @examples
 #' \dontrun{
@@ -15,52 +23,50 @@
 #' r_to_python("example.R", output_file = "example.py")
 #'}
 #' @export
-r_to_python <- function(r) {
-  
+r_to_python <- function(r, ...) {
+
   # import, process text
   r <- read_text(r)
-  text <- 
-    r$text %>% 
+  text <-
+    r$text %>%
     paste0(collapse = "\n")
-  
+
   # initial user input
   n_msgs <- nrow(r_to_python_prompt)
-  r_to_python_prompt$content[n_msgs] <- 
+  r_to_python_prompt$content[n_msgs] <-
     sprintf(fmt = r_to_python_prompt$content[n_msgs], text)
-  
+
   # chat
   cli::cli_alert_info("Python-code writing in progress. Hold on tight!")
-  resp <- chat_completion(r_to_python_prompt)
+  resp <- chat_completion(r_to_python_prompt, ...)
   total_tokens_used <- usage(resp)$total_tokens
   info_token <- paste0("Total tokens used: ", total_tokens_used)
   cli::cli_inform(info_token)
-  
+
   # extract output
-  output <- 
-    resp %>% 
-    messages_content() %>% 
+  output <-
+    resp %>%
+    messages_content() %>%
     clean_output()
-  
+
   output <- gsub("^python", "", output)
-  
+
   # validate output
-  if (is_python(output)==FALSE){
-    cli::cli_alert_warning("The conversion from R to Python has potentially resulted in invalid Python code. Please verify the output code carefully!")
+  if (is_python(output) == FALSE) {
+    cli::cli_alert_warning(paste0("The conversion from R to Python has ",
+    "potentially resulted in invalid Python code. Please verify the output ",
+    "code carefully!"))
   }
 
   # Return the processed r as BibTeX entries
   filename <- unique(r$file)
   if (filename == "character string") {
     return(output)
-    
+
   } else {
     output_file <- replace_file_extension(filename, new_extension = ".py")
     writeLines(output, output_file)
     return(output_file)
-    
+
   }
-  
 }
-
-
-

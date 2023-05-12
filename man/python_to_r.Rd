@@ -4,20 +4,25 @@
 \alias{python_to_r}
 \title{Convert Python code to R code}
 \usage{
-python_to_r(py)
+python_to_r(py, ...)
 }
 \arguments{
-\item{py}{A file path or character string containing the Python code to be converted.}
+\item{py}{A file path or character string containing the Python code to be
+converted.}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
-If the input is a character string, the function returns the converted R code as a
-        character string. If the input is a file, the function writes the converted R code to a
-        new file with the same name and a ".R" extension, and returns the output file path.
+If the input is a character string, the function returns the
+converted R code as a character string. If the input is a file, the function
+writes the converted R code to a new file with the same name and a ".R"
+extension, and returns the output file path.
 }
 \description{
-This function takes a Python code file or character string as input and attempts to
-convert the code to R using the OpenAI API. The function provides feedback on
-the total tokens used during the conversion and warns if the output might not be valid R code.
+This function takes a Python code file or character string as input and
+attempts to convert the code to R using the OpenAI API. The function provides
+feedback on the total tokens used during the conversion and warns if the
+output might not be valid R code.
 }
 \examples{
 \dontrun{

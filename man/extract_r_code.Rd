@@ -7,21 +7,24 @@
 extract_r_code(input_string)
 }
 \arguments{
-\item{input_string}{A character string containing R code and comments, mixed with other text.
-The string may contain multiple lines separated by newline characters.}
+\item{input_string}{A character string containing R code and comments, mixed
+with other text. The string may contain multiple lines separated by newline
+characters.}
 }
 \value{
-A character vector containing R code and comment lines extracted from the input string.
-        Each element in the vector corresponds to one line of code or a comment.
+A character vector containing R code and comment lines extracted from
+the input string. Each element in the vector corresponds to one line of code
+or a comment.
 }
 \description{
-This function takes an input string, detects R code and comments, and returns a character vector
-containing the R code and comments. The input string is split into lines based on newline characters,
-and each line is examined for R code and comment patterns. Only the lines that match either of these
-patterns are returned.
+This function takes an input string, detects R code and comments, and returns
+a character vector containing the R code and comments. The input string is
+split into lines based on newline characters, and each line is examined for R
+code and comment patterns. Only the lines that match either of these patterns
+are returned.
 }
 \examples{
-example_string <- 
+example_string <-
 "This is a text string with R code and comments.\n
 # A comment\n
 x <- 5\

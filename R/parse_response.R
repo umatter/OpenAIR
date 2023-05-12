@@ -1,7 +1,8 @@
 #' Parse a Response From the API
 #'
 #' This function takes an input string containing both text and code blocks,
-#' and returns a list of blocks with their respective type, content, and language (if applicable).
+#' and returns a list of blocks with their respective type, content, and
+#' language (if applicable).
 #' Each block is either of type 'text' or 'code'.
 #'
 #' @param input_string The response from the API
@@ -59,7 +60,7 @@ parse_response <- function(input_string) {
   if (res[1] == -1) {
     return(list(list(type = "text", content = input_string)))
   }
-  
+
   # start_text is the start for text blocks, start_code is the start for code
   # end_text is the end for text blocks, end_code is the end for code
   start_code <- as.numeric(res)
@@ -78,18 +79,18 @@ parse_response <- function(input_string) {
     start_text <- start_text[-length(start_text)]
   }
 
-  if (0 < length(start_text) & 0 < length(end_text)){
+  if (0 < length(start_text) && 0 < length(end_text)) {
     text_blocks <- substring(input_string, start_text, end_text)
     text_list <- mapply(function(block, start) {
       list(type = "text", content = block, start = start)
     }, text_blocks, start_text, SIMPLIFY = FALSE)
-    
+
   } else {
     # no text in response
     text_list <- NULL
   }
 
-  if (0 < length(start_code) & 0 < length(end_code)){
+  if (0 < length(start_code) && 0 < length(end_code)) {
     code_blocks <- substring(input_string, start_code, end_code)
     code_list <- mapply(function(block, start) {
       # Remove the ticks

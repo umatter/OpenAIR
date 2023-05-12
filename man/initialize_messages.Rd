@@ -10,19 +10,24 @@ initialize_messages(
 )
 }
 \arguments{
-\item{initial_role}{A character string representing the role issueing the initial content (per default: "system")}
+\item{initial_role}{A character string representing the role issueing the
+initial content (per default: "system")}
 
-\item{initial_content}{A character string representing the initial message from the system}
+\item{initial_content}{A character string representing the initial message
+from the system}
 }
 \value{
-A data frame containing a single message from the system to the user, with columns for the
+A data frame containing a single message from the system to the user,
+with columns for the
 message role and content.
 }
 \description{
-This function initializes a new messages object as a template for messages sent to the OpenAI API
-https://api.openai.com/v1/chat/completions endpoint. By default, the template contains a single message from
-the system to the user with the initial content "You are a helpful assistant.", but you can customize the content
-by specifying a different value for the "initial_system_content" parameter.
+This function initializes a new messages object as a template for messages
+sent to the OpenAI API https://api.openai.com/v1/chat/completions endpoint.
+By default, the template contains a single message from the system to the
+user with the initial content "You are a helpful assistant.", but you can
+customize the content by specifying a different value for the
+"initial_system_content" parameter.
 }
 \examples{
 messages <- initialize_messages()

@@ -6,7 +6,8 @@
 \title{Input: message content template for extract_entities()}
 \format{
 ## `extract_entities_prompt`
-A data frame with 2 rows and 2 columns representing the messages object in API calls.
+A data frame with 2 rows and 2 columns representing the messages object in
+API calls.
 }
 \source{
 Contributed by umatter

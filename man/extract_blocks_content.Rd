@@ -13,5 +13,6 @@ extract_blocks_content(block_list)
 A list of content parts
 }
 \description{
-This function takes a list of blocks and returns a list of their content parts.
+This function takes a list of blocks and returns a list of their content
+parts.
 }

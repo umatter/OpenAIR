@@ -7,18 +7,23 @@
 nested_to_pipe(r, n_tokens_limit = 3000, ...)
 }
 \arguments{
-\item{r}{A file path or character string containing the R code to be converted.}
+\item{r}{A file path or character string containing the R code to be
+converted.}
 
-\item{n_tokens_limit}{The maximum number of tokens allowed in the input text (default: 3000).}
+\item{n_tokens_limit}{The maximum number of tokens allowed in the input text
+(default: 3000).}
 
-\item{...}{Additional arguments passed to the chat_completion function.}
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
-If r is a character string, the function returns the converted R code as a character string. If r is a file path, the function writes the converted code to a new file with the same name and a "-pipe.R" suffix, and returns the path to the output file.
+If r is a character string, the function returns the converted R code
+as a character string. If r is a file path, the function writes the converted
+code to a new file with the same name and a "-pipe.R" suffix, and returns the
+path to the output file.
 }
 \description{
-This function takes an R script containing traditional (nested syntax) R code and
-converts it to magrittr-style syntax, using the pipe (%>%) operator.
+This function takes an R script containing traditional (nested syntax) R
+code and converts it to magrittr-style syntax, using the pipe (%>%) operator.
 It also validates the input and output code to ensure proper R syntax.
 }
 \examples{

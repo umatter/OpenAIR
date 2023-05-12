@@ -10,7 +10,8 @@ is_xml(input_string)
 \item{input_string}{A character string to be checked for XML format.}
 }
 \value{
-A logical value. If the input string is in valid XML format, returns TRUE, otherwise returns FALSE.
+A logical value. If the input string is in valid XML format, returns
+TRUE, otherwise returns FALSE.
 }
 \description{
 Check if the provided string is in valid XML format.

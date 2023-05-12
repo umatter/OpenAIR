@@ -11,11 +11,14 @@ set_chatlog(
 )
 }
 \arguments{
-\item{initial_role}{A character string representing the role issueing the initial content (per default: "system")}
+\item{initial_role}{A character string representing the role issueing the
+initial content (per default: "system")}
 
-\item{initial_content}{A character string representing the initial message from the system}
+\item{initial_content}{A character string representing the initial message
+from the system}
 
-\item{chatlog_id}{A character string representing the ID of this conversation. Per default, this will be set automatically.}
+\item{chatlog_id}{A character string representing the ID of this
+conversation. Per default, this will be set automatically.}
 }
 \value{
 A new chatlog object

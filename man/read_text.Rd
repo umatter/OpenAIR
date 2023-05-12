@@ -7,16 +7,18 @@
 read_text(text)
 }
 \arguments{
-\item{text}{A character string containing the text to be converted, or a path to a text file.}
+\item{text}{A character string containing the text to be converted, or a
+path to a text file.}
 }
 \value{
-A tibble containing the converted text in tidy-text format, with columns for the text,
+A tibble containing the converted text in tidy-text format,
+with columns for the text,
 file name, line number, and batch index (if applicable).
 }
 \description{
-This function takes a character string or a path to a text file as input and converts it 
-to tidy-text format. The resulting tibble contains one row for each line of the input text,
-along with the file name, and line number.
+This function takes a character string or a path to a text file as input and
+converts it to tidy-text format. The resulting tibble contains one row for
+each line of the input text, along with the file name, and line number.
 }
 \examples{
 read_text("Hello, how are you?")

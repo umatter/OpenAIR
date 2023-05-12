@@ -4,21 +4,26 @@
 \alias{edit_code}
 \title{Edit code based on user's input}
 \usage{
-edit_code(filename, chatlog_id = ".__CURRENTCODEFILE__")
+edit_code(filename, chatlog_id = ".__CURRENTCODEFILE__", ...)
 }
 \arguments{
-\item{filename}{A character string representing the name of the file containing the code to be edited.}
+\item{filename}{A character string representing the name of the file
+containing the code to be edited.}
 
-\item{chatlog_id}{An optional character string representing the chatlog ID. Defaults to ".__CURRENTCODEFILE__".
-This ID is used to maintain the conversation history with the AI.}
+\item{chatlog_id}{An optional character string representing the chatlog ID.
+Defaults to ".__CURRENTCODEFILE__". This ID is used to maintain the
+conversation history with the AI.}
+
+\item{...}{Additional arguments to pass to the chat_completion() function.}
 }
 \value{
 Returns the name of the file containing the modified code.
 }
 \description{
-The `edit_code` function prompts the user to provide a plain English description of how the code in a given file
-should be modified. The function then generates the modified code based on the user's input
-and writes it back to the specified file.
+The `edit_code` function prompts the user to provide a plain English
+description of how the code in a given file should be modified. The function
+then generates the modified code based on the user's input and writes it back
+to the specified file.
 }
 \examples{
 \dontrun{

@@ -10,10 +10,12 @@ created(response)
 \item{response}{a list object representing the HTTP response}
 }
 \value{
-a Date object representing the date-time string of when the response was created
+a Date object representing the date-time string of when the response
+was created
 }
 \description{
-This function extracts the date-time string of when the response was created from the parsed HTTP response of an API call to the
+This function extracts the date-time string of when the response was created
+from the parsed HTTP response of an API call to the
 OpenAI chat completions endpoint.
 }
 \author{

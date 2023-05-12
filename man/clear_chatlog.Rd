@@ -7,8 +7,9 @@
 clear_chatlog(chatlog_id = ".__CURRENTCHAT__")
 }
 \arguments{
-\item{chatlog_id}{character string indicating the name of the chat log to clear.
-Default is ".__CURRENTCHAT__".}
+\item{chatlog_id}{character string indicating the name of the chat log to
+clear.
+                  Default is ".__CURRENTCHAT__".}
 }
 \value{
 This function does not return anything.

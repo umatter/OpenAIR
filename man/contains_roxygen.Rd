@@ -7,15 +7,17 @@
 contains_roxygen(input)
 }
 \arguments{
-\item{input}{A character string specifying the path to the text file, or a character
-string containing the text to be checked for Roxygen2 documentation.}
+\item{input}{A character string specifying the path to the text file, or a
+character
+  string containing the text to be checked for Roxygen2 documentation.}
 }
 \value{
 A logical value (TRUE or FALSE) indicating whether the input
   contains Roxygen2 documentation.
 }
 \description{
-This function parses a text file or a character string and returns TRUE if it contains
+This function parses a text file or a character string and returns TRUE if it
+contains
 Roxygen2 documentation. It uses a regex pattern to identify
 possible Roxygen2 documentation lines.
 }
