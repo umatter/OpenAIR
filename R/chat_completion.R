@@ -6,7 +6,9 @@
 #' based on the conversation history and the specified model parameters.
 #'
 #' @param msgs A data.frame containing the chat history to generate text from or
-#' a chatlog object.
+#' a chatlog object
+#' @param functions An optional list of functions to use for the function call.
+#' @param function_call An optional list specifying the function call to use.
 #' @param model A character string specifying the ID of the model to use.
 #' The default value is "gpt-3.5-turbo".
 #' @param temperature An optional numeric scalar specifying the sampling
@@ -56,10 +58,11 @@
 #' chat_completion(msgs_df)
 #' }
 #' @export
-chat_completion <- function(msgs, model = "gpt-3.5-turbo", temperature = NULL,
-  max_tokens = NULL, n = NULL, stop = NULL,presence_penalty = NULL, 
-  frequency_penalty = NULL, best_of = NULL, logit_bias = NULL, stream = FALSE, 
-  top_p = NULL, user = NULL) {
+chat_completion <- function(msgs, functions = NULL, function_call = NULL,
+  model = "gpt-3.5-turbo", temperature = NULL, max_tokens = NULL, n = NULL,
+  stop = NULL, presence_penalty = NULL, frequency_penalty = NULL,
+  best_of = NULL, logit_bias = NULL, stream = FALSE, top_p = NULL,
+  user = NULL) {
   # the relevant API endpoint
   API_ENDPOINT <- "https://api.openai.com/v1/chat/completions"
 
@@ -85,6 +88,21 @@ chat_completion <- function(msgs, model = "gpt-3.5-turbo", temperature = NULL,
     model = model,
     messages = msgs
   )
+
+  if (!is.null(functions)) {
+    # Currently, only two models support the 'functions' argument
+    # TODO: stop or warn ?
+    supported_models <- c("gpt-3.5-turbo-0613", "gpt-4-0613")
+    if (!any(model %in% supported_models)) {
+      stop("The 'functions' argument is currently only supported for the ",
+        paste(supported_models, collapse = ", "), " models.")
+    }
+    payload$functions <- functions
+
+    if (!is.null(function_call)) {
+      payload$function_call <- function_call
+    }
+  }
 
   if (!is.null(max_tokens)) {
     payload$max_tokens <- max_tokens
