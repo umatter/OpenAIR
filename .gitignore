@@ -7,3 +7,4 @@ tests/_notes.R
 inst/slides/
 inst/text/func.R
 inst/doc
+.aider*
