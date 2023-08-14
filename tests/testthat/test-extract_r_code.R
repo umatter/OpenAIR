@@ -15,4 +15,10 @@ test_that("extract_r_code works correctly", {
   input_no_code <- "This is a text string without R code and comments."
   test_output_no_code <- extract_r_code(input_no_code)
   expect_equal(test_output_no_code, character(0))
+
+  # Test with an input string that only contains R code
+  input_only_code <- "x <- 5\ny = 10\nz <- x + y"
+  expected_output_only_code <- c("x <- 5", "y = 10", "z <- x + y")
+  test_output_only_code <- extract_r_code(input_only_code)
+  expect_equal(test_output_only_code, expected_output_only_code)
 })
