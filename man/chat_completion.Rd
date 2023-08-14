@@ -6,6 +6,8 @@
 \usage{
 chat_completion(
   msgs,
+  functions = NULL,
+  function_call = NULL,
   model = "gpt-3.5-turbo",
   temperature = NULL,
   max_tokens = NULL,
@@ -22,7 +24,11 @@ chat_completion(
 }
 \arguments{
 \item{msgs}{A data.frame containing the chat history to generate text from or
-a chatlog object.}
+a chatlog object}
+
+\item{functions}{An optional list of functions to use for the function call.}
+
+\item{function_call}{An optional list specifying the function call to use.}
 
 \item{model}{A character string specifying the ID of the model to use.
 The default value is "gpt-3.5-turbo".}
