@@ -21,7 +21,7 @@
 read_text <- function(text) {
 
   # read text (either from file or string)
-    if(!file.exists(text) & !R.utils::isUrl(text)) {
+    if(text == "" || (!file.exists(text) & !R.utils::isUrl(text))) {
       fn <- "character string"
       # read the data, split into lines
       lines <- readr::read_lines(I(text))
