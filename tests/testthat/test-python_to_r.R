@@ -28,14 +28,14 @@ if (!nchar(Sys.getenv("OPENAI_API_KEY")) == 0) {
 
     # Test with a Python code string that contains syntax that doesn't have a direct equivalent in R
     test_python_code <- "try:\n  x = 5\nexcept Exception as e:\n  print(e)"
-    expect_warning(python_to_r(test_python_code))
+    expect_message(python_to_r(test_python_code), "The Python code contains syntax that doesn't have a direct equivalent in R.")
 
     # Test with an empty string
     expect_equal(python_to_r(""), "")
 
     # Test with a non-Python code string
     test_non_python_code <- "This is not Python code."
-    expect_warning(python_to_r(test_non_python_code))
+    expect_message(python_to_r(test_non_python_code), "The input string does not appear to be valid Python code.")
     
      })
 } else {
