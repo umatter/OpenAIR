@@ -63,15 +63,17 @@ python_to_r <- function(py, ...) {
     "carefully!"))
   }
 
-  # Return the processed py as R
-  filename <- unique(py$file)
-  if (filename == "character string") {
-    return(output)
-
-  } else {
-    output_file <- replace_file_extension(filename, new_extension = ".R")
-    writeLines(output, output_file)
-    return(output_file)
-
-  }
+  # Return the processed py as R                                                                                                                                                                       
+  if (is.null(py$file) || length(py$file) == 0) {                                                                                                                                                      
+    return(output)                                                                                                                                                                                     
+  } else {                                                                                                                                                                                             
+    filename <- unique(py$file)                                                                                                                                                                        
+    if (filename == "character string") {                                                                                                                                                              
+      return(output)                                                                                                                                                                                   
+    } else {                                                                                                                                                                                           
+      output_file <- replace_file_extension(filename, new_extension = ".R")                                                                                                                            
+      writeLines(output, output_file)                                                                                                                                                                  
+      return(output_file)                                                                                                                                                                              
+    }                                                                                                                                                                                                  
+  }    
 }
