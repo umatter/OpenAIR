@@ -65,7 +65,7 @@ python_to_r <- function(py, ...) {
 
   # check for Python syntax that doesn't have a direct equivalent in R
   if (grepl("try:\\n|except Exception as e:\\n", text)) {
-    warning("The Python code contains syntax that doesn't have a direct equivalent in R.")
+    cli::cli_alert_warning("The Python code contains syntax that doesn't have a direct equivalent in R.")
   }
 
   # check for empty string input
@@ -75,7 +75,7 @@ python_to_r <- function(py, ...) {
 
   # check for non-Python code string
   if (!grepl("=", text)) {
-    warning("The input string does not appear to be valid Python code.")
+    cli::cli_alert_warning("The input string does not appear to be valid Python code.")
   }
 
   # Return the processed py as R                                                                                                                                                                       
