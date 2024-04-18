@@ -57,6 +57,7 @@ write_test <- function(file, ...) {
   } else {
     filename <- paste0(replace_file_extension(filename, new_extension = ""),
       "-test.R")
+    writeLines(output, filename)
     file.edit(filename)
     return(filename)
 
