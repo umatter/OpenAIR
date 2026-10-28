@@ -8,7 +8,7 @@ chat_completion(
   msgs,
   functions = NULL,
   function_call = NULL,
-  model = "gpt-3.5-turbo",
+  model = Sys.getenv("OPENAI_MODEL", "gpt-3.5-turbo"),
   temperature = NULL,
   max_tokens = NULL,
   n = NULL,
@@ -31,7 +31,8 @@ a chatlog object}
 \item{function_call}{An optional list specifying the function call to use.}
 
 \item{model}{A character string specifying the ID of the model to use.
-The default value is "gpt-3.5-turbo".}
+The default value is the environment variable `OPENAI_MODEL` if set,
+otherwise "gpt-3.5-turbo".}
 
 \item{temperature}{An optional numeric scalar specifying the sampling
 temperature to use.}
@@ -74,6 +75,11 @@ This function generates natural language text in a conversational style using
 the OpenAI API's chat endpoint. It takes a series of chat messages as input,
 either as a data.frame or a chatlog object, and generates a text completion
 based on the conversation history and the specified model parameters.
+}
+\details{
+By default, requests go to the OpenAI API. Set the environment variable
+`OPENAI_BASE_URL` (e.g., to `https://openrouter.ai/api/v1`) to use another
+OpenAI-compatible provider; the API key is then read from `OPENAI_API_KEY`.
 }
 \examples{
 \dontrun{

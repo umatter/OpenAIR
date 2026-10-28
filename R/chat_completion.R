@@ -5,12 +5,17 @@
 #' either as a data.frame or a chatlog object, and generates a text completion
 #' based on the conversation history and the specified model parameters.
 #'
+#' By default, requests go to the OpenAI API. Set the environment variable
+#' `OPENAI_BASE_URL` (e.g., to `https://openrouter.ai/api/v1`) to use another
+#' OpenAI-compatible provider; the API key is then read from `OPENAI_API_KEY`.
+#'
 #' @param msgs A data.frame containing the chat history to generate text from or
 #' a chatlog object
 #' @param functions An optional list of functions to use for the function call.
 #' @param function_call An optional list specifying the function call to use.
 #' @param model A character string specifying the ID of the model to use.
-#' The default value is "gpt-3.5-turbo".
+#' The default value is the environment variable `OPENAI_MODEL` if set,
+#' otherwise "gpt-3.5-turbo".
 #' @param temperature An optional numeric scalar specifying the sampling
 #' temperature to use.
 #' @param max_tokens An optional integer scalar specifying the maximum number of
@@ -59,12 +64,15 @@
 #' }
 #' @export
 chat_completion <- function(msgs, functions = NULL, function_call = NULL,
-  model = "gpt-3.5-turbo", temperature = NULL, max_tokens = NULL, n = NULL,
+  model = Sys.getenv("OPENAI_MODEL", "gpt-3.5-turbo"), temperature = NULL, max_tokens = NULL, n = NULL,
   stop = NULL, presence_penalty = NULL, frequency_penalty = NULL,
   best_of = NULL, logit_bias = NULL, stream = FALSE, top_p = NULL,
   user = NULL) {
   # the relevant API endpoint
-  API_ENDPOINT <- "https://api.openai.com/v1/chat/completions"
+  # (defaults to OpenAI; set the environment variable OPENAI_BASE_URL to use any
+  # OpenAI-compatible provider, e.g., "https://openrouter.ai/api/v1")
+  base_url <- sub("/+$", "", Sys.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1"))
+  API_ENDPOINT <- paste0(base_url, "/chat/completions")
 
   # Fetch api_key from environment variable
   api_key <- Sys.getenv("OPENAI_API_KEY")
